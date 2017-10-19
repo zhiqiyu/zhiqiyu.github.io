@@ -3,17 +3,30 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://zhiqiyu.github.io/post/gdal-install/</loc>
+    <lastmod>2017-10-18T17:07:47-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://zhiqiyu.github.io/intro/me/</loc>
     <lastmod>2017-10-13T11:31:43-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zhiqiyu.github.io/post/first-post/</loc>
-    <lastmod>2017-10-13T10:39:10-04:00</lastmod>
+    <loc>https://zhiqiyu.github.io/categories/bash/</loc>
+    <lastmod>2017-10-18T17:07:47-04:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://zhiqiyu.github.io/categories/</loc>
+    <lastmod>2017-10-18T17:07:47-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhiqiyu.github.io/categories/gdal/</loc>
+    <lastmod>2017-10-18T17:07:47-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -24,8 +37,20 @@
   </url>
   
   <url>
+    <loc>https://zhiqiyu.github.io/categories/mac/</loc>
+    <lastmod>2017-10-18T17:07:47-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://zhiqiyu.github.io/post/</loc>
-    <lastmod>2017-10-13T10:39:10-04:00</lastmod>
+    <lastmod>2017-10-18T17:07:47-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhiqiyu.github.io/categories/python/</loc>
+    <lastmod>2017-10-18T17:07:47-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -36,7 +61,7 @@
   
   <url>
     <loc>https://zhiqiyu.github.io/</loc>
-    <lastmod>2017-10-13T11:31:43-04:00</lastmod>
+    <lastmod>2017-10-18T17:07:47-04:00</lastmod>
     <priority>0</priority>
   </url>
   

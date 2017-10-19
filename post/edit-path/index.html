@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 <head>
   <title>
-    First post // Zhiqi Yu
+    Edit Path // Zhiqi Yu
   </title>
 
   <link href="http://gmpg.org/xfn/11" rel="profile">
@@ -16,11 +16,11 @@
 <meta name="author" content="">
 <meta name="generator" content="Hugo 0.29" />
 
-  <meta property="og:title" content="First post" />
+  <meta property="og:title" content="Edit Path" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="en_US" />
-<meta property="og:url" content="https://zhiqiyu.github.io/post/first-post/" />
+<meta property="og:url" content="https://zhiqiyu.github.io/post/edit-path/" />
 
 
   
@@ -121,18 +121,16 @@
 		
 
 		
-			
-	    
   		<section class="post">
             <h1 class="post-title">
-              <a href="/post/first-post/">First post</a>
+              <a href="/post/edit-path/">Edit Path</a>
             </h1>
             <h3 class="post-subtitle">
             	
             </h3>
             
             	<span class="post-date">
-                	<span class="post-date-day"><sup>13</sup></span><span class="post-date-separator">/</span><span class="post-date-month">Oct</span> <span class="post-date-year">2017</span>
+                	<span class="post-date-day"><sup>18</sup></span><span class="post-date-separator">/</span><span class="post-date-month">Oct</span> <span class="post-date-year">2017</span>
             	</span>
             	
             
@@ -143,7 +141,13 @@
 			
 				<div class="post-categories">
 				
-					<a class="post-category post-category-misc." href="https://zhiqiyu.github.io/categories/misc.">Misc.</a>
+					<a class="post-category post-category-gdal" href="https://zhiqiyu.github.io/categories/gdal">GDAL</a>
+				
+					<a class="post-category post-category-mac" href="https://zhiqiyu.github.io/categories/mac">Mac</a>
+				
+					<a class="post-category post-category-python" href="https://zhiqiyu.github.io/categories/python">Python</a>
+				
+					<a class="post-category post-category-bash" href="https://zhiqiyu.github.io/categories/bash">Bash</a>
 				
 				</div>
 			
@@ -152,7 +156,40 @@
 
 			
 
-            <p>Hello, I am Zhiqi Yu, this is my first post.</p>
+            
+
+<h1 id="installation-of-gdal-and-its-python-libraries-on-mac">Installation of GDAL and its Python Libraries on Mac</h1>
+
+<p>Recently I have been trying to install GDAL on my Mac and I cannot find a way to link the Python libraries to the Python program I am using so that I can import GDAL libraries by the <code>import gdal</code> statement in my python program.</p>
+
+<p>The GDAL is designed to run in Mac OS X Terminals, but the installation include python libraries which are not automatically linked to the program. Therefore, the only thing we need to do to make it work in python is to link those libraries properly. Python search libraries in predefined search path list. The list can be printed by:</p>
+
+<pre><code class="language-python">import sys
+print sys.path
+</code></pre>
+
+<p>Note that this path list is different from the $PATH environment variable.</p>
+
+<h3 id="edit-pythonpath-temporarily">Edit <code>PYTHONPATH</code> Temporarily</h3>
+
+<p>One way to link GDAL&rsquo;s python library is by editing the python search path in the .py file you are working with. The code looks like this:</p>
+
+<pre><code class="language-python">import sys
+sys.path.append(&quot;/path/to/gdal/libraries&quot;)
+from osgeo import gdal
+</code></pre>
+
+<p>Note this approach only add the GDAL library directory to the <code>PYTHONPATH</code> temporarily, meaning if you close the program, the GDAL path will disappear. So you need to add this block of code every time when you want to use GDAL python library.</p>
+
+<h3 id="edit-pythonpath-permanently">Edit <code>PYTHONPATH</code> Permanently</h3>
+
+<p>If you don&rsquo;t want to edit <code>PYTHONPATH</code> every single time, there is another way to link GDAL libraries. According to other sources, you can add GDAL library path to the <code>PYTHONPATH</code> by entering this block of code in the <strong>bash</strong>:</p>
+
+<pre><code class="language-bash">export PYTHONPATH=&quot;${PYTHONPATH}:/path/to/gdal/libraries&quot; &gt;&gt; ~/.bash_profile
+source ~/.bash_profile
+</code></pre>
+
+<p>The path to your GDAL library might be <code>/Library/Frameworks/GDAL.framework/Versions/2.1/Python/2.7/site-packages</code> if you installed your GDAL library from <a href="kyngchaos.com">kyngchaos.com</a>.</p>
 
 	
 			
@@ -163,13 +200,13 @@
 				<div class="paging">
 					<span class="paging-label">More Reading</span>
 					
-					<div class="paging-newer">
-						<span class="dark-red">Newer</span><span class="decorative-marker">//</span>
-						<a class="paging-link" href="/intro/me/">About Me</a>
-		            </div>
-		            
 
 					
+					<div class="paging-older">
+						<span class="dark-red">Older</span><span class="decorative-marker">//</span>
+			            <a class="paging-link" href="/intro/me/">About Me</a>
+		            </div>
+		            
 	            </div>
             
           </section>

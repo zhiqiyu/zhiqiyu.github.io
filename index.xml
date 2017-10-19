@@ -6,10 +6,20 @@
     <description>Recent content on Zhiqi Yu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 13 Oct 2017 11:31:43 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 18 Oct 2017 17:07:47 -0400</lastBuildDate>
     
 	<atom:link href="https://zhiqiyu.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Edit Path</title>
+      <link>https://zhiqiyu.github.io/post/gdal-install/</link>
+      <pubDate>Wed, 18 Oct 2017 17:07:47 -0400</pubDate>
+      
+      <guid>https://zhiqiyu.github.io/post/gdal-install/</guid>
+      <description>Installation of GDAL and its Python Libraries on Mac Recently I have been trying to install GDAL on my Mac and I cannot find a way to link the Python libraries to the Python program I am using so that I can import GDAL libraries by the import gdal statement in my python program.
+The GDAL is designed to run in Mac OS X Terminals, but the installation include python libraries which are not automatically linked to the program.</description>
+    </item>
     
     <item>
       <title>About Me</title>
@@ -17,16 +27,7 @@
       <pubDate>Fri, 13 Oct 2017 11:31:43 -0400</pubDate>
       
       <guid>https://zhiqiyu.github.io/intro/me/</guid>
-      <description>Zhiqi Yu I am Zhiqi Yu.</description>
-    </item>
-    
-    <item>
-      <title>First post</title>
-      <link>https://zhiqiyu.github.io/post/first-post/</link>
-      <pubDate>Fri, 13 Oct 2017 10:39:10 -0400</pubDate>
-      
-      <guid>https://zhiqiyu.github.io/post/first-post/</guid>
-      <description>Hello, I am Zhiqi Yu, this is my first post.</description>
+      <description> Zhiqi Yu </description>
     </item>
     
   </channel>
