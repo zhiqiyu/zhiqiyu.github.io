@@ -3,11 +3,29 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+<<<<<<< HEAD
     <loc>https://zhiqiyu.github.io/post/gdal-install/</loc>
     <lastmod>2017-10-18T17:07:47-04:00</lastmod>
   </url>
   
   <url>
+=======
+    <loc>https://zhiqiyu.github.io/post/hsi-geoint/</loc>
+    <lastmod>2017-10-26T17:07:58-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zhiqiyu.github.io/post/future-gis/</loc>
+    <lastmod>2017-10-26T16:57:45-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zhiqiyu.github.io/post/gdal-install/</loc>
+    <lastmod>2017-10-18T17:07:47-04:00</lastmod>
+  </url>
+  
+  <url>
+>>>>>>> new
     <loc>https://zhiqiyu.github.io/intro/me/</loc>
     <lastmod>2017-10-13T11:31:43-04:00</lastmod>
   </url>
@@ -31,6 +49,21 @@
   </url>
   
   <url>
+<<<<<<< HEAD
+=======
+    <loc>https://zhiqiyu.github.io/categories/geoint/</loc>
+    <lastmod>2017-10-26T17:07:58-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhiqiyu.github.io/categories/gis/</loc>
+    <lastmod>2017-10-26T16:57:45-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+>>>>>>> new
     <loc>https://zhiqiyu.github.io/intro/</loc>
     <lastmod>2017-10-13T11:31:43-04:00</lastmod>
     <priority>0</priority>
@@ -44,13 +77,27 @@
   
   <url>
     <loc>https://zhiqiyu.github.io/post/</loc>
-    <lastmod>2017-10-18T17:07:47-04:00</lastmod>
+<<<<<<< HEAD
+=======
+    <lastmod>2017-10-26T17:07:58-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://zhiqiyu.github.io/categories/python/</loc>
+>>>>>>> new
     <lastmod>2017-10-18T17:07:47-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+<<<<<<< HEAD
+    <loc>https://zhiqiyu.github.io/categories/python/</loc>
+    <lastmod>2017-10-18T17:07:47-04:00</lastmod>
+=======
+    <loc>https://zhiqiyu.github.io/categories/remote-sensing/</loc>
+    <lastmod>2017-10-26T17:07:58-04:00</lastmod>
+>>>>>>> new
     <priority>0</priority>
   </url>
   
@@ -61,7 +108,11 @@
   
   <url>
     <loc>https://zhiqiyu.github.io/</loc>
+<<<<<<< HEAD
     <lastmod>2017-10-18T17:07:47-04:00</lastmod>
+=======
+    <lastmod>2017-10-26T17:07:58-04:00</lastmod>
+>>>>>>> new
     <priority>0</priority>
   </url>
   
