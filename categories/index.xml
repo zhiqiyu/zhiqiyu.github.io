@@ -30,8 +30,6 @@
     </item>
     
     <item>
-<<<<<<< HEAD
-=======
       <title>Geoint</title>
       <link>https://zhiqiyu.github.io/categories/geoint/</link>
       <pubDate>Thu, 26 Oct 2017 17:07:58 -0400</pubDate>
@@ -50,7 +48,6 @@
     </item>
     
     <item>
->>>>>>> new
       <title>Mac</title>
       <link>https://zhiqiyu.github.io/categories/mac/</link>
       <pubDate>Wed, 18 Oct 2017 17:07:47 -0400</pubDate>
@@ -68,8 +65,6 @@
       <description></description>
     </item>
     
-<<<<<<< HEAD
-=======
     <item>
       <title>Remote Sensing</title>
       <link>https://zhiqiyu.github.io/categories/remote-sensing/</link>
@@ -79,6 +74,5 @@
       <description></description>
     </item>
     
->>>>>>> new
   </channel>
 </rss>
