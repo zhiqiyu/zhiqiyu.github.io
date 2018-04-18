@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Coursera on Zhiqi Yu</title>
+    <link>https://zhiqiyu.github.io/categories/coursera/</link>
+    <description>Recent content in Coursera on Zhiqi Yu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 16 Apr 2018 21:11:38 -0400</lastBuildDate>
+    
+	<atom:link href="https://zhiqiyu.github.io/categories/coursera/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Applied Data Science with Python Coursera Certificates</title>
+      <link>https://zhiqiyu.github.io/post/ads-certificates/</link>
+      <pubDate>Mon, 16 Apr 2018 21:11:38 -0400</pubDate>
+      
+      <guid>https://zhiqiyu.github.io/post/ads-certificates/</guid>
+      <description>&lt;p&gt;Good job for me to earn several certificates from the Applied Data Science with Python offered by Michigan University on Coursera!&lt;/p&gt;
+
+&lt;p&gt;The course material can be found at &lt;a href=&#34;https://github.com/zhiqiyu/Applied-Data-Science-with-Python&#34;&gt;https://github.com/zhiqiyu/Applied-Data-Science-with-Python&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Machine Learning Coursera Certificate</title>
+      <link>https://zhiqiyu.github.io/post/ml-certificate/</link>
+      <pubDate>Mon, 16 Apr 2018 20:17:49 -0400</pubDate>
+      
+      <guid>https://zhiqiyu.github.io/post/ml-certificate/</guid>
+      <description>&lt;p&gt;Good job for me to earn the Machine Learning course certificate offered by Prof. Andrew Ng from Stanford University on Coursera!&lt;/p&gt;
+
+&lt;p&gt;The course assignments can be found at &lt;a href=&#34;https://github.com/zhiqiyu/Machine-Learning-Coursera&#34;&gt;https://github.com/zhiqiyu/Machine-Learning-Coursera&lt;/a&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
