@@ -6,10 +6,19 @@
     <description>Recent content on Realm Z</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 12 Sep 2018 17:15:15 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 08 Nov 2018 11:24:36 -0500</lastBuildDate>
     
 	<atom:link href="http://zhiqiyu.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Fully-Connected Layers (FCN) in Convolutional Neural Network (CNN)</title>
+      <link>http://zhiqiyu.github.io/post/conv-fc-conversion/</link>
+      <pubDate>Thu, 08 Nov 2018 11:24:36 -0500</pubDate>
+      
+      <guid>http://zhiqiyu.github.io/post/conv-fc-conversion/</guid>
+      <description>Recently, during a discussion with a colleague about his CNN model architecture on remote sensing image fusion task, he mentioned something that was interesting. Specifically, in his network, he used FCN implementations Keras.layers.Dense and torch.nn.Linear in his code, the input to the FCN is a 2D image with many channels with size (160, 160, channels). Traditionally, I think that to pass through a FCN layer, the neuron numbers of the first FCN layer in this case, should be 160 * 160 * channels, which basically means to flat the volume to a 1D array and feed in a traditional neural network.</description>
+    </item>
     
     <item>
       <title>Deep Learning Specialization Certificate</title>

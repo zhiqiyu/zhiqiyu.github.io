@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://zhiqiyu.github.io/post/conv-fc-conversion/</loc>
+    <lastmod>2018-11-08T11:24:36-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://zhiqiyu.github.io/post/dl-special-cert/</loc>
     <lastmod>2018-09-12T17:15:15-04:00</lastmod>
   </url>
@@ -80,7 +85,7 @@
   
   <url>
     <loc>http://zhiqiyu.github.io/tags/deep-learning/</loc>
-    <lastmod>2018-09-12T17:15:15-04:00</lastmod>
+    <lastmod>2018-11-08T11:24:36-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -103,6 +108,12 @@
   </url>
   
   <url>
+    <loc>http://zhiqiyu.github.io/tags/keras/</loc>
+    <lastmod>2018-11-08T11:24:36-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://zhiqiyu.github.io/tags/mac/</loc>
     <lastmod>2017-10-18T17:07:47-04:00</lastmod>
     <priority>0</priority>
@@ -110,13 +121,13 @@
   
   <url>
     <loc>http://zhiqiyu.github.io/tags/machine-learning/</loc>
-    <lastmod>2018-09-12T17:15:15-04:00</lastmod>
+    <lastmod>2018-11-08T11:24:36-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://zhiqiyu.github.io/post/</loc>
-    <lastmod>2018-09-12T17:15:15-04:00</lastmod>
+    <lastmod>2018-11-08T11:24:36-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -128,7 +139,7 @@
   
   <url>
     <loc>http://zhiqiyu.github.io/</loc>
-    <lastmod>2018-09-12T17:15:15-04:00</lastmod>
+    <lastmod>2018-11-08T11:24:36-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -146,7 +157,7 @@
   
   <url>
     <loc>http://zhiqiyu.github.io/categories/technical/</loc>
-    <lastmod>2017-10-18T17:07:47-04:00</lastmod>
+    <lastmod>2018-11-08T11:24:36-05:00</lastmod>
     <priority>0</priority>
   </url>
   
