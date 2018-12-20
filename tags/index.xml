@@ -2,120 +2,120 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Realm Z</title>
-    <link>http://zhiqiyu.github.io/tags/</link>
+    <link>https://zhiqiyu.github.io/tags/</link>
     <description>Recent content in Tags on Realm Z</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 18 Oct 2017 17:07:47 -0400</lastBuildDate>
     
-	<atom:link href="http://zhiqiyu.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://zhiqiyu.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Bash</title>
-      <link>http://zhiqiyu.github.io/tags/bash/</link>
+      <link>https://zhiqiyu.github.io/tags/bash/</link>
       <pubDate>Wed, 18 Oct 2017 17:07:47 -0400</pubDate>
       
-      <guid>http://zhiqiyu.github.io/tags/bash/</guid>
+      <guid>https://zhiqiyu.github.io/tags/bash/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Coursera</title>
-      <link>http://zhiqiyu.github.io/tags/coursera/</link>
+      <link>https://zhiqiyu.github.io/tags/coursera/</link>
       <pubDate>Wed, 12 Sep 2018 17:15:15 -0400</pubDate>
       
-      <guid>http://zhiqiyu.github.io/tags/coursera/</guid>
+      <guid>https://zhiqiyu.github.io/tags/coursera/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Data Science</title>
-      <link>http://zhiqiyu.github.io/tags/data-science/</link>
+      <link>https://zhiqiyu.github.io/tags/data-science/</link>
       <pubDate>Mon, 16 Apr 2018 20:17:49 -0400</pubDate>
       
-      <guid>http://zhiqiyu.github.io/tags/data-science/</guid>
+      <guid>https://zhiqiyu.github.io/tags/data-science/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Deep Learning</title>
-      <link>http://zhiqiyu.github.io/tags/deep-learning/</link>
+      <link>https://zhiqiyu.github.io/tags/deep-learning/</link>
       <pubDate>Thu, 08 Nov 2018 11:24:36 -0500</pubDate>
       
-      <guid>http://zhiqiyu.github.io/tags/deep-learning/</guid>
+      <guid>https://zhiqiyu.github.io/tags/deep-learning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Gdal</title>
-      <link>http://zhiqiyu.github.io/tags/gdal/</link>
+      <link>https://zhiqiyu.github.io/tags/gdal/</link>
       <pubDate>Wed, 18 Oct 2017 17:07:47 -0400</pubDate>
       
-      <guid>http://zhiqiyu.github.io/tags/gdal/</guid>
+      <guid>https://zhiqiyu.github.io/tags/gdal/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Geoint</title>
-      <link>http://zhiqiyu.github.io/tags/geoint/</link>
+      <link>https://zhiqiyu.github.io/tags/geoint/</link>
       <pubDate>Thu, 26 Oct 2017 17:07:58 -0400</pubDate>
       
-      <guid>http://zhiqiyu.github.io/tags/geoint/</guid>
+      <guid>https://zhiqiyu.github.io/tags/geoint/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Gis</title>
-      <link>http://zhiqiyu.github.io/tags/gis/</link>
+      <link>https://zhiqiyu.github.io/tags/gis/</link>
       <pubDate>Thu, 26 Oct 2017 16:57:45 -0400</pubDate>
       
-      <guid>http://zhiqiyu.github.io/tags/gis/</guid>
+      <guid>https://zhiqiyu.github.io/tags/gis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Keras</title>
-      <link>http://zhiqiyu.github.io/tags/keras/</link>
+      <link>https://zhiqiyu.github.io/tags/keras/</link>
       <pubDate>Thu, 08 Nov 2018 11:24:36 -0500</pubDate>
       
-      <guid>http://zhiqiyu.github.io/tags/keras/</guid>
+      <guid>https://zhiqiyu.github.io/tags/keras/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Mac</title>
-      <link>http://zhiqiyu.github.io/tags/mac/</link>
+      <link>https://zhiqiyu.github.io/tags/mac/</link>
       <pubDate>Wed, 18 Oct 2017 17:07:47 -0400</pubDate>
       
-      <guid>http://zhiqiyu.github.io/tags/mac/</guid>
+      <guid>https://zhiqiyu.github.io/tags/mac/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Machine Learning</title>
-      <link>http://zhiqiyu.github.io/tags/machine-learning/</link>
+      <link>https://zhiqiyu.github.io/tags/machine-learning/</link>
       <pubDate>Thu, 08 Nov 2018 11:24:36 -0500</pubDate>
       
-      <guid>http://zhiqiyu.github.io/tags/machine-learning/</guid>
+      <guid>https://zhiqiyu.github.io/tags/machine-learning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Python</title>
-      <link>http://zhiqiyu.github.io/tags/python/</link>
+      <link>https://zhiqiyu.github.io/tags/python/</link>
       <pubDate>Wed, 18 Oct 2017 17:07:47 -0400</pubDate>
       
-      <guid>http://zhiqiyu.github.io/tags/python/</guid>
+      <guid>https://zhiqiyu.github.io/tags/python/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Remote Sensing</title>
-      <link>http://zhiqiyu.github.io/tags/remote-sensing/</link>
+      <link>https://zhiqiyu.github.io/tags/remote-sensing/</link>
       <pubDate>Thu, 26 Oct 2017 17:07:58 -0400</pubDate>
       
-      <guid>http://zhiqiyu.github.io/tags/remote-sensing/</guid>
+      <guid>https://zhiqiyu.github.io/tags/remote-sensing/</guid>
       <description></description>
     </item>
     

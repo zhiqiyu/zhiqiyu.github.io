@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Articles on Realm Z</title>
-    <link>http://zhiqiyu.github.io/categories/articles/</link>
+    <link>https://zhiqiyu.github.io/categories/articles/</link>
     <description>Recent content in Articles on Realm Z</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 26 Oct 2017 17:07:58 -0400</lastBuildDate>
     
-	<atom:link href="http://zhiqiyu.github.io/categories/articles/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://zhiqiyu.github.io/categories/articles/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hyperspectral Remote Sensing for Geospatial Intelligence</title>
-      <link>http://zhiqiyu.github.io/post/hsi-geoint/</link>
+      <link>https://zhiqiyu.github.io/post/hsi-geoint/</link>
       <pubDate>Thu, 26 Oct 2017 17:07:58 -0400</pubDate>
       
-      <guid>http://zhiqiyu.github.io/post/hsi-geoint/</guid>
+      <guid>https://zhiqiyu.github.io/post/hsi-geoint/</guid>
       <description>This article is for an assignment of GGS684 Topics in Geospatial Intelligence.
 I believe the Hyperspectral remote sensing will be the game changer for geospatial intelligence. Traditional remote sensing sensors usually provide only 10s of bands that cover visible spectrum range and near infrared range. The limited number of bands lead to the relatively broad range of spectrum that a band would cover. But hyperspectral sensors greatly shrinks the spectrum range that one band cover so that each band can ’focus’ more on its designated spectrum range.</description>
     </item>
     
     <item>
       <title>Emerging Future of GIS</title>
-      <link>http://zhiqiyu.github.io/post/future-gis/</link>
+      <link>https://zhiqiyu.github.io/post/future-gis/</link>
       <pubDate>Thu, 26 Oct 2017 16:57:45 -0400</pubDate>
       
-      <guid>http://zhiqiyu.github.io/post/future-gis/</guid>
+      <guid>https://zhiqiyu.github.io/post/future-gis/</guid>
       <description>This article is for an assignment of GGS684 Topics in Geospatial Intelligence seminar. The video series mentioned in the article is the Geospatial Revolution Series made by PennState University. This video series is a good viewport of what GIS can do and how it is changing our lives.)
 The Geospatial Revolution series has introduced several cases on how GIS is being used in modern societies and how it is changing the way we live and the world around us.</description>
     </item>

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Python on Realm Z</title>
-    <link>http://zhiqiyu.github.io/tags/python/</link>
+    <link>https://zhiqiyu.github.io/tags/python/</link>
     <description>Recent content in Python on Realm Z</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 18 Oct 2017 17:07:47 -0400</lastBuildDate>
     
-	<atom:link href="http://zhiqiyu.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://zhiqiyu.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Installation of GDAL and its Python Libraries on Mac</title>
-      <link>http://zhiqiyu.github.io/post/gdal-install/</link>
+      <link>https://zhiqiyu.github.io/post/gdal-install/</link>
       <pubDate>Wed, 18 Oct 2017 17:07:47 -0400</pubDate>
       
-      <guid>http://zhiqiyu.github.io/post/gdal-install/</guid>
+      <guid>https://zhiqiyu.github.io/post/gdal-install/</guid>
       <description>Recently I have been trying to install GDAL on my Mac and I cannot find a way to link the Python libraries to the Python program I am using so that I can import GDAL libraries by the import gdal statement in my python program.
 The GDAL is designed to run in Mac OS X Terminals, but the installation include python libraries which are not automatically linked to the program.</description>
     </item>
