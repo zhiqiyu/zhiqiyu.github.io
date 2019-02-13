@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://zhiqiyu.github.io/post/landsat-sentinel-match/</loc>
+    <lastmod>2019-02-13T15:20:20-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://zhiqiyu.github.io/post/conv-fc-conversion/</loc>
     <lastmod>2018-11-08T11:24:36-05:00</lastmod>
   </url>
@@ -85,7 +90,7 @@
   
   <url>
     <loc>https://zhiqiyu.github.io/tags/deep-learning/</loc>
-    <lastmod>2018-11-08T11:24:36-05:00</lastmod>
+    <lastmod>2019-02-13T15:20:20-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -108,6 +113,12 @@
   </url>
   
   <url>
+    <loc>https://zhiqiyu.github.io/tags/google-earth-engine/</loc>
+    <lastmod>2019-02-13T15:20:20-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://zhiqiyu.github.io/tags/keras/</loc>
     <lastmod>2018-11-08T11:24:36-05:00</lastmod>
     <priority>0</priority>
@@ -121,13 +132,13 @@
   
   <url>
     <loc>https://zhiqiyu.github.io/tags/machine-learning/</loc>
-    <lastmod>2018-11-08T11:24:36-05:00</lastmod>
+    <lastmod>2018-09-12T17:15:15-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://zhiqiyu.github.io/post/</loc>
-    <lastmod>2018-11-08T11:24:36-05:00</lastmod>
+    <lastmod>2019-02-13T15:20:20-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -139,13 +150,13 @@
   
   <url>
     <loc>https://zhiqiyu.github.io/</loc>
-    <lastmod>2018-11-08T11:24:36-05:00</lastmod>
+    <lastmod>2019-02-13T15:20:20-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://zhiqiyu.github.io/tags/remote-sensing/</loc>
-    <lastmod>2017-10-26T17:07:58-04:00</lastmod>
+    <lastmod>2019-02-13T15:20:20-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -157,7 +168,7 @@
   
   <url>
     <loc>https://zhiqiyu.github.io/categories/technical/</loc>
-    <lastmod>2018-11-08T11:24:36-05:00</lastmod>
+    <lastmod>2019-02-13T15:20:20-05:00</lastmod>
     <priority>0</priority>
   </url>
   
