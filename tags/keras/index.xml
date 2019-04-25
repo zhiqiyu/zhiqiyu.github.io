@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Keras on Realm Z</title>
+    <title>Keras on ZQ.Yu</title>
     <link>https://zhiqiyu.github.io/tags/keras/</link>
-    <description>Recent content in Keras on Realm Z</description>
+    <description>Recent content in Keras on ZQ.Yu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 08 Nov 2018 11:24:36 -0500</lastBuildDate>
@@ -12,7 +12,7 @@
     
     
     <item>
-      <title>Fully-Connected Layers (FCN) in Convolutional Neural Network (CNN)</title>
+      <title>What are Fully-Connected Layers (FCN) in Convolutional Neural Networks (CNN)?</title>
       <link>https://zhiqiyu.github.io/post/conv-fc-conversion/</link>
       <pubDate>Thu, 08 Nov 2018 11:24:36 -0500</pubDate>
       

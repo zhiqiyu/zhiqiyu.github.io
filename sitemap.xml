@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://zhiqiyu.github.io/post/undef-symbol-pytorch/</loc>
+    <lastmod>2019-04-24T23:42:55-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://zhiqiyu.github.io/post/landsat-sentinel-match/</loc>
     <lastmod>2019-02-13T15:20:20-05:00</lastmod>
   </url>
@@ -33,16 +38,6 @@
   </url>
   
   <url>
-    <loc>https://zhiqiyu.github.io/post/hsi-geoint/</loc>
-    <lastmod>2017-10-26T17:07:58-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zhiqiyu.github.io/post/future-gis/</loc>
-    <lastmod>2017-10-26T16:57:45-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://zhiqiyu.github.io/post/gdal-install/</loc>
     <lastmod>2017-10-18T17:07:47-04:00</lastmod>
   </url>
@@ -59,20 +54,14 @@
   </url>
   
   <url>
-    <loc>https://zhiqiyu.github.io/categories/articles/</loc>
-    <lastmod>2017-10-26T17:07:58-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhiqiyu.github.io/tags/bash/</loc>
-    <lastmod>2017-10-18T17:07:47-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://zhiqiyu.github.io/categories/</loc>
     <lastmod>2018-09-12T17:15:15-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhiqiyu.github.io/tags/cli/</loc>
+    <lastmod>2017-10-18T17:07:47-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -90,30 +79,12 @@
   
   <url>
     <loc>https://zhiqiyu.github.io/tags/deep-learning/</loc>
-    <lastmod>2019-02-13T15:20:20-05:00</lastmod>
+    <lastmod>2019-04-24T23:42:55-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://zhiqiyu.github.io/tags/gdal/</loc>
-    <lastmod>2017-10-18T17:07:47-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhiqiyu.github.io/tags/geoint/</loc>
-    <lastmod>2017-10-26T17:07:58-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhiqiyu.github.io/tags/gis/</loc>
-    <lastmod>2017-10-26T16:57:45-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhiqiyu.github.io/tags/google-earth-engine/</loc>
+    <loc>https://zhiqiyu.github.io/tags/gee/</loc>
     <lastmod>2019-02-13T15:20:20-05:00</lastmod>
     <priority>0</priority>
   </url>
@@ -125,12 +96,6 @@
   </url>
   
   <url>
-    <loc>https://zhiqiyu.github.io/tags/mac/</loc>
-    <lastmod>2017-10-18T17:07:47-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://zhiqiyu.github.io/tags/machine-learning/</loc>
     <lastmod>2018-09-12T17:15:15-04:00</lastmod>
     <priority>0</priority>
@@ -138,24 +103,30 @@
   
   <url>
     <loc>https://zhiqiyu.github.io/post/</loc>
-    <lastmod>2019-02-13T15:20:20-05:00</lastmod>
+    <lastmod>2019-04-24T23:42:55-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://zhiqiyu.github.io/tags/python/</loc>
-    <lastmod>2017-10-18T17:07:47-04:00</lastmod>
+    <lastmod>2019-04-24T23:42:55-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://zhiqiyu.github.io/</loc>
-    <lastmod>2019-02-13T15:20:20-05:00</lastmod>
+    <loc>https://zhiqiyu.github.io/tags/pytorch/</loc>
+    <lastmod>2019-04-24T23:42:55-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://zhiqiyu.github.io/tags/remote-sensing/</loc>
+    <lastmod>2019-02-13T15:20:20-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhiqiyu.github.io/categories/research/</loc>
     <lastmod>2019-02-13T15:20:20-05:00</lastmod>
     <priority>0</priority>
   </url>
@@ -168,7 +139,13 @@
   
   <url>
     <loc>https://zhiqiyu.github.io/categories/technical/</loc>
-    <lastmod>2019-02-13T15:20:20-05:00</lastmod>
+    <lastmod>2019-04-24T23:42:55-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhiqiyu.github.io/</loc>
+    <lastmod>2019-04-24T23:42:55-04:00</lastmod>
     <priority>0</priority>
   </url>
   

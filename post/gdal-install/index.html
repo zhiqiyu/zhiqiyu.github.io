@@ -47,9 +47,9 @@ if (!doNotTrack) {
 
 	<div class="container">
 		<div class="logo" role="banner">
-			<a class="logo__link" href="/" title="Realm Z" rel="home">
-				<div class="logo__title">Realm Z</div>
-				<div class="logo__tagline">Geospatial data explorer, Machine learning enthusiast</div>
+			<a class="logo__link" href="/" title="ZQ.Yu" rel="home">
+				<div class="logo__title">ZQ.Yu</div>
+				<div class="logo__tagline">Geospatial data explorer, Deep learning enthusiast</div>
 			</a>
 		</div>
 		
@@ -94,7 +94,7 @@ if (!doNotTrack) {
 
 <p>Recently I have been trying to install GDAL on my Mac and I cannot find a way to link the Python libraries to the Python program I am using so that I can import GDAL libraries by the <code>import gdal</code> statement in my python program.</p>
 
-<p>The GDAL is designed to run in Mac OS X Terminals, but the installation include python libraries which are not automatically linked to the program. Therefore, the only thing we need to do to make it work in python is to link those libraries properly. Python search libraries in predefined search path list. The list can be printed by:</p>
+<p>The GDAL is designed to run in Mac OS X Terminals, but the installation include python libraries which are not automatically linked to the program. Therefore, the only thing we need to do to make it work in python is to link those libraries properly. Python search libraries in predefined search path list. The list can be printed by executing the following code snippet in Python.</p>
 
 <pre><code class="language-python">import sys
 print sys.path
@@ -115,7 +115,7 @@ from osgeo import gdal
 
 <h3 id="edit-pythonpath-permanently">Edit <code>PYTHONPATH</code> Permanently</h3>
 
-<p>If you don&rsquo;t want to edit <code>PYTHONPATH</code> every single time, there is another way to link GDAL libraries. According to other sources, you can add GDAL library path to the <code>PYTHONPATH</code> by entering this block of code in the <strong>bash</strong>:</p>
+<p>If you don&rsquo;t want to edit <code>PYTHONPATH</code> every single time, there is another way to link GDAL libraries. Specifically, you can add GDAL library path to the <code>PYTHONPATH</code> by entering the following block of code in a Command Line Interface (e.g Terminal on Mac) from a Linux OS:</p>
 
 <pre><code class="language-bash">export PYTHONPATH=&quot;${PYTHONPATH}:/path/to/gdal/libraries&quot; &gt;&gt; ~/.bash_profile
 source ~/.bash_profile
@@ -128,19 +128,28 @@ source ~/.bash_profile
 <div class="post__tags tags clearfix">
 	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16"><path d="M16 9.5c0 .373-.24.74-.5 1l-5 5c-.275.26-.634.5-1 .5-.373 0-.74-.24-1-.5L1 8a2.853 2.853 0 0 1-.7-1C.113 6.55 0 5.973 0 5.6V1.4C0 1.034.134.669.401.401.67.134 1.034 0 1.4 0h4.2c.373 0 .95.113 1.4.3.45.187.732.432 1 .7l7.5 7.502c.26.274.5.632.5.998zM3.5 5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/></svg>
 	<ul class="tags__list">
-		<li class="tags__item"><a class="tags__link btn" href="/tags/gdal/" rel="tag">GDAL</a></li>
-		<li class="tags__item"><a class="tags__link btn" href="/tags/mac/" rel="tag">Mac</a></li>
 		<li class="tags__item"><a class="tags__link btn" href="/tags/python/" rel="tag">Python</a></li>
-		<li class="tags__item"><a class="tags__link btn" href="/tags/bash/" rel="tag">Bash</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/cli/" rel="tag">CLI</a></li>
 	</ul>
 </div>
 	</article>
 </main>
 
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="Zhiqi Yu avatar" src="/img/avatar.jpg" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About Zhiqi Yu</span>
+	</div>
+	<div class="authorbox__description">
+		Ph.D. student in Geoinformation Science
+	</div>
+</div>
 
 <nav class="post-nav flex">
 	<div class="post-nav__item post-nav__item--next">
-		<a class="post-nav__link" href="/post/future-gis/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">Emerging Future of GIS</p></a>
+		<a class="post-nav__link" href="/post/ml-certificate/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">Machine Learning Coursera Certificate</p></a>
 	</div>
 </nav>
 

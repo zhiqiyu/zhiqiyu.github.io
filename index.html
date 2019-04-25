@@ -4,23 +4,23 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Realm Z</title>
+	<title>ZQ.Yu</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="Zhiqi&#39;s blog about his research, achievements and life">
 	<meta name="generator" content="Hugo 0.50" />
-	<meta property="og:title" content="Realm Z" />
+	<meta property="og:title" content="ZQ.Yu" />
 <meta property="og:description" content="Zhiqi&#39;s blog about his research, achievements and life" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://zhiqiyu.github.io/" />
-<meta property="og:updated_time" content="2019-02-13T15:20:20-05:00"/>
+<meta property="og:updated_time" content="2019-04-24T23:42:55-04:00"/>
 
 	<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Realm Z"/>
+<meta name="twitter:title" content="ZQ.Yu"/>
 <meta name="twitter:description" content="Zhiqi&#39;s blog about his research, achievements and life"/>
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
-	<link rel="alternate" type="application/rss+xml" href="/index.xml" title="Realm Z">
+	<link rel="alternate" type="application/rss+xml" href="/index.xml" title="ZQ.Yu">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
 	<link rel="stylesheet" href="/css/style.css">
 	<link rel="shortcut icon" href="/img/favicon-96.png">
@@ -46,9 +46,9 @@ if (!doNotTrack) {
 
 	<div class="container">
 		<div class="logo" role="banner">
-			<a class="logo__link" href="/" title="Realm Z" rel="home">
-				<div class="logo__title">Realm Z</div>
-				<div class="logo__tagline">Geospatial data explorer, Machine learning enthusiast</div>
+			<a class="logo__link" href="/" title="ZQ.Yu" rel="home">
+				<div class="logo__title">ZQ.Yu</div>
+				<div class="logo__tagline">Geospatial data explorer, Deep learning enthusiast</div>
 			</a>
 		</div>
 		
@@ -74,8 +74,36 @@ if (!doNotTrack) {
 <main class="main list" role="main"><article class="list__item post">
 	<header class="list__header">
 		<h3 class="list__title post__title ">
+			<a href="/post/undef-symbol-pytorch/" rel="bookmark">
+			&#39;Undefined Symbol: PySlice_Unpack&#39; error in Pytorch
+			</a>
+		</h3>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+	<time class="meta__text" datetime="2019-04-24T23:42:55">April 24, 2019</time>
+</div>
+
+<div class="meta__item-categories meta__item">
+	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta__text"><a class="meta__link" href="/categories/technical" rel="category">Technical</a></span>
+</div>
+</div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		Problem:
+ &lsquo;Undefined Symbol: PySlice_Unpack&rsquo;
+ Environment:
+Pytorch = 1.0.1 Python = 3.6.0  Solution:
+ Upgrade Python to 3.6.3. Seems like this is the only solution.
+Update by conda install python==3.6.3 command if using Miniconda in CLI.
+ 
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h3 class="list__title post__title ">
 			<a href="/post/landsat-sentinel-match/" rel="bookmark">
-			Landsat8 and Sentinel2 Image Pairs Generation
+			Same-day Landsat-8 and Sentinel-2 Pair Generation on GEE
 			</a>
 		</h3>
 		<div class="list__meta meta">
@@ -86,7 +114,7 @@ if (!doNotTrack) {
 
 <div class="meta__item-categories meta__item">
 	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta__text"><a class="meta__link" href="/categories/technical" rel="category">Technical</a></span>
+	<span class="meta__text"><a class="meta__link" href="/categories/technical" rel="category">Technical</a>, <a class="meta__link" href="/categories/research" rel="category">Research</a></span>
 </div>
 </div>
 	</header>
@@ -103,7 +131,7 @@ import ee ee.Initialize() from IPython import display import zipfile import urll
 	<header class="list__header">
 		<h3 class="list__title post__title ">
 			<a href="/post/conv-fc-conversion/" rel="bookmark">
-			Fully-Connected Layers (FCN) in Convolutional Neural Network (CNN)
+			What are Fully-Connected Layers (FCN) in Convolutional Neural Networks (CNN)?
 			</a>
 		</h3>
 		<div class="list__meta meta">
@@ -243,58 +271,6 @@ Can&rsquo;t wait to apply some of the idea in my research work. Cheers!</p>
 </article><article class="list__item post">
 	<header class="list__header">
 		<h3 class="list__title post__title ">
-			<a href="/post/hsi-geoint/" rel="bookmark">
-			Hyperspectral Remote Sensing for Geospatial Intelligence
-			</a>
-		</h3>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-	<time class="meta__text" datetime="2017-10-26T17:07:58">October 26, 2017</time>
-</div>
-
-<div class="meta__item-categories meta__item">
-	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta__text"><a class="meta__link" href="/categories/articles" rel="category">Articles</a></span>
-</div>
-</div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		This article is for an assignment of GGS684 Topics in Geospatial Intelligence.
-I believe the Hyperspectral remote sensing will be the game changer for geospatial intelligence. Traditional remote sensing sensors usually provide only 10s of bands that cover visible spectrum range and near infrared range. The limited number of bands lead to the relatively broad range of spectrum that a band would cover. But hyperspectral sensors greatly shrinks the spectrum range that one band cover so that each band can ’focus’ more on its designated spectrum range.
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/post/hsi-geoint/">Read more…</a>
-	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h3 class="list__title post__title ">
-			<a href="/post/future-gis/" rel="bookmark">
-			Emerging Future of GIS
-			</a>
-		</h3>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-	<time class="meta__text" datetime="2017-10-26T16:57:45">October 26, 2017</time>
-</div>
-
-<div class="meta__item-categories meta__item">
-	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta__text"><a class="meta__link" href="/categories/articles" rel="category">Articles</a></span>
-</div>
-</div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		This article is for an assignment of GGS684 Topics in Geospatial Intelligence seminar. The video series mentioned in the article is the Geospatial Revolution Series made by PennState University. This video series is a good viewport of what GIS can do and how it is changing our lives.)
-The Geospatial Revolution series has introduced several cases on how GIS is being used in modern societies and how it is changing the way we live and the world around us.
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/post/future-gis/">Read more…</a>
-	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h3 class="list__title post__title ">
 			<a href="/post/gdal-install/" rel="bookmark">
 			Installation of GDAL and its Python Libraries on Mac
 			</a>
@@ -323,7 +299,7 @@ The GDAL is designed to run in Mac OS X Terminals, but the installation include 
 
 
 			</section>
-			<aside class="sidebar sidebar--left"><div class="widget-search widget">
+			<aside class="sidebar"><div class="widget-search widget">
 	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
 		<label>
 			<input class="widget-search__field" type="search" placeholder="SEARCH..." value="" name="q" aria-label="SEARCH...">
@@ -336,11 +312,11 @@ The GDAL is designed to run in Mac OS X Terminals, but the installation include 
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/post/landsat-sentinel-match/">Landsat8 and Sentinel2 Image Pairs Generation</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/conv-fc-conversion/">Fully-Connected Layers (FCN) in Convolutional Neural Network (CNN)</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/undef-symbol-pytorch/">&#39;Undefined Symbol: PySlice_Unpack&#39; error in Pytorch</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/landsat-sentinel-match/">Same-day Landsat-8 and Sentinel-2 Pair Generation on GEE</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/conv-fc-conversion/">What are Fully-Connected Layers (FCN) in Convolutional Neural Networks (CNN)?</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/dl-special-cert/">Deep Learning Specialization Certificate</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/dl-certificates/">Deep Learning Course Certificates</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/ads-certificates/">Applied Data Science with Python Coursera Certificates</a></li>
 		</ul>
 	</div>
 </div>
@@ -349,7 +325,7 @@ The GDAL is designed to run in Mac OS X Terminals, but the installation include 
 	<div class="widget__content">
 		<ul class="widget__list">
 			<li class="widget__item"><a class="widget__link" href="/categories/achievements">Achievements</a></li>
-			<li class="widget__item"><a class="widget__link" href="/categories/articles">Articles</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/research">Research</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/technical">Technical</a></li>
 		</ul>
 	</div>
@@ -357,19 +333,16 @@ The GDAL is designed to run in Mac OS X Terminals, but the installation include 
 <div class="widget-taglist widget">
 	<h4 class="widget__title">Tags</h4>
 	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/tags/deep-learning" title="Deep learning">Deep learning (5)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/coursera" title="Coursera">Coursera (4)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/deep-learning" title="Deep learning">Deep learning (4)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/machine-learning" title="Machine learning">Machine learning (4)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/geoint" title="Geoint">Geoint (2)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/remote-sensing" title="Remote sensing">Remote sensing (2)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/bash" title="Bash">Bash (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/python" title="Python">Python (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/cli" title="Cli">Cli (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/data-science" title="Data science">Data science (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/gdal" title="Gdal">Gdal (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/gis" title="Gis">Gis (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/google-earth-engine" title="Google earth engine">Google earth engine (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/gee" title="Gee">Gee (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/keras" title="Keras">Keras (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/mac" title="Mac">Mac (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/python" title="Python">Python (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/pytorch" title="Pytorch">Pytorch (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/remote-sensing" title="Remote sensing">Remote sensing (1)</a>
 	</div>
 </div>
 <div class="widget-social widget">

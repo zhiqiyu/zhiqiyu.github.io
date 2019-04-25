@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Realm Z</title>
+    <title>Categories on ZQ.Yu</title>
     <link>https://zhiqiyu.github.io/categories/</link>
-    <description>Recent content in Categories on Realm Z</description>
+    <description>Recent content in Categories on ZQ.Yu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 12 Sep 2018 17:15:15 -0400</lastBuildDate>
@@ -21,18 +21,18 @@
     </item>
     
     <item>
-      <title>Articles</title>
-      <link>https://zhiqiyu.github.io/categories/articles/</link>
-      <pubDate>Thu, 26 Oct 2017 17:07:58 -0400</pubDate>
+      <title>Research</title>
+      <link>https://zhiqiyu.github.io/categories/research/</link>
+      <pubDate>Wed, 13 Feb 2019 15:20:20 -0500</pubDate>
       
-      <guid>https://zhiqiyu.github.io/categories/articles/</guid>
+      <guid>https://zhiqiyu.github.io/categories/research/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Technical</title>
       <link>https://zhiqiyu.github.io/categories/technical/</link>
-      <pubDate>Wed, 13 Feb 2019 15:20:20 -0500</pubDate>
+      <pubDate>Wed, 24 Apr 2019 23:42:55 -0400</pubDate>
       
       <guid>https://zhiqiyu.github.io/categories/technical/</guid>
       <description></description>

@@ -1,18 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Realm Z</title>
+    <title>Posts on ZQ.Yu</title>
     <link>https://zhiqiyu.github.io/post/</link>
-    <description>Recent content in Posts on Realm Z</description>
+    <description>Recent content in Posts on ZQ.Yu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 13 Feb 2019 15:20:20 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 24 Apr 2019 23:42:55 -0400</lastBuildDate>
     
 	<atom:link href="https://zhiqiyu.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Landsat8 and Sentinel2 Image Pairs Generation</title>
+      <title>&#39;Undefined Symbol: PySlice_Unpack&#39; error in Pytorch</title>
+      <link>https://zhiqiyu.github.io/post/undef-symbol-pytorch/</link>
+      <pubDate>Wed, 24 Apr 2019 23:42:55 -0400</pubDate>
+      
+      <guid>https://zhiqiyu.github.io/post/undef-symbol-pytorch/</guid>
+      <description>Problem:
+ &amp;lsquo;Undefined Symbol: PySlice_Unpack&amp;rsquo;
+ Environment:
+Pytorch = 1.0.1 Python = 3.6.0  Solution:
+ Upgrade Python to 3.6.3. Seems like this is the only solution.
+Update by conda install python==3.6.3 command if using Miniconda in CLI.
+ </description>
+    </item>
+    
+    <item>
+      <title>Same-day Landsat-8 and Sentinel-2 Pair Generation on GEE</title>
       <link>https://zhiqiyu.github.io/post/landsat-sentinel-match/</link>
       <pubDate>Wed, 13 Feb 2019 15:20:20 -0500</pubDate>
       
@@ -24,7 +39,7 @@ import ee ee.Initialize() from IPython import display import zipfile import urll
     </item>
     
     <item>
-      <title>Fully-Connected Layers (FCN) in Convolutional Neural Network (CNN)</title>
+      <title>What are Fully-Connected Layers (FCN) in Convolutional Neural Networks (CNN)?</title>
       <link>https://zhiqiyu.github.io/post/conv-fc-conversion/</link>
       <pubDate>Thu, 08 Nov 2018 11:24:36 -0500</pubDate>
       
@@ -82,26 +97,6 @@ Can&amp;rsquo;t wait to apply some of the idea in my research work. Cheers!&lt;/
 
 &lt;p&gt;The course assignments can be found at &lt;a href=&#34;https://github.com/zhiqiyu/Machine-Learning-Coursera&#34;&gt;https://github.com/zhiqiyu/Machine-Learning-Coursera&lt;/a&gt;
 &lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Hyperspectral Remote Sensing for Geospatial Intelligence</title>
-      <link>https://zhiqiyu.github.io/post/hsi-geoint/</link>
-      <pubDate>Thu, 26 Oct 2017 17:07:58 -0400</pubDate>
-      
-      <guid>https://zhiqiyu.github.io/post/hsi-geoint/</guid>
-      <description>This article is for an assignment of GGS684 Topics in Geospatial Intelligence.
-I believe the Hyperspectral remote sensing will be the game changer for geospatial intelligence. Traditional remote sensing sensors usually provide only 10s of bands that cover visible spectrum range and near infrared range. The limited number of bands lead to the relatively broad range of spectrum that a band would cover. But hyperspectral sensors greatly shrinks the spectrum range that one band cover so that each band can ’focus’ more on its designated spectrum range.</description>
-    </item>
-    
-    <item>
-      <title>Emerging Future of GIS</title>
-      <link>https://zhiqiyu.github.io/post/future-gis/</link>
-      <pubDate>Thu, 26 Oct 2017 16:57:45 -0400</pubDate>
-      
-      <guid>https://zhiqiyu.github.io/post/future-gis/</guid>
-      <description>This article is for an assignment of GGS684 Topics in Geospatial Intelligence seminar. The video series mentioned in the article is the Geospatial Revolution Series made by PennState University. This video series is a good viewport of what GIS can do and how it is changing our lives.)
-The Geospatial Revolution series has introduced several cases on how GIS is being used in modern societies and how it is changing the way we live and the world around us.</description>
     </item>
     
     <item>

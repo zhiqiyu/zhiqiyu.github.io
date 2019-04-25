@@ -1,15 +1,42 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Python on Realm Z</title>
+    <title>Python on ZQ.Yu</title>
     <link>https://zhiqiyu.github.io/tags/python/</link>
-    <description>Recent content in Python on Realm Z</description>
+    <description>Recent content in Python on ZQ.Yu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 18 Oct 2017 17:07:47 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 24 Apr 2019 23:42:55 -0400</lastBuildDate>
     
 	<atom:link href="https://zhiqiyu.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>&#39;Undefined Symbol: PySlice_Unpack&#39; error in Pytorch</title>
+      <link>https://zhiqiyu.github.io/post/undef-symbol-pytorch/</link>
+      <pubDate>Wed, 24 Apr 2019 23:42:55 -0400</pubDate>
+      
+      <guid>https://zhiqiyu.github.io/post/undef-symbol-pytorch/</guid>
+      <description>Problem:
+ &amp;lsquo;Undefined Symbol: PySlice_Unpack&amp;rsquo;
+ Environment:
+Pytorch = 1.0.1 Python = 3.6.0  Solution:
+ Upgrade Python to 3.6.3. Seems like this is the only solution.
+Update by conda install python==3.6.3 command if using Miniconda in CLI.
+ </description>
+    </item>
+    
+    <item>
+      <title>Same-day Landsat-8 and Sentinel-2 Pair Generation on GEE</title>
+      <link>https://zhiqiyu.github.io/post/landsat-sentinel-match/</link>
+      <pubDate>Wed, 13 Feb 2019 15:20:20 -0500</pubDate>
+      
+      <guid>https://zhiqiyu.github.io/post/landsat-sentinel-match/</guid>
+      <description>This notebook presents a data preparation workflow that finds same-date and overlapped Landsat8 and Sentinel2 image patches and provide a way to download the processed images to the local machine.
+This is a part of the ongoing research project Landsat2Sentinel.
+The whole notebook is available on my Github repository.
+import ee ee.Initialize() from IPython import display import zipfile import urllib from ipywidgets import IntProgress  Function for downloading images from GEE def download_tif(image, scale, name, folder): url = ee.</description>
+    </item>
     
     <item>
       <title>Installation of GDAL and its Python Libraries on Mac</title>

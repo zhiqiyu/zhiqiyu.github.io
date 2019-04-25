@@ -1,18 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Deep Learning on Realm Z</title>
+    <title>Deep Learning on ZQ.Yu</title>
     <link>https://zhiqiyu.github.io/tags/deep-learning/</link>
-    <description>Recent content in Deep Learning on Realm Z</description>
+    <description>Recent content in Deep Learning on ZQ.Yu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 13 Feb 2019 15:20:20 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 24 Apr 2019 23:42:55 -0400</lastBuildDate>
     
 	<atom:link href="https://zhiqiyu.github.io/tags/deep-learning/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Landsat8 and Sentinel2 Image Pairs Generation</title>
+      <title>&#39;Undefined Symbol: PySlice_Unpack&#39; error in Pytorch</title>
+      <link>https://zhiqiyu.github.io/post/undef-symbol-pytorch/</link>
+      <pubDate>Wed, 24 Apr 2019 23:42:55 -0400</pubDate>
+      
+      <guid>https://zhiqiyu.github.io/post/undef-symbol-pytorch/</guid>
+      <description>Problem:
+ &amp;lsquo;Undefined Symbol: PySlice_Unpack&amp;rsquo;
+ Environment:
+Pytorch = 1.0.1 Python = 3.6.0  Solution:
+ Upgrade Python to 3.6.3. Seems like this is the only solution.
+Update by conda install python==3.6.3 command if using Miniconda in CLI.
+ </description>
+    </item>
+    
+    <item>
+      <title>Same-day Landsat-8 and Sentinel-2 Pair Generation on GEE</title>
       <link>https://zhiqiyu.github.io/post/landsat-sentinel-match/</link>
       <pubDate>Wed, 13 Feb 2019 15:20:20 -0500</pubDate>
       
@@ -24,7 +39,7 @@ import ee ee.Initialize() from IPython import display import zipfile import urll
     </item>
     
     <item>
-      <title>Fully-Connected Layers (FCN) in Convolutional Neural Network (CNN)</title>
+      <title>What are Fully-Connected Layers (FCN) in Convolutional Neural Networks (CNN)?</title>
       <link>https://zhiqiyu.github.io/post/conv-fc-conversion/</link>
       <pubDate>Thu, 08 Nov 2018 11:24:36 -0500</pubDate>
       
