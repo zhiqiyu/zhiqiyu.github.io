@@ -3,37 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://zhiqiyu.github.io/categories/</loc>
-    <lastmod>2019-09-01T18:39:05-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zhiqiyu.github.io/categories/leetcode/</loc>
-    <lastmod>2019-09-01T18:39:05-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zhiqiyu.github.io/tags/leetcode/</loc>
-    <lastmod>2019-09-01T18:39:05-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://zhiqiyu.github.io/post/leetcode94/</loc>
-    <lastmod>2019-09-01T18:39:05-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zhiqiyu.github.io/tags/</loc>
-    <lastmod>2019-09-01T18:39:05-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zhiqiyu.github.io/tags/tree/</loc>
-    <lastmod>2019-09-01T18:39:05-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zhiqiyu.github.io/</loc>
     <lastmod>2019-09-01T18:39:05-04:00</lastmod>
   </url>
   
@@ -43,48 +13,8 @@
   </url>
   
   <url>
-    <loc>https://zhiqiyu.github.io/tags/deep-learning/</loc>
-    <lastmod>2019-04-24T23:42:55-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zhiqiyu.github.io/tags/python/</loc>
-    <lastmod>2019-04-24T23:42:55-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zhiqiyu.github.io/tags/pytorch/</loc>
-    <lastmod>2019-04-24T23:42:55-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zhiqiyu.github.io/categories/technical/</loc>
-    <lastmod>2019-04-24T23:42:55-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zhiqiyu.github.io/tags/gee/</loc>
-    <lastmod>2019-02-13T15:20:20-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zhiqiyu.github.io/tags/remote-sensing/</loc>
-    <lastmod>2019-02-13T15:20:20-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zhiqiyu.github.io/categories/research/</loc>
-    <lastmod>2019-02-13T15:20:20-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://zhiqiyu.github.io/post/landsat-sentinel-match/</loc>
     <lastmod>2019-02-13T15:20:20-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zhiqiyu.github.io/tags/keras/</loc>
-    <lastmod>2018-11-08T11:24:36-05:00</lastmod>
   </url>
   
   <url>
@@ -93,22 +23,7 @@
   </url>
   
   <url>
-    <loc>https://zhiqiyu.github.io/categories/achievements/</loc>
-    <lastmod>2018-09-12T17:15:15-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zhiqiyu.github.io/tags/coursera/</loc>
-    <lastmod>2018-09-12T17:15:15-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://zhiqiyu.github.io/post/dl-special-cert/</loc>
-    <lastmod>2018-09-12T17:15:15-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zhiqiyu.github.io/tags/machine-learning/</loc>
     <lastmod>2018-09-12T17:15:15-04:00</lastmod>
   </url>
   
@@ -123,18 +38,8 @@
   </url>
   
   <url>
-    <loc>https://zhiqiyu.github.io/tags/data-science/</loc>
-    <lastmod>2018-04-16T20:17:49-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://zhiqiyu.github.io/post/ml-certificate/</loc>
     <lastmod>2018-04-16T20:17:49-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zhiqiyu.github.io/tags/cli/</loc>
-    <lastmod>2017-10-18T17:07:47-04:00</lastmod>
   </url>
   
   <url>
@@ -143,13 +48,128 @@
   </url>
   
   <url>
-    <loc>https://zhiqiyu.github.io/post/</loc>
-    <lastmod>2017-10-13T11:52:37-04:00</lastmod>
+    <loc>https://zhiqiyu.github.io/about/</loc>
+    <lastmod>2017-10-13T11:31:43-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zhiqiyu.github.io/about/</loc>
-    <lastmod>2017-10-13T11:31:43-04:00</lastmod>
+    <loc>https://zhiqiyu.github.io/categories/achievements/</loc>
+    <lastmod>2018-09-12T17:15:15-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhiqiyu.github.io/categories/</loc>
+    <lastmod>2018-09-12T17:15:15-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhiqiyu.github.io/tags/cli/</loc>
+    <lastmod>2017-10-18T17:07:47-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhiqiyu.github.io/tags/coursera/</loc>
+    <lastmod>2018-09-12T17:15:15-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhiqiyu.github.io/tags/data-science/</loc>
+    <lastmod>2018-04-16T20:17:49-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhiqiyu.github.io/tags/deep-learning/</loc>
+    <lastmod>2019-04-24T23:42:55-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhiqiyu.github.io/tags/gee/</loc>
+    <lastmod>2019-02-13T15:20:20-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhiqiyu.github.io/tags/keras/</loc>
+    <lastmod>2018-11-08T11:24:36-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhiqiyu.github.io/categories/leetcode/</loc>
+    <lastmod>2019-09-01T18:39:05-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhiqiyu.github.io/tags/leetcode/</loc>
+    <lastmod>2019-09-01T18:39:05-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhiqiyu.github.io/tags/machine-learning/</loc>
+    <lastmod>2018-09-12T17:15:15-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhiqiyu.github.io/post/</loc>
+    <lastmod>2019-09-01T18:39:05-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhiqiyu.github.io/tags/python/</loc>
+    <lastmod>2019-04-24T23:42:55-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhiqiyu.github.io/tags/pytorch/</loc>
+    <lastmod>2019-04-24T23:42:55-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhiqiyu.github.io/tags/remote-sensing/</loc>
+    <lastmod>2019-02-13T15:20:20-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhiqiyu.github.io/categories/research/</loc>
+    <lastmod>2019-02-13T15:20:20-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhiqiyu.github.io/tags/</loc>
+    <lastmod>2017-10-18T17:07:47-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhiqiyu.github.io/categories/technical/</loc>
+    <lastmod>2019-04-24T23:42:55-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhiqiyu.github.io/tags/tree/</loc>
+    <lastmod>2019-09-01T18:39:05-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhiqiyu.github.io/</loc>
+    <lastmod>2019-09-01T18:39:05-04:00</lastmod>
+    <priority>0</priority>
   </url>
   
 </urlset>
