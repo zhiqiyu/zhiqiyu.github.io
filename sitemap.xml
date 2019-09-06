@@ -3,53 +3,53 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://zhiqiyu.github.io/post/leetcode94/</loc>
+    <loc>https://zhiqiyu.github.io/about/</loc>
+    <lastmod>2019-09-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zhiqiyu.github.io/post/leetcode-94.-binary-tree-inorder-traversal/</loc>
     <lastmod>2019-09-01T18:39:05-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zhiqiyu.github.io/post/undef-symbol-pytorch/</loc>
+    <loc>https://zhiqiyu.github.io/post/undefined-symbol-pyslice_unpack-error-in-pytorch/</loc>
     <lastmod>2019-04-24T23:42:55-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zhiqiyu.github.io/post/landsat-sentinel-match/</loc>
+    <loc>https://zhiqiyu.github.io/post/same-day-landsat-8-and-sentinel-2-pair-generation-on-gee/</loc>
     <lastmod>2019-02-13T15:20:20-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zhiqiyu.github.io/post/conv-fc-conversion/</loc>
+    <loc>https://zhiqiyu.github.io/post/what-are-fully-connected-layers-fcn-in-convolutional-neural-networks-cnn/</loc>
     <lastmod>2018-11-08T11:24:36-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zhiqiyu.github.io/post/dl-special-cert/</loc>
+    <loc>https://zhiqiyu.github.io/post/deep-learning-specialization-certificate/</loc>
     <lastmod>2018-09-12T17:15:15-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zhiqiyu.github.io/post/dl-certificates/</loc>
+    <loc>https://zhiqiyu.github.io/post/deep-learning-course-certificates/</loc>
     <lastmod>2018-05-16T11:22:28-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zhiqiyu.github.io/post/ads-certificates/</loc>
+    <loc>https://zhiqiyu.github.io/post/applied-data-science-with-python-coursera-certificates/</loc>
     <lastmod>2018-04-16T21:11:38-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zhiqiyu.github.io/post/ml-certificate/</loc>
+    <loc>https://zhiqiyu.github.io/post/machine-learning-coursera-certificate/</loc>
     <lastmod>2018-04-16T20:17:49-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zhiqiyu.github.io/post/gdal-install/</loc>
+    <loc>https://zhiqiyu.github.io/post/installation-of-gdal-and-its-python-libraries-on-mac/</loc>
     <lastmod>2017-10-18T17:07:47-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zhiqiyu.github.io/about/</loc>
-    <lastmod>2017-10-13T11:31:43-04:00</lastmod>
   </url>
   
   <url>
@@ -101,13 +101,13 @@
   </url>
   
   <url>
-    <loc>https://zhiqiyu.github.io/categories/leetcode/</loc>
+    <loc>https://zhiqiyu.github.io/tags/leetcode/</loc>
     <lastmod>2019-09-01T18:39:05-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://zhiqiyu.github.io/tags/leetcode/</loc>
+    <loc>https://zhiqiyu.github.io/categories/leetcode/</loc>
     <lastmod>2019-09-01T18:39:05-04:00</lastmod>
     <priority>0</priority>
   </url>
@@ -168,7 +168,7 @@
   
   <url>
     <loc>https://zhiqiyu.github.io/</loc>
-    <lastmod>2019-09-01T18:39:05-04:00</lastmod>
+    <lastmod>2019-09-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

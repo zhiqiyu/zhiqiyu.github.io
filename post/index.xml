@@ -13,10 +13,10 @@
     
     <item>
       <title>Leetcode 94. Binary Tree Inorder Traversal</title>
-      <link>https://zhiqiyu.github.io/post/leetcode94/</link>
+      <link>https://zhiqiyu.github.io/post/leetcode-94.-binary-tree-inorder-traversal/</link>
       <pubDate>Sun, 01 Sep 2019 18:39:05 -0400</pubDate>
       
-      <guid>https://zhiqiyu.github.io/post/leetcode94/</guid>
+      <guid>https://zhiqiyu.github.io/post/leetcode-94.-binary-tree-inorder-traversal/</guid>
       <description>Given a binary tree, return the inorder traversal of its nodes&amp;rsquo; values.
 Example:
 Input: [1,null,2,3] 1 \ 2 / 3 Output: [1,3,2]  Solution 1: Recursion Recursion is the go-to method when dealing with tree data structures. In this problem, the tree needs to be printed out as inorder, which means to put root node in between left subtree and right subtree. Therefore, the recursion solution is done by recursively calling a funtion with a tree node as the argument.</description>
@@ -24,10 +24,10 @@ Input: [1,null,2,3] 1 \ 2 / 3 Output: [1,3,2]  Solution 1: Recursion Recursion i
     
     <item>
       <title>&#39;Undefined Symbol: PySlice_Unpack&#39; error in Pytorch</title>
-      <link>https://zhiqiyu.github.io/post/undef-symbol-pytorch/</link>
+      <link>https://zhiqiyu.github.io/post/undefined-symbol-pyslice_unpack-error-in-pytorch/</link>
       <pubDate>Wed, 24 Apr 2019 23:42:55 -0400</pubDate>
       
-      <guid>https://zhiqiyu.github.io/post/undef-symbol-pytorch/</guid>
+      <guid>https://zhiqiyu.github.io/post/undefined-symbol-pyslice_unpack-error-in-pytorch/</guid>
       <description>Problem:
  &amp;lsquo;Undefined Symbol: PySlice_Unpack&amp;rsquo;
  Environment:
@@ -39,10 +39,10 @@ Update by conda install python==3.6.3 command if using Miniconda in CLI.
     
     <item>
       <title>Same-day Landsat-8 and Sentinel-2 Pair Generation on GEE</title>
-      <link>https://zhiqiyu.github.io/post/landsat-sentinel-match/</link>
+      <link>https://zhiqiyu.github.io/post/same-day-landsat-8-and-sentinel-2-pair-generation-on-gee/</link>
       <pubDate>Wed, 13 Feb 2019 15:20:20 -0500</pubDate>
       
-      <guid>https://zhiqiyu.github.io/post/landsat-sentinel-match/</guid>
+      <guid>https://zhiqiyu.github.io/post/same-day-landsat-8-and-sentinel-2-pair-generation-on-gee/</guid>
       <description>This notebook presents a data preparation workflow that finds same-date and overlapped Landsat8 and Sentinel2 image patches and provide a way to download the processed images to the local machine.
 This is a part of the ongoing research project Landsat2Sentinel.
 The whole notebook is available on my Github repository.
@@ -51,19 +51,19 @@ import ee ee.Initialize() from IPython import display import zipfile import urll
     
     <item>
       <title>What are Fully-Connected Layers (FCN) in Convolutional Neural Networks (CNN)?</title>
-      <link>https://zhiqiyu.github.io/post/conv-fc-conversion/</link>
+      <link>https://zhiqiyu.github.io/post/what-are-fully-connected-layers-fcn-in-convolutional-neural-networks-cnn/</link>
       <pubDate>Thu, 08 Nov 2018 11:24:36 -0500</pubDate>
       
-      <guid>https://zhiqiyu.github.io/post/conv-fc-conversion/</guid>
+      <guid>https://zhiqiyu.github.io/post/what-are-fully-connected-layers-fcn-in-convolutional-neural-networks-cnn/</guid>
       <description>Recently, during a discussion with a colleague about his CNN model architecture on remote sensing image fusion task, he mentioned something that was interesting. Specifically, in his network, he used FCN implementations Keras.layers.Dense and torch.nn.Linear in his code, the input to the FCN is a 2D image with many channels with size (160, 160, channels). Traditionally, I think that to pass through a FCN layer, the neuron numbers of the first FCN layer in this case, should be 160 * 160 * channels, which basically means to flat the volume to a 1D array and feed in a traditional neural network.</description>
     </item>
     
     <item>
       <title>Deep Learning Specialization Certificate</title>
-      <link>https://zhiqiyu.github.io/post/dl-special-cert/</link>
+      <link>https://zhiqiyu.github.io/post/deep-learning-specialization-certificate/</link>
       <pubDate>Wed, 12 Sep 2018 17:15:15 -0400</pubDate>
       
-      <guid>https://zhiqiyu.github.io/post/dl-special-cert/</guid>
+      <guid>https://zhiqiyu.github.io/post/deep-learning-specialization-certificate/</guid>
       <description>&lt;p&gt;Recently I have completed the 5-month journey of the Deep Learning specialization on Coursera. I enjoyed this course a lot.
 Can&amp;rsquo;t wait to apply some of the idea in my research work. Cheers!&lt;/p&gt;
 
@@ -72,10 +72,10 @@ Can&amp;rsquo;t wait to apply some of the idea in my research work. Cheers!&lt;/
     
     <item>
       <title>Deep Learning Course Certificates</title>
-      <link>https://zhiqiyu.github.io/post/dl-certificates/</link>
+      <link>https://zhiqiyu.github.io/post/deep-learning-course-certificates/</link>
       <pubDate>Wed, 16 May 2018 11:22:28 -0400</pubDate>
       
-      <guid>https://zhiqiyu.github.io/post/dl-certificates/</guid>
+      <guid>https://zhiqiyu.github.io/post/deep-learning-course-certificates/</guid>
       <description>&lt;p&gt;Good job for me to earn several deep learning related certificates under the Deep Learning Specialization on Coursera. The specialization is offered by Dr. Andrew Ng from deeplearning.ai.&lt;/p&gt;
 
 &lt;p&gt;The course assignments can be found at &lt;a href=&#34;https://github.com/zhiqiyu/Deep-Learning-Coursera&#34;&gt;https://github.com/zhiqiyu/Deep-Learning-Coursera&lt;/a&gt;&lt;/p&gt;
@@ -87,10 +87,10 @@ Can&amp;rsquo;t wait to apply some of the idea in my research work. Cheers!&lt;/
     
     <item>
       <title>Applied Data Science with Python Coursera Certificates</title>
-      <link>https://zhiqiyu.github.io/post/ads-certificates/</link>
+      <link>https://zhiqiyu.github.io/post/applied-data-science-with-python-coursera-certificates/</link>
       <pubDate>Mon, 16 Apr 2018 21:11:38 -0400</pubDate>
       
-      <guid>https://zhiqiyu.github.io/post/ads-certificates/</guid>
+      <guid>https://zhiqiyu.github.io/post/applied-data-science-with-python-coursera-certificates/</guid>
       <description>&lt;p&gt;Good job for me to earn several certificates from the Applied Data Science with Python offered by Michigan University on Coursera!&lt;/p&gt;
 
 &lt;p&gt;The course material can be found at &lt;a href=&#34;https://github.com/zhiqiyu/Applied-Data-Science-with-Python&#34;&gt;https://github.com/zhiqiyu/Applied-Data-Science-with-Python&lt;/a&gt;&lt;/p&gt;
@@ -100,10 +100,10 @@ Can&amp;rsquo;t wait to apply some of the idea in my research work. Cheers!&lt;/
     
     <item>
       <title>Machine Learning Coursera Certificate</title>
-      <link>https://zhiqiyu.github.io/post/ml-certificate/</link>
+      <link>https://zhiqiyu.github.io/post/machine-learning-coursera-certificate/</link>
       <pubDate>Mon, 16 Apr 2018 20:17:49 -0400</pubDate>
       
-      <guid>https://zhiqiyu.github.io/post/ml-certificate/</guid>
+      <guid>https://zhiqiyu.github.io/post/machine-learning-coursera-certificate/</guid>
       <description>&lt;p&gt;Good job for me to earn the Machine Learning course certificate offered by Prof. Andrew Ng from Stanford University on Coursera!&lt;/p&gt;
 
 &lt;p&gt;The course assignments can be found at &lt;a href=&#34;https://github.com/zhiqiyu/Machine-Learning-Coursera&#34;&gt;https://github.com/zhiqiyu/Machine-Learning-Coursera&lt;/a&gt;
@@ -112,10 +112,10 @@ Can&amp;rsquo;t wait to apply some of the idea in my research work. Cheers!&lt;/
     
     <item>
       <title>Installation of GDAL and its Python Libraries on Mac</title>
-      <link>https://zhiqiyu.github.io/post/gdal-install/</link>
+      <link>https://zhiqiyu.github.io/post/installation-of-gdal-and-its-python-libraries-on-mac/</link>
       <pubDate>Wed, 18 Oct 2017 17:07:47 -0400</pubDate>
       
-      <guid>https://zhiqiyu.github.io/post/gdal-install/</guid>
+      <guid>https://zhiqiyu.github.io/post/installation-of-gdal-and-its-python-libraries-on-mac/</guid>
       <description>Recently I have been trying to install GDAL on my Mac and I cannot find a way to link the Python libraries to the Python program I am using so that I can import GDAL libraries by the import gdal statement in my python program.
 The GDAL is designed to run in Mac OS X Terminals, but the installation include python libraries which are not automatically linked to the program.</description>
     </item>

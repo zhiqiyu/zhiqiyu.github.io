@@ -13,10 +13,10 @@
     
     <item>
       <title>&#39;Undefined Symbol: PySlice_Unpack&#39; error in Pytorch</title>
-      <link>https://zhiqiyu.github.io/post/undef-symbol-pytorch/</link>
+      <link>https://zhiqiyu.github.io/post/undefined-symbol-pyslice_unpack-error-in-pytorch/</link>
       <pubDate>Wed, 24 Apr 2019 23:42:55 -0400</pubDate>
       
-      <guid>https://zhiqiyu.github.io/post/undef-symbol-pytorch/</guid>
+      <guid>https://zhiqiyu.github.io/post/undefined-symbol-pyslice_unpack-error-in-pytorch/</guid>
       <description>Problem:
  &amp;lsquo;Undefined Symbol: PySlice_Unpack&amp;rsquo;
  Environment:
@@ -28,10 +28,10 @@ Update by conda install python==3.6.3 command if using Miniconda in CLI.
     
     <item>
       <title>Same-day Landsat-8 and Sentinel-2 Pair Generation on GEE</title>
-      <link>https://zhiqiyu.github.io/post/landsat-sentinel-match/</link>
+      <link>https://zhiqiyu.github.io/post/same-day-landsat-8-and-sentinel-2-pair-generation-on-gee/</link>
       <pubDate>Wed, 13 Feb 2019 15:20:20 -0500</pubDate>
       
-      <guid>https://zhiqiyu.github.io/post/landsat-sentinel-match/</guid>
+      <guid>https://zhiqiyu.github.io/post/same-day-landsat-8-and-sentinel-2-pair-generation-on-gee/</guid>
       <description>This notebook presents a data preparation workflow that finds same-date and overlapped Landsat8 and Sentinel2 image patches and provide a way to download the processed images to the local machine.
 This is a part of the ongoing research project Landsat2Sentinel.
 The whole notebook is available on my Github repository.
@@ -40,10 +40,10 @@ import ee ee.Initialize() from IPython import display import zipfile import urll
     
     <item>
       <title>Installation of GDAL and its Python Libraries on Mac</title>
-      <link>https://zhiqiyu.github.io/post/gdal-install/</link>
+      <link>https://zhiqiyu.github.io/post/installation-of-gdal-and-its-python-libraries-on-mac/</link>
       <pubDate>Wed, 18 Oct 2017 17:07:47 -0400</pubDate>
       
-      <guid>https://zhiqiyu.github.io/post/gdal-install/</guid>
+      <guid>https://zhiqiyu.github.io/post/installation-of-gdal-and-its-python-libraries-on-mac/</guid>
       <description>Recently I have been trying to install GDAL on my Mac and I cannot find a way to link the Python libraries to the Python program I am using so that I can import GDAL libraries by the import gdal statement in my python program.
 The GDAL is designed to run in Mac OS X Terminals, but the installation include python libraries which are not automatically linked to the program.</description>
     </item>

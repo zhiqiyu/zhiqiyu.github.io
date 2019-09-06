@@ -13,10 +13,10 @@
     
     <item>
       <title>What are Fully-Connected Layers (FCN) in Convolutional Neural Networks (CNN)?</title>
-      <link>https://zhiqiyu.github.io/post/conv-fc-conversion/</link>
+      <link>https://zhiqiyu.github.io/post/what-are-fully-connected-layers-fcn-in-convolutional-neural-networks-cnn/</link>
       <pubDate>Thu, 08 Nov 2018 11:24:36 -0500</pubDate>
       
-      <guid>https://zhiqiyu.github.io/post/conv-fc-conversion/</guid>
+      <guid>https://zhiqiyu.github.io/post/what-are-fully-connected-layers-fcn-in-convolutional-neural-networks-cnn/</guid>
       <description>Recently, during a discussion with a colleague about his CNN model architecture on remote sensing image fusion task, he mentioned something that was interesting. Specifically, in his network, he used FCN implementations Keras.layers.Dense and torch.nn.Linear in his code, the input to the FCN is a 2D image with many channels with size (160, 160, channels). Traditionally, I think that to pass through a FCN layer, the neuron numbers of the first FCN layer in this case, should be 160 * 160 * channels, which basically means to flat the volume to a 1D array and feed in a traditional neural network.</description>
     </item>
     

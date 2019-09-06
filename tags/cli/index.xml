@@ -13,10 +13,10 @@
     
     <item>
       <title>Installation of GDAL and its Python Libraries on Mac</title>
-      <link>https://zhiqiyu.github.io/post/gdal-install/</link>
+      <link>https://zhiqiyu.github.io/post/installation-of-gdal-and-its-python-libraries-on-mac/</link>
       <pubDate>Wed, 18 Oct 2017 17:07:47 -0400</pubDate>
       
-      <guid>https://zhiqiyu.github.io/post/gdal-install/</guid>
+      <guid>https://zhiqiyu.github.io/post/installation-of-gdal-and-its-python-libraries-on-mac/</guid>
       <description>Recently I have been trying to install GDAL on my Mac and I cannot find a way to link the Python libraries to the Python program I am using so that I can import GDAL libraries by the import gdal statement in my python program.
 The GDAL is designed to run in Mac OS X Terminals, but the installation include python libraries which are not automatically linked to the program.</description>
     </item>
