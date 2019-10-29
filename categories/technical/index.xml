@@ -6,10 +6,19 @@
     <description>Recent content in Technical on ZQ.Yu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 25 Sep 2019 17:07:25 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 28 Oct 2019 22:53:17 -0400</lastBuildDate>
     
 	<atom:link href="https://zhiqiyu.github.io/categories/technical/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Solve LunarLander-v2 with Deep Q-learning</title>
+      <link>https://zhiqiyu.github.io/post/solve-lunarlander-v2-with-deep-q-learning/</link>
+      <pubDate>Mon, 28 Oct 2019 22:53:17 -0400</pubDate>
+      
+      <guid>https://zhiqiyu.github.io/post/solve-lunarlander-v2-with-deep-q-learning/</guid>
+      <description>the LL environ- ment is a simulated environment where the agent needs to successfully and safely land the aircraft in the designated area. The lunar lander has 4 discrete actions, do nothing, fire the left orientation engine, fire the main engine, and fire the right orientation engine. The states of the lander are represented as 8-dimensional vectors: (x, y, vx, vy, θ, vθ, lef tleg, rightleg), x and y are the x and y-coordinates of the lunar lander’s position on the screen.</description>
+    </item>
     
     <item>
       <title>Memory Ownership in C Explained</title>

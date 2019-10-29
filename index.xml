@@ -6,10 +6,19 @@
     <description>Recent content on ZQ.Yu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 25 Sep 2019 17:07:25 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 28 Oct 2019 22:53:17 -0400</lastBuildDate>
     
 	<atom:link href="https://zhiqiyu.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Solve LunarLander-v2 with Deep Q-learning</title>
+      <link>https://zhiqiyu.github.io/post/solve-lunarlander-v2-with-deep-q-learning/</link>
+      <pubDate>Mon, 28 Oct 2019 22:53:17 -0400</pubDate>
+      
+      <guid>https://zhiqiyu.github.io/post/solve-lunarlander-v2-with-deep-q-learning/</guid>
+      <description>the LL environ- ment is a simulated environment where the agent needs to successfully and safely land the aircraft in the designated area. The lunar lander has 4 discrete actions, do nothing, fire the left orientation engine, fire the main engine, and fire the right orientation engine. The states of the lander are represented as 8-dimensional vectors: (x, y, vx, vy, θ, vθ, lef tleg, rightleg), x and y are the x and y-coordinates of the lunar lander’s position on the screen.</description>
+    </item>
     
     <item>
       <title>Memory Ownership in C Explained</title>
@@ -86,9 +95,7 @@ import ee ee.Initialize() from IPython import display import zipfile import urll
       
       <guid>https://zhiqiyu.github.io/post/deep-learning-specialization-certificate/</guid>
       <description>&lt;p&gt;Recently I have completed the 5-month journey of the Deep Learning specialization on Coursera. I enjoyed this course a lot.
-Can&amp;rsquo;t wait to apply some of the idea in my research work. Cheers!&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+Can&amp;rsquo;t wait to apply some of the idea in my research work. Cheers!&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -101,9 +108,7 @@ Can&amp;rsquo;t wait to apply some of the idea in my research work. Cheers!&lt;/
 
 &lt;p&gt;The course assignments can be found at &lt;a href=&#34;https://github.com/zhiqiyu/Deep-Learning-Coursera&#34;&gt;https://github.com/zhiqiyu/Deep-Learning-Coursera&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Following is the breakdown course certificates I earned.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Following is the breakdown course certificates I earned.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -114,9 +119,7 @@ Can&amp;rsquo;t wait to apply some of the idea in my research work. Cheers!&lt;/
       <guid>https://zhiqiyu.github.io/post/applied-data-science-with-python-coursera-certificates/</guid>
       <description>&lt;p&gt;Good job for me to earn several certificates from the Applied Data Science with Python offered by Michigan University on Coursera!&lt;/p&gt;
 
-&lt;p&gt;The course material can be found at &lt;a href=&#34;https://github.com/zhiqiyu/Applied-Data-Science-with-Python&#34;&gt;https://github.com/zhiqiyu/Applied-Data-Science-with-Python&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;The course material can be found at &lt;a href=&#34;https://github.com/zhiqiyu/Applied-Data-Science-with-Python&#34;&gt;https://github.com/zhiqiyu/Applied-Data-Science-with-Python&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -127,8 +130,7 @@ Can&amp;rsquo;t wait to apply some of the idea in my research work. Cheers!&lt;/
       <guid>https://zhiqiyu.github.io/post/machine-learning-coursera-certificate/</guid>
       <description>&lt;p&gt;Good job for me to earn the Machine Learning course certificate offered by Prof. Andrew Ng from Stanford University on Coursera!&lt;/p&gt;
 
-&lt;p&gt;The course assignments can be found at &lt;a href=&#34;https://github.com/zhiqiyu/Machine-Learning-Coursera&#34;&gt;https://github.com/zhiqiyu/Machine-Learning-Coursera&lt;/a&gt;
-&lt;/p&gt;</description>
+&lt;p&gt;The course assignments can be found at &lt;a href=&#34;https://github.com/zhiqiyu/Machine-Learning-Coursera&#34;&gt;https://github.com/zhiqiyu/Machine-Learning-Coursera&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
