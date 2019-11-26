@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker on ZQ.Yu</title>
+    <link>https://zhiqiyu.github.io/tags/docker/</link>
+    <description>Recent content in Docker on ZQ.Yu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 26 Nov 2019 10:41:29 -0500</lastBuildDate>
+    
+	<atom:link href="https://zhiqiyu.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Install and Troubleshoot Docker Toolbox on Windows 10 Home</title>
+      <link>https://zhiqiyu.github.io/post/install-and-troubleshoot-docker-toolbox-on-windows-10-home/</link>
+      <pubDate>Tue, 26 Nov 2019 10:41:29 -0500</pubDate>
+      
+      <guid>https://zhiqiyu.github.io/post/install-and-troubleshoot-docker-toolbox-on-windows-10-home/</guid>
+      <description>As the Docker for Windows only works on Windows 10 Pro and Enterprise editions, I cannot install it on my laptop which comes with a pre-installed Windows 10 Home. Fortunately, Docker has another product called Docker toolbox. It is specifically released for legacy desktop operating system versions. (Somehow windows 10 home is considered as legacy&amp;hellip;)
+However, there are some caveats during the installation and configuration of the Docker toolbox on my laptop, so here are the problems and solutions I found useful:</description>
+    </item>
+    
+  </channel>
+</rss>

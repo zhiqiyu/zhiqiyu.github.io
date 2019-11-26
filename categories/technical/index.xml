@@ -6,10 +6,20 @@
     <description>Recent content in Technical on ZQ.Yu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 28 Oct 2019 22:53:17 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 26 Nov 2019 10:41:29 -0500</lastBuildDate>
     
 	<atom:link href="https://zhiqiyu.github.io/categories/technical/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Install and Troubleshoot Docker Toolbox on Windows 10 Home</title>
+      <link>https://zhiqiyu.github.io/post/install-and-troubleshoot-docker-toolbox-on-windows-10-home/</link>
+      <pubDate>Tue, 26 Nov 2019 10:41:29 -0500</pubDate>
+      
+      <guid>https://zhiqiyu.github.io/post/install-and-troubleshoot-docker-toolbox-on-windows-10-home/</guid>
+      <description>As the Docker for Windows only works on Windows 10 Pro and Enterprise editions, I cannot install it on my laptop which comes with a pre-installed Windows 10 Home. Fortunately, Docker has another product called Docker toolbox. It is specifically released for legacy desktop operating system versions. (Somehow windows 10 home is considered as legacy&amp;hellip;)
+However, there are some caveats during the installation and configuration of the Docker toolbox on my laptop, so here are the problems and solutions I found useful:</description>
+    </item>
     
     <item>
       <title>Solve LunarLander-v2 with Deep Q-learning</title>

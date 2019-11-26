@@ -6,26 +6,17 @@
     <description>Recent content in Tags on ZQ.Yu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 28 Oct 2019 22:53:17 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 01 Sep 2019 18:39:05 -0400</lastBuildDate>
     
 	<atom:link href="https://zhiqiyu.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>OMSCS</title>
-      <link>https://zhiqiyu.github.io/tags/omscs/</link>
-      <pubDate>Mon, 28 Oct 2019 22:53:17 -0400</pubDate>
+      <title>Algorithms</title>
+      <link>https://zhiqiyu.github.io/tags/algorithms/</link>
+      <pubDate>Sun, 01 Sep 2019 18:39:05 -0400</pubDate>
       
-      <guid>https://zhiqiyu.github.io/tags/omscs/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Reinforcement Learning</title>
-      <link>https://zhiqiyu.github.io/tags/reinforcement-learning/</link>
-      <pubDate>Mon, 28 Oct 2019 22:53:17 -0400</pubDate>
-      
-      <guid>https://zhiqiyu.github.io/tags/reinforcement-learning/</guid>
+      <guid>https://zhiqiyu.github.io/tags/algorithms/</guid>
       <description></description>
     </item>
     
@@ -39,20 +30,74 @@
     </item>
     
     <item>
-      <title>Algorithms</title>
-      <link>https://zhiqiyu.github.io/tags/algorithms/</link>
-      <pubDate>Sun, 01 Sep 2019 18:39:05 -0400</pubDate>
+      <title>Cli</title>
+      <link>https://zhiqiyu.github.io/tags/cli/</link>
+      <pubDate>Wed, 18 Oct 2017 17:07:47 -0400</pubDate>
       
-      <guid>https://zhiqiyu.github.io/tags/algorithms/</guid>
+      <guid>https://zhiqiyu.github.io/tags/cli/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>DS-Tree</title>
+      <title>Coursera</title>
+      <link>https://zhiqiyu.github.io/tags/coursera/</link>
+      <pubDate>Wed, 12 Sep 2018 17:15:15 -0400</pubDate>
+      
+      <guid>https://zhiqiyu.github.io/tags/coursera/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Data Science</title>
+      <link>https://zhiqiyu.github.io/tags/data-science/</link>
+      <pubDate>Mon, 16 Apr 2018 20:17:49 -0400</pubDate>
+      
+      <guid>https://zhiqiyu.github.io/tags/data-science/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Deep Learning</title>
+      <link>https://zhiqiyu.github.io/tags/deep-learning/</link>
+      <pubDate>Wed, 24 Apr 2019 23:42:55 -0400</pubDate>
+      
+      <guid>https://zhiqiyu.github.io/tags/deep-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>https://zhiqiyu.github.io/tags/docker/</link>
+      <pubDate>Tue, 26 Nov 2019 10:41:29 -0500</pubDate>
+      
+      <guid>https://zhiqiyu.github.io/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ds Tree</title>
       <link>https://zhiqiyu.github.io/tags/ds-tree/</link>
       <pubDate>Sun, 01 Sep 2019 18:39:05 -0400</pubDate>
       
       <guid>https://zhiqiyu.github.io/tags/ds-tree/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gee</title>
+      <link>https://zhiqiyu.github.io/tags/gee/</link>
+      <pubDate>Wed, 13 Feb 2019 15:20:20 -0500</pubDate>
+      
+      <guid>https://zhiqiyu.github.io/tags/gee/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Keras</title>
+      <link>https://zhiqiyu.github.io/tags/keras/</link>
+      <pubDate>Thu, 08 Nov 2018 11:24:36 -0500</pubDate>
+      
+      <guid>https://zhiqiyu.github.io/tags/keras/</guid>
       <description></description>
     </item>
     
@@ -66,11 +111,20 @@
     </item>
     
     <item>
-      <title>Deep Learning</title>
-      <link>https://zhiqiyu.github.io/tags/deep-learning/</link>
-      <pubDate>Wed, 24 Apr 2019 23:42:55 -0400</pubDate>
+      <title>Machine Learning</title>
+      <link>https://zhiqiyu.github.io/tags/machine-learning/</link>
+      <pubDate>Wed, 12 Sep 2018 17:15:15 -0400</pubDate>
       
-      <guid>https://zhiqiyu.github.io/tags/deep-learning/</guid>
+      <guid>https://zhiqiyu.github.io/tags/machine-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Omscs</title>
+      <link>https://zhiqiyu.github.io/tags/omscs/</link>
+      <pubDate>Mon, 28 Oct 2019 22:53:17 -0400</pubDate>
+      
+      <guid>https://zhiqiyu.github.io/tags/omscs/</guid>
       <description></description>
     </item>
     
@@ -93,11 +147,11 @@
     </item>
     
     <item>
-      <title>GEE</title>
-      <link>https://zhiqiyu.github.io/tags/gee/</link>
-      <pubDate>Wed, 13 Feb 2019 15:20:20 -0500</pubDate>
+      <title>Reinforcement Learning</title>
+      <link>https://zhiqiyu.github.io/tags/reinforcement-learning/</link>
+      <pubDate>Mon, 28 Oct 2019 22:53:17 -0400</pubDate>
       
-      <guid>https://zhiqiyu.github.io/tags/gee/</guid>
+      <guid>https://zhiqiyu.github.io/tags/reinforcement-learning/</guid>
       <description></description>
     </item>
     
@@ -107,51 +161,6 @@
       <pubDate>Wed, 13 Feb 2019 15:20:20 -0500</pubDate>
       
       <guid>https://zhiqiyu.github.io/tags/remote-sensing/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Keras</title>
-      <link>https://zhiqiyu.github.io/tags/keras/</link>
-      <pubDate>Thu, 08 Nov 2018 11:24:36 -0500</pubDate>
-      
-      <guid>https://zhiqiyu.github.io/tags/keras/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Coursera</title>
-      <link>https://zhiqiyu.github.io/tags/coursera/</link>
-      <pubDate>Wed, 12 Sep 2018 17:15:15 -0400</pubDate>
-      
-      <guid>https://zhiqiyu.github.io/tags/coursera/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Machine Learning</title>
-      <link>https://zhiqiyu.github.io/tags/machine-learning/</link>
-      <pubDate>Wed, 12 Sep 2018 17:15:15 -0400</pubDate>
-      
-      <guid>https://zhiqiyu.github.io/tags/machine-learning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Data Science</title>
-      <link>https://zhiqiyu.github.io/tags/data-science/</link>
-      <pubDate>Mon, 16 Apr 2018 20:17:49 -0400</pubDate>
-      
-      <guid>https://zhiqiyu.github.io/tags/data-science/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>CLI</title>
-      <link>https://zhiqiyu.github.io/tags/cli/</link>
-      <pubDate>Wed, 18 Oct 2017 17:07:47 -0400</pubDate>
-      
-      <guid>https://zhiqiyu.github.io/tags/cli/</guid>
       <description></description>
     </item>
     
