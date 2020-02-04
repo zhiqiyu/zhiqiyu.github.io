@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://zhiqiyu.github.io/post/combine-modis-terra-and-aqua-products-on-gee/</loc>
+    <lastmod>2020-02-04T15:21:38-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://zhiqiyu.github.io/post/install-and-troubleshoot-docker-toolbox-on-windows-10-home/</loc>
     <lastmod>2019-11-26T10:41:29-05:00</lastmod>
   </url>
@@ -129,7 +134,7 @@
   
   <url>
     <loc>https://zhiqiyu.github.io/tags/gee/</loc>
-    <lastmod>2019-02-13T15:20:20-05:00</lastmod>
+    <lastmod>2020-02-04T15:21:38-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -140,13 +145,13 @@
   </url>
   
   <url>
-    <loc>https://zhiqiyu.github.io/tags/leetcode/</loc>
+    <loc>https://zhiqiyu.github.io/categories/leetcode/</loc>
     <lastmod>2019-09-01T18:39:05-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://zhiqiyu.github.io/categories/leetcode/</loc>
+    <loc>https://zhiqiyu.github.io/tags/leetcode/</loc>
     <lastmod>2019-09-01T18:39:05-04:00</lastmod>
     <priority>0</priority>
   </url>
@@ -165,7 +170,7 @@
   
   <url>
     <loc>https://zhiqiyu.github.io/post/</loc>
-    <lastmod>2019-11-26T10:41:29-05:00</lastmod>
+    <lastmod>2020-02-04T15:21:38-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -189,7 +194,7 @@
   
   <url>
     <loc>https://zhiqiyu.github.io/tags/remote-sensing/</loc>
-    <lastmod>2019-02-13T15:20:20-05:00</lastmod>
+    <lastmod>2020-02-04T15:21:38-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -207,13 +212,13 @@
   
   <url>
     <loc>https://zhiqiyu.github.io/categories/technical/</loc>
-    <lastmod>2019-11-26T10:41:29-05:00</lastmod>
+    <lastmod>2020-02-04T15:21:38-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://zhiqiyu.github.io/</loc>
-    <lastmod>2019-11-26T10:41:29-05:00</lastmod>
+    <lastmod>2020-02-04T15:21:38-05:00</lastmod>
     <priority>0</priority>
   </url>
   

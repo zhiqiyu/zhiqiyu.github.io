@@ -6,10 +6,19 @@
     <description>Recent content in Remote Sensing on ZQ.Yu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 13 Feb 2019 15:20:20 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 04 Feb 2020 15:21:38 -0500</lastBuildDate>
     
 	<atom:link href="https://zhiqiyu.github.io/tags/remote-sensing/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Combine MODIS Terra and Aqua Products on GEE</title>
+      <link>https://zhiqiyu.github.io/post/combine-modis-terra-and-aqua-products-on-gee/</link>
+      <pubDate>Tue, 04 Feb 2020 15:21:38 -0500</pubDate>
+      
+      <guid>https://zhiqiyu.github.io/post/combine-modis-terra-and-aqua-products-on-gee/</guid>
+      <description>The Moderate Resolution Imaging Spectroradiometer (MODIS) has been providing high temporal resolution images since the first launch of Terra satellite in 1999 followed by the Aqua satellite in 2002. The Terra satellite passes from north to south in the morning at around 10:30 a.m. local time. The Aqua satellite passes from south to north in the afternoon at around 1:30 p.m. Since MODIS has a revisiting time of one or two days, for any given day, there are most likely be images from both Terra and Aqua satellites.</description>
+    </item>
     
     <item>
       <title>Same-day Landsat-8 and Sentinel-2 Pair Generation on GEE</title>

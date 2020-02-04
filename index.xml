@@ -6,10 +6,19 @@
     <description>Recent content on ZQ.Yu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 26 Nov 2019 10:41:29 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 04 Feb 2020 15:21:38 -0500</lastBuildDate>
     
 	<atom:link href="https://zhiqiyu.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Combine MODIS Terra and Aqua Products on GEE</title>
+      <link>https://zhiqiyu.github.io/post/combine-modis-terra-and-aqua-products-on-gee/</link>
+      <pubDate>Tue, 04 Feb 2020 15:21:38 -0500</pubDate>
+      
+      <guid>https://zhiqiyu.github.io/post/combine-modis-terra-and-aqua-products-on-gee/</guid>
+      <description>The Moderate Resolution Imaging Spectroradiometer (MODIS) has been providing high temporal resolution images since the first launch of Terra satellite in 1999 followed by the Aqua satellite in 2002. The Terra satellite passes from north to south in the morning at around 10:30 a.m. local time. The Aqua satellite passes from south to north in the afternoon at around 1:30 p.m. Since MODIS has a revisiting time of one or two days, for any given day, there are most likely be images from both Terra and Aqua satellites.</description>
+    </item>
     
     <item>
       <title>Install and Troubleshoot Docker Toolbox on Windows 10 Home</title>
@@ -46,9 +55,9 @@ For example, you have a main function, in which a pointer gfcontext_t *ctx to a 
       <pubDate>Fri, 06 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://zhiqiyu.github.io/about/</guid>
-      <description>Zhiqi Yu Summary Solid background in GIS and remote sensing and computer science. Strong programming background with various popular programming languages. Strong theoretical background in machine learning/data science and practical experience in remote sensing image processing, deep learning with remote sensing images and image classification.
-Skill Sets Languages &amp;nbsp;&amp;nbsp; Python, Java, JavaScript, C/C++, Octave (MATLAB), C#, R
-Software &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; ArcGIS, Google Earth Engine, MS Visual Studio Code, ERDAS IMAGINE</description>
+      <description>Zhiqi Yu Summary Highly motivated programmer with a strong background in computer science, GIS and remote sensing. Solid theoretical knowledge in algorithms, statistics, machine learning, and deep learning. Practical experiences in text processing, data visualization, remote sensing image classification, and object detection.
+Skillsets  Programming Languages  Python, C/C++, SQL, JavaScript, Bash, Java, Octave (MATLAB), C#, R
+  Data Science Tools  Pytorch, TensorFlow, Keras, Pandas, Jupyter Lab, Matplotlib, Scikit-learn SQLite, PostgreSQL  Web Technologies  Leaflet, D3.</description>
     </item>
     
     <item>
