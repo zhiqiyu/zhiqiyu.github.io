@@ -93,8 +93,30 @@ if (!doNotTrack) {
 			
 <main class="main" role="main">
 	<article class="post">
-		
-		</header><div class="content post__content clearfix">
+		<header class="post__header">
+			<h1 class="post__title">Solve LunarLander-v2 with Deep Q-learning</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2019-10-28T22:53:17-04:00">October 28, 2019</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="https://zhiqiyu.github.io/categories/technical/" rel="category">Technical</a>
+	</span>
+</div></div>
+		</header>
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#trained-agent-performance">Trained Agent Performance</a></li>
+    <li><a href="#experience-replay">Experience Replay</a></li>
+    <li><a href="#function-approximation">Function Approximation</a></li>
+    <li><a href="#the-lunar-lander-agent">The Lunar Lander Agent</a></li>
+    <li><a href="#training">Training</a></li>
+    <li><a href="#start-training">Start Training:</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+	</div>
+</div><div class="content post__content clearfix">
 			<p>the LL environ- ment is a simulated environment where the agent needs to successfully and safely land the aircraft in the designated area. The lunar lander has 4 discrete actions, do nothing, fire the left orientation engine, fire the main engine, and fire the right orientation engine. The states of the lander are represented as 8-dimensional vectors:
 <code>(x, y, vx, vy, θ, vθ, lef tleg, rightleg)</code>,
 x and y are the x and y-coordinates of the lunar lander’s position on the screen. vx and vy are the lunar lander’s velocity components on the x and y axes.θ is the angle of the lunar lander. vθ is the angular velocity of the lander. Finally, leftleg and rightleg are binary values to indicate whether the left leg or right leg of the lunar lander is touching the ground. The lunar lander starts as (0,0) and the target landing pad is at (0, 1). The total reward for moving from starting point to landing pad ranges from 100 - 140 points varying on lander placement on the pad. If lander moves away from landing pad it is penalized the amount of reward that would be gained by moving towards the pad. An episode finishes if the lander crashes or comes to rest, receiving additional -100 or +100 points respectively. Each leg ground contact is rewarded with +10 points. Each firing main engine action has a -0.3 point reward, but fuels are infinite. Lastly, the LL problem is considered solved when an average of 200 points is achieved over 100 consecutive runs.</p>
@@ -440,9 +462,9 @@ reward_records <span style="color:#f92672">=</span> train(agent, optimizer, epis
 Training complete!
 </code></pre>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">plot_training(episode_rewards, solve_thres<span style="color:#f92672">=</span><span style="color:#ae81ff">200</span>)
-</code></pre></div><!-- raw HTML omitted -->
+</code></pre></div><img src="https://zhiqiyu.github.io/img/lunar-lander/ll_training.png" width="500"/>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">plot_test(agent, solve_thres<span style="color:#f92672">=</span><span style="color:#ae81ff">200</span>)
-</code></pre></div><!-- raw HTML omitted -->
+</code></pre></div><img src="https://zhiqiyu.github.io/img/lunar-lander/ll_test.png" width="500"/>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">agent<span style="color:#f92672">.</span>play(render<span style="color:#f92672">=</span>False)
 </code></pre></div><pre><code>Total reward: 221
 </code></pre>

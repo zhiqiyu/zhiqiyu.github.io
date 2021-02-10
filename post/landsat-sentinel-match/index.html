@@ -102,8 +102,31 @@ if (!doNotTrack) {
 			
 <main class="main" role="main">
 	<article class="post">
-		
-		</header><div class="content post__content clearfix">
+		<header class="post__header">
+			<h1 class="post__title">Same-day Landsat-8 and Sentinel-2 Pair Generation on GEE</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2019-02-13T15:20:20-05:00">February 13, 2019</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="https://zhiqiyu.github.io/categories/technical/" rel="category">Technical</a>, <a class="meta__link" href="https://zhiqiyu.github.io/categories/research/" rel="category">Research</a>
+	</span>
+</div></div>
+		</header>
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#function-for-downloading-images-from-gee">Function for downloading images from GEE</a></li>
+    <li><a href="#functions-used-in-the-process">Functions used in the process</a></li>
+    <li><a href="#main-process">Main Process</a>
+      <ul>
+        <li><a href="#get-the-matched-image-pairs-of-landsat8-and-sentinel2">Get the matched image pairs of Landsat8 and Sentinel2</a></li>
+        <li><a href="#download-images">Download Images</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+	</div>
+</div><div class="content post__content clearfix">
 			<p>This notebook presents a data preparation workflow that finds same-date and overlapped Landsat8 and Sentinel2 image patches and provide a way to download the processed images to the local machine.</p>
 <p>This is a part of the ongoing research project <strong>Landsat2Sentinel</strong>.</p>
 <p>The whole notebook is available on my Github repository.</p>

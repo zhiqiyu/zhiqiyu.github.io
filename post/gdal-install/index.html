@@ -96,8 +96,29 @@ if (!doNotTrack) {
 			
 <main class="main" role="main">
 	<article class="post">
-		
-		</header><div class="content post__content clearfix">
+		<header class="post__header">
+			<h1 class="post__title">Installation of GDAL and its Python Libraries on Mac</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2017-10-18T17:07:47-04:00">October 18, 2017</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="https://zhiqiyu.github.io/categories/technical/" rel="category">Technical</a>
+	</span>
+</div></div>
+		</header>
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#edit-pythonpath-temporarily">Edit <code>PYTHONPATH</code> Temporarily</a></li>
+        <li><a href="#edit-pythonpath-permanently">Edit <code>PYTHONPATH</code> Permanently</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+	</div>
+</div><div class="content post__content clearfix">
 			<p>Recently I have been trying to install GDAL on my Mac and I cannot find a way to link the Python libraries to the Python program I am using so that I can import GDAL libraries by the <code>import gdal</code> statement in my python program.</p>
 <p>The GDAL is designed to run in Mac OS X Terminals, but the installation include python libraries which are not automatically linked to the program. Therefore, the only thing we need to do to make it work in python is to link those libraries properly. Python search libraries in predefined search path list. The list can be printed by executing the following code snippet in Python.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> sys

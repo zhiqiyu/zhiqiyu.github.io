@@ -96,7 +96,13 @@ if (!doNotTrack) {
 			
 <main class="main" role="main">
 	<article class="post">
-		
+		<header class="post__header">
+			<h1 class="post__title">Memory Ownership in C Explained</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2019-09-25T17:07:25-04:00">September 25, 2019</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="https://zhiqiyu.github.io/categories/technical/" rel="category">Technical</a>
+	</span>
+</div></div>
 		</header><div class="content post__content clearfix">
 			<p>The memory ownership problem or pointer ownership problem is a problem generally seen in C and C++ programs. The problem is generally violating a simple assumption that there should be only one pointer to a given piece of memory, so that when the memory is freed, no other pointers will point to an address that has already been freed.</p>
 <p>For example, you have a main function, in which a pointer <code>gfcontext_t *ctx</code> to a <code>struct gfcontext_t</code> is created. Let&rsquo;s say the <code>ctx</code> is located at address <code>y</code>, and its value is <code>x</code>, which is the address of the actual created data structure. If the address now need to be passed to a second function for additional process, if we directly pass <code>ctx</code> to the function, in the scope of this function, a local pointer variable at address <code>z</code> will be created, and it holds exactly same value as the passed-in <code>ctx</code>, i.e <code>y</code>, because function arguments are passed-by-value in C. What this implies is that there will be two pointers to the <code>y</code>, one in the main function, one in the second function. If the second function decide to free the memory of the data because it finished processing, the other pointer in the main function will not be affected, and it still holds the address to the data, which is just freed by the second function. The second function have no way to modify the <code>ctx</code> pointer in the main function because the function does not have the address of <code>ctx</code>.</p>
