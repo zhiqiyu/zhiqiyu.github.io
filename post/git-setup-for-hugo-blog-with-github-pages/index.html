@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Git Setup for Hugo Blog With Github Pages - ZQ.Yu</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="A tutorial on how to setup Git when hosting Hugo blogs using GitHub Pages">
+		<meta property="og:title" content="Git Setup for Hugo Blog With Github Pages" />
+<meta property="og:description" content="A tutorial on how to setup Git when hosting Hugo blogs using GitHub Pages" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://zhiqiyu.github.io/post/git-setup-for-hugo-blog-with-github-pages/" />
+<meta property="article:published_time" content="2021-02-10T16:02:03-05:00" />
+<meta property="article:modified_time" content="2021-02-10T16:02:03-05:00" />
+
+		<meta itemprop="name" content="Git Setup for Hugo Blog With Github Pages">
+<meta itemprop="description" content="A tutorial on how to setup Git when hosting Hugo blogs using GitHub Pages">
+<meta itemprop="datePublished" content="2021-02-10T16:02:03-05:00" />
+<meta itemprop="dateModified" content="2021-02-10T16:02:03-05:00" />
+<meta itemprop="wordCount" content="618">
+
+
+
+<meta itemprop="keywords" content="GitHub,Git," />
+
+		<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Git Setup for Hugo Blog With Github Pages"/>
+<meta name="twitter:description" content="A tutorial on how to setup Git when hosting Hugo blogs using GitHub Pages"/>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="https://zhiqiyu.github.io/css/style.css">
+	
+
+	<link rel="shortcut icon" href="https://zhiqiyu.github.io/favicon.ico">
+		
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-128672710-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="https://zhiqiyu.github.io/" title="ZQ.Yu" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">ZQ.Yu</div>
+					<div class="logo__tagline">A place to share my work, study, achievements and life</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="https://zhiqiyu.github.io/">
+				
+				<span class="menu__text">Blog</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="https://zhiqiyu.github.io/about/">
+				
+				<span class="menu__text">About</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Git Setup for Hugo Blog With Github Pages</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-02-10T16:02:03-05:00">February 10, 2021</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="https://zhiqiyu.github.io/categories/technical/" rel="category">Technical</a>
+	</span>
+</div></div>
+		</header>
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#initialize-the-blog-and-the-github-repo">Initialize the Blog and the GitHub repo</a></li>
+    <li><a href="#add-hugo-theme">Add Hugo Theme</a></li>
+    <li><a href="#set-up-github-pages">Set up GitHub Pages</a></li>
+    <li><a href="#write-blog-and-publish">Write Blog and Publish</a></li>
+  </ul>
+</nav>
+	</div>
+</div><div class="content post__content clearfix">
+			<p>This is a short tutorial on how to use Git to manage Hugo blog contents, themes, and generated static files that will be hosted on GitHub Pages.</p>
+<h2 id="initialize-the-blog-and-the-github-repo">Initialize the Blog and the GitHub repo</h2>
+<p>First, you need to initialize a Hugo blog, and enter the site folder:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo new site &lt;sitename&gt;
+cd &lt;sitename&gt;
+</code></pre></div><p>This creates an empty site with name <code>sitename</code>, the site has a structure like this:</p>
+<p><img src="https://zhiqiyu.github.io/img/git-hugo-github/file-structure.png" alt="file-structure"></p>
+<p>Then you initialize a local Git repository in this folder with:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git init
+</code></pre></div><p>You also need to create an upstream GitHub repo for this local Git repository, and set it as the remote of the local repository, and push everything to the GitHub repo as the first commit.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote add origin &lt;url_to_your_GitHub_repo&gt;
+git push --set-upstream origin master
+</code></pre></div><h2 id="add-hugo-theme">Add Hugo Theme</h2>
+<p>Since the default site does not have any theme, you may want to add a theme from hundreds of themes provided by users of Hugo, which can be browsed <a href="https://themes.gohugo.io/">here</a>.</p>
+<p>Once you chose a theme, in my case, the <code>Mainroad</code> theme, you can add it as a <strong>submodule</strong> to your blog repo:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git submodule add &lt;url_to_the_theme&gt; themes/&lt;name_of_the_theme&gt;
+</code></pre></div><p>Adding it as a submodule ensures that the theme is treated as a different project such that Git manages them separately, i.e. changes to the theme won&rsquo;t affect the working tree of the blog source code, even though the theme folder is within the blog folder.</p>
+<p><strong>Optional</strong>:</p>
+<p>If you want to customize the theme, you can first fork the original theme repo to your own GitHub profile, and add the forked theme as a submodule instead of the original repo. Then you can setup two remotes:</p>
+<ol>
+<li><code>upstream</code> for the original theme repo</li>
+<li><code>origin</code> for your forked theme repo</li>
+</ol>
+<p>You can then make any changes to the theme locally and push to your theme repo with <code>git push origin master</code>. When there are updates from the original repo <code>upstream</code>, you can pull them with <code>git pull upstream master</code>.</p>
+<h2 id="set-up-github-pages">Set up GitHub Pages</h2>
+<p>Hosting Hugo blogs with GitHub Pages is super easy.</p>
+<p>First, you need to create a special repo on GitHub named <code>username.github.io</code> where <code>username</code> is your GitHub username.</p>
+<p>Second, add the <code>username.github.io</code> repo as a submodule to your blog folder:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git submodule add &lt;url_to_username.github.io&gt; public
+</code></pre></div><p><strong>Note</strong> the destination has to be the <code>public</code> folder, which you may need to delete first before executing the above command.</p>
+<p>The <code>public</code> folder is created by default when you first initialize a blog with Hugo, it stores the generated static files of the site, which can be deployed to any HTTP server, in this case, the GitHub Pages. Using the <code>public</code> folder as a submodule conveniently connects the output of your Hugo blog to the place where is should be deployed. Otherwise, you need to copy paste everything from <code>public</code> folder to your local <code>username.github.io</code> folder everytime when you update your blog, which is boring and inconvenient.</p>
+<p>👌 That is it, you are done with all the set-ups! Next, I will show how to write and publish a blog.</p>
+<h2 id="write-blog-and-publish">Write Blog and Publish</h2>
+<p>Initialize a new post by:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo new &lt;path_to_new_post&gt;
+</code></pre></div><p>The <code>path_to_new_post</code> will be by default in the <code>content</code> folder, it can be of many file types, but most often, it will be a Markdown file with extention <code>.md</code>.</p>
+<p>After writing the post in the new post file, you can generate the site with:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo
+</code></pre></div><p>The updated site will be in the <code>public</code> folder. You can then commit both the source code and static files with:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git add .
+git commit -m <span style="color:#e6db74">&#34;commit message&#34;</span>
+git push origin master
+
+cd public
+git add --all .
+git commit -m <span style="color:#e6db74">&#34;commit message&#34;</span>
+git push origin master
+</code></pre></div><p>That is it. You should now see the updated site at <code>username.github.io</code>.</p>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="https://zhiqiyu.github.io/tags/github/" rel="tag">GitHub</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="https://zhiqiyu.github.io/tags/git/" rel="tag">Git</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="Zhiqi Yu avatar" src="https://zhiqiyu.github.io/img/avatar.jpg" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About Zhiqi Yu</span>
+	</div>
+	<div class="authorbox__description">
+		Full stack developer, remote sensing researcher.
+	</div>
+</div>
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="https://zhiqiyu.github.io/post/fancy-github-readme/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">Resources to make a fancy GitHub README profile</p>
+		</a>
+	</div>
+</nav>
+
+<section class="comments">
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "realm-z" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 Zhiqi Yu.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="https://zhiqiyu.github.io/js/menu.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+</body>
+</html>

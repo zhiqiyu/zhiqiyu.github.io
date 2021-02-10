@@ -12,7 +12,7 @@
 <meta property="og:description" content="Zhiqi&#39;s blog about his work, study, achievements and life" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://zhiqiyu.github.io/" />
-<meta property="og:updated_time" content="2021-02-09T12:15:13-05:00" />
+<meta property="og:updated_time" content="2021-02-10T16:02:03-05:00" />
 
 		<meta itemprop="name" content="ZQ.Yu">
 <meta itemprop="description" content="Zhiqi&#39;s blog about his work, study, achievements and life">
@@ -87,6 +87,28 @@ if (!doNotTrack) {
 			
 <main class="main list" role="main">
 	<article class="list__item post">
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="https://zhiqiyu.github.io/post/landsat-sentinel-match/" rel="bookmark">
+			Same-day Landsat-8 and Sentinel-2 Pair Generation on GEE
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2019-02-13T15:20:20-05:00">February 13, 2019</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="https://zhiqiyu.github.io/categories/technical/" rel="category">Technical</a>, <a class="meta__link" href="https://zhiqiyu.github.io/categories/research/" rel="category">Research</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		This notebook presents a data preparation workflow that finds same-date and overlapped Landsat8 and Sentinel2 image patches and provide a way to download the processed images to the local machine.
+This is a part of the ongoing research project Landsat2Sentinel.
+The whole notebook is available on my Github repository.
+import ee ee.Initialize() from IPython import display import zipfile import urllib from ipywidgets import IntProgress Function for downloading images from GEE def download_tif(image, scale, name, folder): url = ee.
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="https://zhiqiyu.github.io/post/landsat-sentinel-match/">Read more…</a>
+	</div>
+</article><article class="list__item post">
 	<header class="list__header">
 		<h2 class="list__title post__title">
 			<a href="https://zhiqiyu.github.io/post/conv-fc-conversion/" rel="bookmark">
@@ -228,11 +250,11 @@ The GDAL is designed to run in Mac OS X Terminals, but the installation include 
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="https://zhiqiyu.github.io/post/git-setup-for-hugo-blog-with-github-pages/">Git Setup for Hugo Blog With Github Pages</a></li>
 			<li class="widget__item"><a class="widget__link" href="https://zhiqiyu.github.io/post/fancy-github-readme/">Resources to make a fancy GitHub README profile</a></li>
 			<li class="widget__item"><a class="widget__link" href="https://zhiqiyu.github.io/post/gee-combine-modis/">Combine MODIS Terra and Aqua Products on GEE</a></li>
 			<li class="widget__item"><a class="widget__link" href="https://zhiqiyu.github.io/post/docker-win10home/">Install and Troubleshoot Docker Toolbox on Windows 10 Home</a></li>
 			<li class="widget__item"><a class="widget__link" href="https://zhiqiyu.github.io/post/ll-dqn/">Solve LunarLander-v2 with Deep Q-learning</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://zhiqiyu.github.io/post/memory_ownership/">Memory Ownership in C Explained</a></li>
 		</ul>
 	</div>
 </div>
@@ -267,7 +289,8 @@ The GDAL is designed to run in Mac OS X Terminals, but the installation include 
 		<a class="widget-taglist__link widget__link btn" href="https://zhiqiyu.github.io/tags/docker/" title="Docker">Docker (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://zhiqiyu.github.io/tags/ds-tree/" title="DS-Tree">DS-Tree (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://zhiqiyu.github.io/tags/gee/" title="GEE">GEE (2)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://zhiqiyu.github.io/tags/github/" title="GitHub">GitHub (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://zhiqiyu.github.io/tags/git/" title="Git">Git (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://zhiqiyu.github.io/tags/github/" title="GitHub">GitHub (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://zhiqiyu.github.io/tags/keras/" title="Keras">Keras (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://zhiqiyu.github.io/tags/leetcode/" title="Leetcode">Leetcode (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://zhiqiyu.github.io/tags/machine-learning/" title="Machine Learning">Machine Learning (4)</a>
