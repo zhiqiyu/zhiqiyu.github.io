@@ -1,34 +1,51 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en-us">
+<html class="no-js" lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Same-day Landsat-8 and Sentinel-2 Pair Generation on GEE</title>
+	<title>Same-day Landsat-8 and Sentinel-2 Pair Generation on GEE - ZQ.Yu</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
-	<meta name="generator" content="Hugo 0.50" />
-	<meta property="og:title" content="Same-day Landsat-8 and Sentinel-2 Pair Generation on GEE" />
+		<meta property="og:title" content="Same-day Landsat-8 and Sentinel-2 Pair Generation on GEE" />
 <meta property="og:description" content="This notebook presents a data preparation workflow that finds same-date and overlapped Landsat8 and Sentinel2 image patches and provide a way to download the processed images to the local machine.
 This is a part of the ongoing research project Landsat2Sentinel.
 The whole notebook is available on my Github repository.
-import ee ee.Initialize() from IPython import display import zipfile import urllib from ipywidgets import IntProgress  Function for downloading images from GEE def download_tif(image, scale, name, folder): url = ee." />
+import ee ee.Initialize() from IPython import display import zipfile import urllib from ipywidgets import IntProgress Function for downloading images from GEE def download_tif(image, scale, name, folder): url = ee." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://zhiqiyu.github.io/post/landsat-sentinel-match/" /><meta property="article:published_time" content="2019-02-13T15:20:20-05:00"/>
-<meta property="article:modified_time" content="2019-02-13T15:20:20-05:00"/>
+<meta property="og:url" content="https://zhiqiyu.github.io/post/landsat-sentinel-match/" />
+<meta property="article:published_time" content="2019-02-13T15:20:20-05:00" />
+<meta property="article:modified_time" content="2019-02-13T15:20:20-05:00" />
 
-	<meta name="twitter:card" content="summary"/>
+		<meta itemprop="name" content="Same-day Landsat-8 and Sentinel-2 Pair Generation on GEE">
+<meta itemprop="description" content="This notebook presents a data preparation workflow that finds same-date and overlapped Landsat8 and Sentinel2 image patches and provide a way to download the processed images to the local machine.
+This is a part of the ongoing research project Landsat2Sentinel.
+The whole notebook is available on my Github repository.
+import ee ee.Initialize() from IPython import display import zipfile import urllib from ipywidgets import IntProgress Function for downloading images from GEE def download_tif(image, scale, name, folder): url = ee.">
+<meta itemprop="datePublished" content="2019-02-13T15:20:20-05:00" />
+<meta itemprop="dateModified" content="2019-02-13T15:20:20-05:00" />
+<meta itemprop="wordCount" content="481">
+
+
+
+<meta itemprop="keywords" content="GEE,Remote Sensing,Deep Learning,Python," />
+
+		<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Same-day Landsat-8 and Sentinel-2 Pair Generation on GEE"/>
 <meta name="twitter:description" content="This notebook presents a data preparation workflow that finds same-date and overlapped Landsat8 and Sentinel2 image patches and provide a way to download the processed images to the local machine.
 This is a part of the ongoing research project Landsat2Sentinel.
 The whole notebook is available on my Github repository.
-import ee ee.Initialize() from IPython import display import zipfile import urllib from ipywidgets import IntProgress  Function for downloading images from GEE def download_tif(image, scale, name, folder): url = ee."/>
+import ee ee.Initialize() from IPython import display import zipfile import urllib from ipywidgets import IntProgress Function for downloading images from GEE def download_tif(image, scale, name, folder): url = ee."/>
 
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
-	<link rel="stylesheet" href="/css/style.css">
-	<link rel="shortcut icon" href="/img/favicon-96.png">
+
+	<link rel="stylesheet" href="https://zhiqiyu.github.io/css/style.css">
+	
+
+	<link rel="shortcut icon" href="https://zhiqiyu.github.io/favicon.ico">
 		
 <script type="application/javascript">
 var doNotTrack = false;
@@ -45,17 +62,16 @@ if (!doNotTrack) {
 <body class="body">
 	<div class="container container--outer">
 		<header class="header">
-	<link rel="stylesheet" href="https://zhiqiyu.github.io/css/xcode.css" rel="stylesheet" id="theme-stylesheet">
-	<script src="https://zhiqiyu.github.io/js/highlight.pack.js"></script>
-	<script>hljs.initHighlightingOnLoad();</script>
-
-	<div class="container">
-		<div class="logo" role="banner">
-			<a class="logo__link" href="/" title="ZQ.Yu" rel="home">
-				<div class="logo__title">ZQ.Yu</div>
-				<div class="logo__tagline">Geospatial data explorer, Deep learning enthusiast</div>
-			</a>
-		</div>
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="https://zhiqiyu.github.io/" title="ZQ.Yu" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">ZQ.Yu</div>
+					<div class="logo__tagline">A place to share my work, study, achievements and life</div>
+				</div>
+		</a>
+	</div>
 		
 <nav class="menu">
 	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
@@ -63,10 +79,18 @@ if (!doNotTrack) {
 	</button>
 	<ul class="menu__list">
 		<li class="menu__item">
-			<a class="menu__link" href="/">Blog</a>
+			<a class="menu__link" href="https://zhiqiyu.github.io/">
+				
+				<span class="menu__text">Blog</span>
+				
+			</a>
 		</li>
 		<li class="menu__item">
-			<a class="menu__link" href="/about/">About</a>
+			<a class="menu__link" href="https://zhiqiyu.github.io/about/">
+				
+				<span class="menu__text">About</span>
+				
+			</a>
 		</li>
 	</ul>
 </nav>
@@ -74,213 +98,194 @@ if (!doNotTrack) {
 	</div>
 </header>
 		<div class="wrapper flex">
-			<section class="primary">
+			<div class="primary">
 			
 <main class="main" role="main">
 	<article class="post">
 		
-		<header class="post__header">
-			<h1 class="post__title">Same-day Landsat-8 and Sentinel-2 Pair Generation on GEE</h1>
-			<div class="post__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-	<time class="meta__text" datetime="2019-02-13T15:20:20">February 13, 2019</time>
-</div>
-
-<div class="meta__item-categories meta__item">
-	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta__text"><a class="meta__link" href="/categories/technical" rel="category">Technical</a>, <a class="meta__link" href="/categories/research" rel="category">Research</a></span>
-</div>
-</div>
-		
 		</header><div class="content post__content clearfix">
-			
-
-<p>This notebook presents a data preparation workflow that finds same-date and overlapped Landsat8 and Sentinel2 image patches and provide a way to download the processed images to the local machine.</p>
-
+			<p>This notebook presents a data preparation workflow that finds same-date and overlapped Landsat8 and Sentinel2 image patches and provide a way to download the processed images to the local machine.</p>
 <p>This is a part of the ongoing research project <strong>Landsat2Sentinel</strong>.</p>
-
 <p>The whole notebook is available on my Github repository.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> ee
+ee<span style="color:#f92672">.</span>Initialize()
 
-<pre><code class="language-python">import ee
-ee.Initialize()
-
-from IPython import display
-import zipfile
-import urllib
-from ipywidgets import IntProgress
-</code></pre>
-
-<h2 id="function-for-downloading-images-from-gee">Function for downloading images from GEE</h2>
-
-<pre><code class="language-python">def download_tif(image, scale, name, folder):
-    url = ee.data.makeDownloadUrl(ee.data.getDownloadId({
-        'image': image.serialize(),
-        'scale': '%d' % scale,
-        'filePerBand': 'false',
-        'name': name,
+<span style="color:#f92672">from</span> IPython <span style="color:#f92672">import</span> display
+<span style="color:#f92672">import</span> zipfile
+<span style="color:#f92672">import</span> urllib
+<span style="color:#f92672">from</span> ipywidgets <span style="color:#f92672">import</span> IntProgress
+</code></pre></div><h2 id="function-for-downloading-images-from-gee">Function for downloading images from GEE</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">download_tif</span>(image, scale, name, folder):
+    url <span style="color:#f92672">=</span> ee<span style="color:#f92672">.</span>data<span style="color:#f92672">.</span>makeDownloadUrl(ee<span style="color:#f92672">.</span>data<span style="color:#f92672">.</span>getDownloadId({
+        <span style="color:#e6db74">&#39;image&#39;</span>: image<span style="color:#f92672">.</span>serialize(),
+        <span style="color:#e6db74">&#39;scale&#39;</span>: <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> scale,
+        <span style="color:#e6db74">&#39;filePerBand&#39;</span>: <span style="color:#e6db74">&#39;false&#39;</span>,
+        <span style="color:#e6db74">&#39;name&#39;</span>: name,
     }))
-    local_zip, header = urllib.request.urlretrieve(url)
-    with zipfile.ZipFile(local_zip) as local_zipfile:
-        return local_zipfile.extract(name + '.tif', folder)
-</code></pre>
+    local_zip, header <span style="color:#f92672">=</span> urllib<span style="color:#f92672">.</span>request<span style="color:#f92672">.</span>urlretrieve(url)
+    <span style="color:#66d9ef">with</span> zipfile<span style="color:#f92672">.</span>ZipFile(local_zip) <span style="color:#66d9ef">as</span> local_zipfile:
+        <span style="color:#66d9ef">return</span> local_zipfile<span style="color:#f92672">.</span>extract(name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;.tif&#39;</span>, folder)
+</code></pre></div><h2 id="functions-used-in-the-process">Functions used in the process</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#===============================</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">mapAddDates</span>(img):
+    <span style="color:#e6db74">&#39;&#39;&#39;
+</span><span style="color:#e6db74">    The function used to map over Sentinel2 images to add a date attribute, 
+</span><span style="color:#e6db74">    and rename the NIR band from &#39;B8&#39; to &#39;B5&#39; to match the naming convention of Landsat
+</span><span style="color:#e6db74">    &#39;&#39;&#39;</span>
+    date_time <span style="color:#f92672">=</span> ee<span style="color:#f92672">.</span>Date(img<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;GENERATION_TIME&#39;</span>))
+    <span style="color:#66d9ef">return</span> img<span style="color:#f92672">.</span>set(<span style="color:#e6db74">&#39;DATE&#39;</span>, date_time<span style="color:#f92672">.</span>format(<span style="color:#e6db74">&#39;yyyy-MM-dd&#39;</span>))<span style="color:#f92672">.</span>rename([<span style="color:#e6db74">&#39;B2&#39;</span>, <span style="color:#e6db74">&#39;B3&#39;</span>, <span style="color:#e6db74">&#39;B4&#39;</span>, <span style="color:#e6db74">&#39;B5&#39;</span>])
 
-<h2 id="functions-used-in-the-process">Functions used in the process</h2>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">getSameDateWithGeom</span>(l8, sent, geom):
+    <span style="color:#e6db74">&#39;&#39;&#39;
+</span><span style="color:#e6db74">    Find pairs of Landsat8 and Sentinel2 images that are acquired in the same day
+</span><span style="color:#e6db74">    and their footprints intersect with the input geometry
+</span><span style="color:#e6db74">    &#39;&#39;&#39;</span>
+    l8pool <span style="color:#f92672">=</span> l8<span style="color:#f92672">.</span>filterBounds(geom)<span style="color:#f92672">.</span>sort(<span style="color:#e6db74">&#39;DATE_ACQUIRED&#39;</span>) \
+                <span style="color:#f92672">.</span>filterMetadata(<span style="color:#e6db74">&#39;CLOUD_COVER&#39;</span>, <span style="color:#e6db74">&#39;less_than&#39;</span>, <span style="color:#ae81ff">10</span>) \ <span style="color:#75715e"># cloud cover limit set to 10%</span>
+                 <span style="color:#f92672">.</span>select(<span style="color:#e6db74">&#39;B[2-5]&#39;</span>)                                <span style="color:#75715e"># only use R,G,B,NIR bands</span>
+    sentpool <span style="color:#f92672">=</span> sent<span style="color:#f92672">.</span>filterBounds(geom)<span style="color:#f92672">.</span>sort(<span style="color:#e6db74">&#39;GENERATION_TIME&#39;</span>) \
+                    <span style="color:#f92672">.</span>filterMetadata(<span style="color:#e6db74">&#39;CLOUDY_PIXEL_PERCENTAGE&#39;</span>, <span style="color:#e6db74">&#39;less_than&#39;</span>, <span style="color:#ae81ff">10</span>) \
+                     <span style="color:#f92672">.</span>filterMetadata(<span style="color:#e6db74">&#39;PROCESSING_BASELINE&#39;</span>, <span style="color:#e6db74">&#39;not_ends_with&#39;</span>, <span style="color:#e6db74">&#39;2&#39;</span>) \
+                     <span style="color:#f92672">.</span>select(<span style="color:#e6db74">&#39;B[2-4|8]&#39;</span>) \
+                     <span style="color:#f92672">.</span>map(mapAddDates)
 
-<pre><code class="language-python">#===============================
-def mapAddDates(img):
-    '''
-    The function used to map over Sentinel2 images to add a date attribute, 
-    and rename the NIR band from 'B8' to 'B5' to match the naming convention of Landsat
-    '''
-    date_time = ee.Date(img.get('GENERATION_TIME'))
-    return img.set('DATE', date_time.format('yyyy-MM-dd')).rename(['B2', 'B3', 'B4', 'B5'])
+    eqfilter <span style="color:#f92672">=</span> ee<span style="color:#f92672">.</span>Filter<span style="color:#f92672">.</span>equals(leftField<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;DATE_ACQUIRED&#39;</span>, rightField<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;DATE&#39;</span>)
+    innerjoin <span style="color:#f92672">=</span> ee<span style="color:#f92672">.</span>Join<span style="color:#f92672">.</span>inner()
+    matches <span style="color:#f92672">=</span> innerjoin<span style="color:#f92672">.</span>apply(l8pool, sentpool, eqfilter)
 
-def getSameDateWithGeom(l8, sent, geom):
-    '''
-    Find pairs of Landsat8 and Sentinel2 images that are acquired in the same day
-    and their footprints intersect with the input geometry
-    '''
-    l8pool = l8.filterBounds(geom).sort('DATE_ACQUIRED') \
-                .filterMetadata('CLOUD_COVER', 'less_than', 10) \ # cloud cover limit set to 10%
-                 .select('B[2-5]')                                # only use R,G,B,NIR bands
-    sentpool = sent.filterBounds(geom).sort('GENERATION_TIME') \
-                    .filterMetadata('CLOUDY_PIXEL_PERCENTAGE', 'less_than', 10) \
-                     .filterMetadata('PROCESSING_BASELINE', 'not_ends_with', '2') \
-                     .select('B[2-4|8]') \
-                     .map(mapAddDates)
-
-    eqfilter = ee.Filter.equals(leftField='DATE_ACQUIRED', rightField='DATE')
-    innerjoin = ee.Join.inner()
-    matches = innerjoin.apply(l8pool, sentpool, eqfilter)
-
-    return matches
-#===============================
+    <span style="color:#66d9ef">return</span> matches
+<span style="color:#75715e">#===============================</span>
 
 
-def getRandomPoints(bound, num):
-    '''
-    Generate random points from the input boundary (for simplity, we used convex hull of the input boundary)
-    '''
-    points = ee.FeatureCollection.randomPoints(bound.geometry().convexHull(), num)
-    return points
-</code></pre>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">getRandomPoints</span>(bound, num):
+    <span style="color:#e6db74">&#39;&#39;&#39;
+</span><span style="color:#e6db74">    Generate random points from the input boundary (for simplity, we used convex hull of the input boundary)
+</span><span style="color:#e6db74">    &#39;&#39;&#39;</span>
+    points <span style="color:#f92672">=</span> ee<span style="color:#f92672">.</span>FeatureCollection<span style="color:#f92672">.</span>randomPoints(bound<span style="color:#f92672">.</span>geometry()<span style="color:#f92672">.</span>convexHull(), num)
+    <span style="color:#66d9ef">return</span> points
+</code></pre></div><h2 id="main-process">Main Process</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">##### Import imagery and boundary #####</span>
+l8toa <span style="color:#f92672">=</span> ee<span style="color:#f92672">.</span>ImageCollection(<span style="color:#e6db74">&#39;LANDSAT/LC08/C01/T1_TOA&#39;</span>)
+sent2 <span style="color:#f92672">=</span> ee<span style="color:#f92672">.</span>ImageCollection(<span style="color:#e6db74">&#39;COPERNICUS/S2&#39;</span>)
+boundary <span style="color:#f92672">=</span> ee<span style="color:#f92672">.</span>FeatureCollection(<span style="color:#e6db74">&#39;users/CSISS_LCLUC/studyarea_V4&#39;</span>)
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">##### Generate square patch around random points #######</span>
+points <span style="color:#f92672">=</span> ee<span style="color:#f92672">.</span>FeatureCollection<span style="color:#f92672">.</span>randomPoints(boundary<span style="color:#f92672">.</span>geometry()<span style="color:#f92672">.</span>convexHull(), <span style="color:#ae81ff">200</span>, seed<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>)
 
-<h2 id="main-process">Main Process</h2>
+<span style="color:#75715e">#===================</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">mapGetPatch</span>(pt):
+    <span style="color:#66d9ef">return</span> pt<span style="color:#f92672">.</span>buffer(<span style="color:#ae81ff">128</span><span style="color:#f92672">*</span><span style="color:#ae81ff">10</span>)<span style="color:#f92672">.</span>bounds()
 
-<pre><code class="language-python">##### Import imagery and boundary #####
-l8toa = ee.ImageCollection('LANDSAT/LC08/C01/T1_TOA')
-sent2 = ee.ImageCollection('COPERNICUS/S2')
-boundary = ee.FeatureCollection('users/CSISS_LCLUC/studyarea_V4')
-</code></pre>
-
-<pre><code class="language-python">##### Generate square patch around random points #######
-points = ee.FeatureCollection.randomPoints(boundary.geometry().convexHull(), 200, seed=10)
-
-#===================
-def mapGetPatch(pt):
-    return pt.buffer(128*10).bounds()
-
-patches = points.map(mapGetPatch)
-</code></pre>
-
-<h3 id="get-the-matched-image-pairs-of-landsat8-and-sentinel2">Get the matched image pairs of Landsat8 and Sentinel2</h3>
-
-<p>The <code>match_collection</code> has the following structure (each level to the next level is a one-to-many relationship):
-- FeatureCollection (random points)
-    - FeatureCollection (pairs with different date for the given point)
-        - Feature <code>{'primary': landsat8 image, 'secondary': sentinel2 image}</code></p>
-
-<pre><code class="language-python"># Get the same date image pairs
-def mapGetMatches(pts):
-    def mapClipImageToPatch(f):
-        l8_cand = ee.Image(f.get('primary'))
-        sent_cand = ee.Image(f.get('secondary'))
-        l8_clip = l8_cand.clipToBoundsAndScale(geometry=pts.geometry(), width=256, height=256)      # Fixed image size
-        sent2_clip = sent_cand.clipToBoundsAndScale(geometry=pts.geometry(), width=256, height=256) 
-#         intersection = l8_clip.geometry().intersection(sent2_clip.geometry())
-        return f.set('primary', l8_clip).set('secondary', sent2_clip)
+patches <span style="color:#f92672">=</span> points<span style="color:#f92672">.</span>map(mapGetPatch)
+</code></pre></div><h3 id="get-the-matched-image-pairs-of-landsat8-and-sentinel2">Get the matched image pairs of Landsat8 and Sentinel2</h3>
+<p>The <code>match_collection</code> has the following structure (each level to the next level is a one-to-many relationship):</p>
+<ul>
+<li>FeatureCollection (random points)
+<ul>
+<li>FeatureCollection (pairs with different date for the given point)
+<ul>
+<li>Feature <code>{'primary': landsat8 image, 'secondary': sentinel2 image}</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Get the same date image pairs</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">mapGetMatches</span>(pts):
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">mapClipImageToPatch</span>(f):
+        l8_cand <span style="color:#f92672">=</span> ee<span style="color:#f92672">.</span>Image(f<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;primary&#39;</span>))
+        sent_cand <span style="color:#f92672">=</span> ee<span style="color:#f92672">.</span>Image(f<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;secondary&#39;</span>))
+        l8_clip <span style="color:#f92672">=</span> l8_cand<span style="color:#f92672">.</span>clipToBoundsAndScale(geometry<span style="color:#f92672">=</span>pts<span style="color:#f92672">.</span>geometry(), width<span style="color:#f92672">=</span><span style="color:#ae81ff">256</span>, height<span style="color:#f92672">=</span><span style="color:#ae81ff">256</span>)      <span style="color:#75715e"># Fixed image size</span>
+        sent2_clip <span style="color:#f92672">=</span> sent_cand<span style="color:#f92672">.</span>clipToBoundsAndScale(geometry<span style="color:#f92672">=</span>pts<span style="color:#f92672">.</span>geometry(), width<span style="color:#f92672">=</span><span style="color:#ae81ff">256</span>, height<span style="color:#f92672">=</span><span style="color:#ae81ff">256</span>) 
+<span style="color:#75715e">#         intersection = l8_clip.geometry().intersection(sent2_clip.geometry())</span>
+        <span style="color:#66d9ef">return</span> f<span style="color:#f92672">.</span>set(<span style="color:#e6db74">&#39;primary&#39;</span>, l8_clip)<span style="color:#f92672">.</span>set(<span style="color:#e6db74">&#39;secondary&#39;</span>, sent2_clip)
     
-    match = getSameDateWithGeom(l8toa, sent2, pts.geometry())
-    match_clip = match.map(mapClipImageToPatch)
-    return match_clip
-#-------------------------------------------
+    match <span style="color:#f92672">=</span> getSameDateWithGeom(l8toa, sent2, pts<span style="color:#f92672">.</span>geometry())
+    match_clip <span style="color:#f92672">=</span> match<span style="color:#f92672">.</span>map(mapClipImageToPatch)
+    <span style="color:#66d9ef">return</span> match_clip
+<span style="color:#75715e">#-------------------------------------------</span>
 
-match_collection = patches.map(mapGetMatches)
-</code></pre>
+match_collection <span style="color:#f92672">=</span> patches<span style="color:#f92672">.</span>map(mapGetMatches)
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">####### Remove matches that no image pairs are found ######</span>
 
-<pre><code class="language-python">####### Remove matches that no image pairs are found ######
+match_list <span style="color:#f92672">=</span> match_collection<span style="color:#f92672">.</span>toList(match_collection<span style="color:#f92672">.</span>size())
 
-match_list = match_collection.toList(match_collection.size())
+<span style="color:#75715e">#=================================</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">mapDropNull</span>(f):
+    f <span style="color:#f92672">=</span> ee<span style="color:#f92672">.</span>FeatureCollection(f)
+    <span style="color:#66d9ef">return</span> ee<span style="color:#f92672">.</span>Algorithms<span style="color:#f92672">.</span>If(f<span style="color:#f92672">.</span>size()<span style="color:#f92672">.</span>eq(<span style="color:#ae81ff">0</span>), None, f)
 
-#=================================
-def mapDropNull(f):
-    f = ee.FeatureCollection(f)
-    return ee.Algorithms.If(f.size().eq(0), None, f)
+pairs_list <span style="color:#f92672">=</span> match_list<span style="color:#f92672">.</span>map(mapDropNull)
+<span style="color:#75715e">#================================</span>
 
-pairs_list = match_list.map(mapDropNull)
-#================================
-
-pairs_list = pairs_list.removeAll(ee.List([None]))
-</code></pre>
-
-<h3 id="download-images">Download Images</h3>
-
-<pre><code class="language-python">num_pairs = pairs_list.length().getInfo()
+pairs_list <span style="color:#f92672">=</span> pairs_list<span style="color:#f92672">.</span>removeAll(ee<span style="color:#f92672">.</span>List([None]))
+</code></pre></div><h3 id="download-images">Download Images</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">num_pairs <span style="color:#f92672">=</span> pairs_list<span style="color:#f92672">.</span>length()<span style="color:#f92672">.</span>getInfo()
 num_pairs
+</code></pre></div><pre><code>180
 </code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">bar <span style="color:#f92672">=</span> IntProgress(min<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, max<span style="color:#f92672">=</span>num_pairs)
+display<span style="color:#f92672">.</span>display(bar)
 
-<pre><code>180
-</code></pre>
-
-<pre><code class="language-python">bar = IntProgress(min=0, max=num_pairs)
-display.display(bar)
-
-for i in range(155, num_pairs):
-    pairs = ee.FeatureCollection(pairs_list.get(i))
-    num_pair = pairs.size().getInfo()
-    pair_list = pairs.toList(num_pair)
-    for j in range(num_pair):
-        pair = ee.Feature(pair_list.get(j))
-        primary = ee.Image(pair.get('primary'))
-        secondary = ee.Image(pair.get('secondary')).divide(10000)   # Scale down the Sentinel2 pixel values to [0,1]
-        download_tif(primary, 10, 'l', 'data/'+str(i)+'_'+str(j)+'/')
-        download_tif(secondary, 10, 's', 'data/'+str(i)+'_'+str(j)+'/')
-    bar.value = i
-</code></pre>
-
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">155</span>, num_pairs):
+    pairs <span style="color:#f92672">=</span> ee<span style="color:#f92672">.</span>FeatureCollection(pairs_list<span style="color:#f92672">.</span>get(i))
+    num_pair <span style="color:#f92672">=</span> pairs<span style="color:#f92672">.</span>size()<span style="color:#f92672">.</span>getInfo()
+    pair_list <span style="color:#f92672">=</span> pairs<span style="color:#f92672">.</span>toList(num_pair)
+    <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(num_pair):
+        pair <span style="color:#f92672">=</span> ee<span style="color:#f92672">.</span>Feature(pair_list<span style="color:#f92672">.</span>get(j))
+        primary <span style="color:#f92672">=</span> ee<span style="color:#f92672">.</span>Image(pair<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;primary&#39;</span>))
+        secondary <span style="color:#f92672">=</span> ee<span style="color:#f92672">.</span>Image(pair<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;secondary&#39;</span>))<span style="color:#f92672">.</span>divide(<span style="color:#ae81ff">10000</span>)   <span style="color:#75715e"># Scale down the Sentinel2 pixel values to [0,1]</span>
+        download_tif(primary, <span style="color:#ae81ff">10</span>, <span style="color:#e6db74">&#39;l&#39;</span>, <span style="color:#e6db74">&#39;data/&#39;</span><span style="color:#f92672">+</span>str(i)<span style="color:#f92672">+</span><span style="color:#e6db74">&#39;_&#39;</span><span style="color:#f92672">+</span>str(j)<span style="color:#f92672">+</span><span style="color:#e6db74">&#39;/&#39;</span>)
+        download_tif(secondary, <span style="color:#ae81ff">10</span>, <span style="color:#e6db74">&#39;s&#39;</span>, <span style="color:#e6db74">&#39;data/&#39;</span><span style="color:#f92672">+</span>str(i)<span style="color:#f92672">+</span><span style="color:#e6db74">&#39;_&#39;</span><span style="color:#f92672">+</span>str(j)<span style="color:#f92672">+</span><span style="color:#e6db74">&#39;/&#39;</span>)
+    bar<span style="color:#f92672">.</span>value <span style="color:#f92672">=</span> i
+</code></pre></div>
 		</div>
-		
+		<footer class="post__footer">
+			
 <div class="post__tags tags clearfix">
-	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16"><path d="M16 9.5c0 .373-.24.74-.5 1l-5 5c-.275.26-.634.5-1 .5-.373 0-.74-.24-1-.5L1 8a2.853 2.853 0 0 1-.7-1C.113 6.55 0 5.973 0 5.6V1.4C0 1.034.134.669.401.401.67.134 1.034 0 1.4 0h4.2c.373 0 .95.113 1.4.3.45.187.732.432 1 .7l7.5 7.502c.26.274.5.632.5.998zM3.5 5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/></svg>
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
 	<ul class="tags__list">
-		<li class="tags__item"><a class="tags__link btn" href="/tags/gee/" rel="tag">GEE</a></li>
-		<li class="tags__item"><a class="tags__link btn" href="/tags/remote-sensing/" rel="tag">Remote Sensing</a></li>
-		<li class="tags__item"><a class="tags__link btn" href="/tags/deep-learning/" rel="tag">Deep Learning</a></li>
-		<li class="tags__item"><a class="tags__link btn" href="/tags/python/" rel="tag">Python</a></li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="https://zhiqiyu.github.io/tags/gee/" rel="tag">GEE</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="https://zhiqiyu.github.io/tags/remote-sensing/" rel="tag">Remote Sensing</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="https://zhiqiyu.github.io/tags/deep-learning/" rel="tag">Deep Learning</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="https://zhiqiyu.github.io/tags/python/" rel="tag">Python</a>
+		</li>
 	</ul>
 </div>
+		</footer>
 	</article>
 </main>
 
 <div class="authorbox clearfix">
 	<figure class="authorbox__avatar">
-		<img alt="Zhiqi Yu avatar" src="/img/avatar.jpg" class="avatar" height="90" width="90">
+		<img alt="Zhiqi Yu avatar" src="https://zhiqiyu.github.io/img/avatar.jpg" class="avatar" height="90" width="90">
 	</figure>
 	<div class="authorbox__header">
 		<span class="authorbox__name">About Zhiqi Yu</span>
 	</div>
 	<div class="authorbox__description">
-		Ph.D. student in Geoinformation Science
+		Full stack developer, remote sensing researcher.
 	</div>
 </div>
 
-<nav class="post-nav flex">
-	<div class="post-nav__item post-nav__item--prev">
-		<a class="post-nav__link" href="/post/conv-fc-conversion/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">What are Fully-Connected Layers (FCN) in Convolutional Neural Networks (CNN)?</p></a>
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="https://zhiqiyu.github.io/post/conv-fc-conversion/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">What are Fully-Connected Layers (FCN) in Convolutional Neural Networks (CNN)?</p>
+		</a>
 	</div>
-	<div class="post-nav__item post-nav__item--next">
-		<a class="post-nav__link" href="/post/undef-symbol-pytorch/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">&#39;Undefined Symbol: PySlice_Unpack&#39; error in Pytorch</p></a>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="https://zhiqiyu.github.io/post/undef-symbol-pytorch/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">&#39;Undefined Symbol: PySlice_Unpack&#39; error in Pytorch</p>
+		</a>
 	</div>
 </nav>
 
@@ -308,20 +313,21 @@ for i in range(155, num_pairs):
 </section>
 
 
-			</section>
+			</div>
 			
 		</div>
 		<footer class="footer">
 	<div class="container footer__container flex">
 		
 		<div class="footer__copyright">
-			&copy; 2019 Zhiqi Yu.
+			&copy; 2021 Zhiqi Yu.
 			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
 		</div>
 	</div>
 </footer>
 	</div>
-<script async defer src="/js/menu.js"></script>
+<script async defer src="https://zhiqiyu.github.io/js/menu.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
 </body>
 </html>

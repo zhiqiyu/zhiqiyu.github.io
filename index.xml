@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ZQ.Yu</title>
@@ -6,45 +6,51 @@
     <description>Recent content on ZQ.Yu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 04 Feb 2020 15:21:38 -0500</lastBuildDate>
-    
-	<atom:link href="https://zhiqiyu.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Tue, 09 Feb 2021 12:15:13 -0500</lastBuildDate><atom:link href="https://zhiqiyu.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Resources to make a fancy GitHub README profile</title>
+      <link>https://zhiqiyu.github.io/post/fancy-github-readme/</link>
+      <pubDate>Tue, 09 Feb 2021 12:15:13 -0500</pubDate>
+      
+      <guid>https://zhiqiyu.github.io/post/fancy-github-readme/</guid>
+      <description>GitHub is a wonderful place for developers to showcase their projects and works. It is also a mythical place where a lot of secret techniques can be utilized, combined to make it more useful.
+GitHub pages As many of you know, GitHub has a GitHub Pages function that a user can use to create their user or organization sites conveniently. Basically, you just need to put source codes in a repo named username.</description>
+    </item>
     
     <item>
       <title>Combine MODIS Terra and Aqua Products on GEE</title>
-      <link>https://zhiqiyu.github.io/post/combine-modis-terra-and-aqua-products-on-gee/</link>
+      <link>https://zhiqiyu.github.io/post/gee-combine-modis/</link>
       <pubDate>Tue, 04 Feb 2020 15:21:38 -0500</pubDate>
       
-      <guid>https://zhiqiyu.github.io/post/combine-modis-terra-and-aqua-products-on-gee/</guid>
+      <guid>https://zhiqiyu.github.io/post/gee-combine-modis/</guid>
       <description>The Moderate Resolution Imaging Spectroradiometer (MODIS) has been providing high temporal resolution images since the first launch of Terra satellite in 1999 followed by the Aqua satellite in 2002. The Terra satellite passes from north to south in the morning at around 10:30 a.m. local time. The Aqua satellite passes from south to north in the afternoon at around 1:30 p.m. Since MODIS has a revisiting time of one or two days, for any given day, there are most likely be images from both Terra and Aqua satellites.</description>
     </item>
     
     <item>
       <title>Install and Troubleshoot Docker Toolbox on Windows 10 Home</title>
-      <link>https://zhiqiyu.github.io/post/install-and-troubleshoot-docker-toolbox-on-windows-10-home/</link>
+      <link>https://zhiqiyu.github.io/post/docker-win10home/</link>
       <pubDate>Tue, 26 Nov 2019 10:41:29 -0500</pubDate>
       
-      <guid>https://zhiqiyu.github.io/post/install-and-troubleshoot-docker-toolbox-on-windows-10-home/</guid>
+      <guid>https://zhiqiyu.github.io/post/docker-win10home/</guid>
       <description>As the Docker for Windows only works on Windows 10 Pro and Enterprise editions, I cannot install it on my laptop which comes with a pre-installed Windows 10 Home. Fortunately, Docker has another product called Docker toolbox. It is specifically released for legacy desktop operating system versions. (Somehow windows 10 home is considered as legacy&amp;hellip;)
 However, there are some caveats during the installation and configuration of the Docker toolbox on my laptop, so here are the problems and solutions I found useful:</description>
     </item>
     
     <item>
       <title>Solve LunarLander-v2 with Deep Q-learning</title>
-      <link>https://zhiqiyu.github.io/post/solve-lunarlander-v2-with-deep-q-learning/</link>
+      <link>https://zhiqiyu.github.io/post/ll-dqn/</link>
       <pubDate>Mon, 28 Oct 2019 22:53:17 -0400</pubDate>
       
-      <guid>https://zhiqiyu.github.io/post/solve-lunarlander-v2-with-deep-q-learning/</guid>
+      <guid>https://zhiqiyu.github.io/post/ll-dqn/</guid>
       <description>the LL environ- ment is a simulated environment where the agent needs to successfully and safely land the aircraft in the designated area. The lunar lander has 4 discrete actions, do nothing, fire the left orientation engine, fire the main engine, and fire the right orientation engine. The states of the lander are represented as 8-dimensional vectors: (x, y, vx, vy, θ, vθ, lef tleg, rightleg), x and y are the x and y-coordinates of the lunar lander’s position on the screen.</description>
     </item>
     
     <item>
       <title>Memory Ownership in C Explained</title>
-      <link>https://zhiqiyu.github.io/post/memory-ownership-in-c-explained/</link>
+      <link>https://zhiqiyu.github.io/post/memory_ownership/</link>
       <pubDate>Wed, 25 Sep 2019 17:07:25 -0400</pubDate>
       
-      <guid>https://zhiqiyu.github.io/post/memory-ownership-in-c-explained/</guid>
+      <guid>https://zhiqiyu.github.io/post/memory_ownership/</guid>
       <description>The memory ownership problem or pointer ownership problem is a problem generally seen in C and C++ programs. The problem is generally violating a simple assumption that there should be only one pointer to a given piece of memory, so that when the memory is freed, no other pointers will point to an address that has already been freed.
 For example, you have a main function, in which a pointer gfcontext_t *ctx to a struct gfcontext_t is created.</description>
     </item>
@@ -55,32 +61,31 @@ For example, you have a main function, in which a pointer gfcontext_t *ctx to a 
       <pubDate>Fri, 06 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://zhiqiyu.github.io/about/</guid>
-      <description>Zhiqi Yu Summary Highly motivated programmer with a strong background in computer science, GIS and remote sensing. Solid theoretical knowledge in algorithms, statistics, machine learning, and deep learning. Practical experiences in text processing, data visualization, remote sensing image classification, and object detection.
-Skillsets  Programming Languages  Python, C/C++, SQL, JavaScript, Bash, Java, Octave (MATLAB), C#, R
-  Data Science Tools  Pytorch, TensorFlow, Keras, Pandas, Jupyter Lab, Matplotlib, Scikit-learn SQLite, PostgreSQL  Web Technologies  Leaflet, D3.</description>
+      <description>Hello! 👋 My name is Zhiqi Yu (pronounced as: Gee-chi Yu). I am a versatile developer and a researcher. This is my site where I occasionally share my thoughts, solutions, achievements, etc. that relate to my work and study. Below is my resumè.
+Technical Skillsets   Programming Languages  Python 3, Java 8, JavaScript (ES6), C/C++, SQL, Bash, Octave (MATLAB), R   Web Development Technologies  React, Spring MVC, Node.</description>
     </item>
     
     <item>
       <title>Leetcode 94. Binary Tree Inorder Traversal</title>
-      <link>https://zhiqiyu.github.io/post/leetcode-94.-binary-tree-inorder-traversal/</link>
+      <link>https://zhiqiyu.github.io/post/leetcode94/</link>
       <pubDate>Sun, 01 Sep 2019 18:39:05 -0400</pubDate>
       
-      <guid>https://zhiqiyu.github.io/post/leetcode-94.-binary-tree-inorder-traversal/</guid>
-      <description>Given a binary tree, return the inorder traversal of its nodes&amp;rsquo; values.
+      <guid>https://zhiqiyu.github.io/post/leetcode94/</guid>
+      <description>Given a binary tree, return the inorder traversal of its nodes&#39; values.
 Example:
-Input: [1,null,2,3] 1 \ 2 / 3 Output: [1,3,2]  Solution 1: Recursion Recursion is the go-to method when dealing with tree data structures. In this problem, the tree needs to be printed out as inorder, which means to put root node in between left subtree and right subtree. Therefore, the recursion solution is done by recursively calling a funtion with a tree node as the argument.</description>
+Input: [1,null,2,3] 1 \ 2 / 3 Output: [1,3,2] Solution 1: Recursion Recursion is the go-to method when dealing with tree data structures. In this problem, the tree needs to be printed out as inorder, which means to put root node in between left subtree and right subtree. Therefore, the recursion solution is done by recursively calling a funtion with a tree node as the argument.</description>
     </item>
     
     <item>
       <title>&#39;Undefined Symbol: PySlice_Unpack&#39; error in Pytorch</title>
-      <link>https://zhiqiyu.github.io/post/undefined-symbol-pyslice_unpack-error-in-pytorch/</link>
+      <link>https://zhiqiyu.github.io/post/undef-symbol-pytorch/</link>
       <pubDate>Wed, 24 Apr 2019 23:42:55 -0400</pubDate>
       
-      <guid>https://zhiqiyu.github.io/post/undefined-symbol-pyslice_unpack-error-in-pytorch/</guid>
+      <guid>https://zhiqiyu.github.io/post/undef-symbol-pytorch/</guid>
       <description>Problem:
  &amp;lsquo;Undefined Symbol: PySlice_Unpack&amp;rsquo;
  Environment:
-Pytorch = 1.0.1 Python = 3.6.0  Solution:
+Pytorch = 1.0.1 Python = 3.6.0 Solution:
  Upgrade Python to 3.6.3. Seems like this is the only solution.
 Update by conda install python==3.6.3 command if using Miniconda in CLI.
  </description>
@@ -88,85 +93,74 @@ Update by conda install python==3.6.3 command if using Miniconda in CLI.
     
     <item>
       <title>Same-day Landsat-8 and Sentinel-2 Pair Generation on GEE</title>
-      <link>https://zhiqiyu.github.io/post/same-day-landsat-8-and-sentinel-2-pair-generation-on-gee/</link>
+      <link>https://zhiqiyu.github.io/post/landsat-sentinel-match/</link>
       <pubDate>Wed, 13 Feb 2019 15:20:20 -0500</pubDate>
       
-      <guid>https://zhiqiyu.github.io/post/same-day-landsat-8-and-sentinel-2-pair-generation-on-gee/</guid>
+      <guid>https://zhiqiyu.github.io/post/landsat-sentinel-match/</guid>
       <description>This notebook presents a data preparation workflow that finds same-date and overlapped Landsat8 and Sentinel2 image patches and provide a way to download the processed images to the local machine.
 This is a part of the ongoing research project Landsat2Sentinel.
 The whole notebook is available on my Github repository.
-import ee ee.Initialize() from IPython import display import zipfile import urllib from ipywidgets import IntProgress  Function for downloading images from GEE def download_tif(image, scale, name, folder): url = ee.</description>
+import ee ee.Initialize() from IPython import display import zipfile import urllib from ipywidgets import IntProgress Function for downloading images from GEE def download_tif(image, scale, name, folder): url = ee.</description>
     </item>
     
     <item>
       <title>What are Fully-Connected Layers (FCN) in Convolutional Neural Networks (CNN)?</title>
-      <link>https://zhiqiyu.github.io/post/what-are-fully-connected-layers-fcn-in-convolutional-neural-networks-cnn/</link>
+      <link>https://zhiqiyu.github.io/post/conv-fc-conversion/</link>
       <pubDate>Thu, 08 Nov 2018 11:24:36 -0500</pubDate>
       
-      <guid>https://zhiqiyu.github.io/post/what-are-fully-connected-layers-fcn-in-convolutional-neural-networks-cnn/</guid>
+      <guid>https://zhiqiyu.github.io/post/conv-fc-conversion/</guid>
       <description>Recently, during a discussion with a colleague about his CNN model architecture on remote sensing image fusion task, he mentioned something that was interesting. Specifically, in his network, he used FCN implementations Keras.layers.Dense and torch.nn.Linear in his code, the input to the FCN is a 2D image with many channels with size (160, 160, channels). Traditionally, I think that to pass through a FCN layer, the neuron numbers of the first FCN layer in this case, should be 160 * 160 * channels, which basically means to flat the volume to a 1D array and feed in a traditional neural network.</description>
     </item>
     
     <item>
       <title>Deep Learning Specialization Certificate</title>
-      <link>https://zhiqiyu.github.io/post/deep-learning-specialization-certificate/</link>
+      <link>https://zhiqiyu.github.io/post/dl-special-cert/</link>
       <pubDate>Wed, 12 Sep 2018 17:15:15 -0400</pubDate>
       
-      <guid>https://zhiqiyu.github.io/post/deep-learning-specialization-certificate/</guid>
+      <guid>https://zhiqiyu.github.io/post/dl-special-cert/</guid>
       <description>&lt;p&gt;Recently I have completed the 5-month journey of the Deep Learning specialization on Coursera. I enjoyed this course a lot.
-Can&amp;rsquo;t wait to apply some of the idea in my research work. Cheers!&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+Can&amp;rsquo;t wait to apply some of the idea in my research work. Cheers!&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Deep Learning Course Certificates</title>
-      <link>https://zhiqiyu.github.io/post/deep-learning-course-certificates/</link>
+      <link>https://zhiqiyu.github.io/post/dl-certificates/</link>
       <pubDate>Wed, 16 May 2018 11:22:28 -0400</pubDate>
       
-      <guid>https://zhiqiyu.github.io/post/deep-learning-course-certificates/</guid>
+      <guid>https://zhiqiyu.github.io/post/dl-certificates/</guid>
       <description>&lt;p&gt;Good job for me to earn several deep learning related certificates under the Deep Learning Specialization on Coursera. The specialization is offered by Dr. Andrew Ng from deeplearning.ai.&lt;/p&gt;
-
 &lt;p&gt;The course assignments can be found at &lt;a href=&#34;https://github.com/zhiqiyu/Deep-Learning-Coursera&#34;&gt;https://github.com/zhiqiyu/Deep-Learning-Coursera&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Following is the breakdown course certificates I earned.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Following is the breakdown course certificates I earned.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Applied Data Science with Python Coursera Certificates</title>
-      <link>https://zhiqiyu.github.io/post/applied-data-science-with-python-coursera-certificates/</link>
+      <link>https://zhiqiyu.github.io/post/ads-certificates/</link>
       <pubDate>Mon, 16 Apr 2018 21:11:38 -0400</pubDate>
       
-      <guid>https://zhiqiyu.github.io/post/applied-data-science-with-python-coursera-certificates/</guid>
+      <guid>https://zhiqiyu.github.io/post/ads-certificates/</guid>
       <description>&lt;p&gt;Good job for me to earn several certificates from the Applied Data Science with Python offered by Michigan University on Coursera!&lt;/p&gt;
-
-&lt;p&gt;The course material can be found at &lt;a href=&#34;https://github.com/zhiqiyu/Applied-Data-Science-with-Python&#34;&gt;https://github.com/zhiqiyu/Applied-Data-Science-with-Python&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;The course material can be found at &lt;a href=&#34;https://github.com/zhiqiyu/Applied-Data-Science-with-Python&#34;&gt;https://github.com/zhiqiyu/Applied-Data-Science-with-Python&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Machine Learning Coursera Certificate</title>
-      <link>https://zhiqiyu.github.io/post/machine-learning-coursera-certificate/</link>
+      <link>https://zhiqiyu.github.io/post/ml-certificate/</link>
       <pubDate>Mon, 16 Apr 2018 20:17:49 -0400</pubDate>
       
-      <guid>https://zhiqiyu.github.io/post/machine-learning-coursera-certificate/</guid>
+      <guid>https://zhiqiyu.github.io/post/ml-certificate/</guid>
       <description>&lt;p&gt;Good job for me to earn the Machine Learning course certificate offered by Prof. Andrew Ng from Stanford University on Coursera!&lt;/p&gt;
-
-&lt;p&gt;The course assignments can be found at &lt;a href=&#34;https://github.com/zhiqiyu/Machine-Learning-Coursera&#34;&gt;https://github.com/zhiqiyu/Machine-Learning-Coursera&lt;/a&gt;
-&lt;/p&gt;</description>
+&lt;p&gt;The course assignments can be found at &lt;a href=&#34;https://github.com/zhiqiyu/Machine-Learning-Coursera&#34;&gt;https://github.com/zhiqiyu/Machine-Learning-Coursera&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Installation of GDAL and its Python Libraries on Mac</title>
-      <link>https://zhiqiyu.github.io/post/installation-of-gdal-and-its-python-libraries-on-mac/</link>
+      <link>https://zhiqiyu.github.io/post/gdal-install/</link>
       <pubDate>Wed, 18 Oct 2017 17:07:47 -0400</pubDate>
       
-      <guid>https://zhiqiyu.github.io/post/installation-of-gdal-and-its-python-libraries-on-mac/</guid>
+      <guid>https://zhiqiyu.github.io/post/gdal-install/</guid>
       <description>Recently I have been trying to install GDAL on my Mac and I cannot find a way to link the Python libraries to the Python program I am using so that I can import GDAL libraries by the import gdal statement in my python program.
-The GDAL is designed to run in Mac OS X Terminals, but the installation include python libraries which are not automatically linked to the program.</description>
+The GDAL is designed to run in Mac OS X Terminals, but the installation include python libraries which are not automatically linked to the program. Therefore, the only thing we need to do to make it work in python is to link those libraries properly.</description>
     </item>
     
   </channel>

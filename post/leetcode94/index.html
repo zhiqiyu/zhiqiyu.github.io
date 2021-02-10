@@ -1,32 +1,48 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en-us">
+<html class="no-js" lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Leetcode 94. Binary Tree Inorder Traversal</title>
+	<title>Leetcode 94. Binary Tree Inorder Traversal - ZQ.Yu</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
-	<meta name="generator" content="Hugo 0.50" />
-	<meta property="og:title" content="Leetcode 94. Binary Tree Inorder Traversal" />
-<meta property="og:description" content="Given a binary tree, return the inorder traversal of its nodes&rsquo; values.
+		<meta property="og:title" content="Leetcode 94. Binary Tree Inorder Traversal" />
+<meta property="og:description" content="Given a binary tree, return the inorder traversal of its nodes&#39; values.
 Example:
-Input: [1,null,2,3] 1 \ 2 / 3 Output: [1,3,2]  Solution 1: Recursion Recursion is the go-to method when dealing with tree data structures. In this problem, the tree needs to be printed out as inorder, which means to put root node in between left subtree and right subtree. Therefore, the recursion solution is done by recursively calling a funtion with a tree node as the argument." />
+Input: [1,null,2,3] 1 \ 2 / 3 Output: [1,3,2] Solution 1: Recursion Recursion is the go-to method when dealing with tree data structures. In this problem, the tree needs to be printed out as inorder, which means to put root node in between left subtree and right subtree. Therefore, the recursion solution is done by recursively calling a funtion with a tree node as the argument." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://zhiqiyu.github.io/post/leetcode94/" /><meta property="article:published_time" content="2019-09-01T18:39:05-04:00"/>
-<meta property="article:modified_time" content="2019-09-01T18:39:05-04:00"/>
+<meta property="og:url" content="https://zhiqiyu.github.io/post/leetcode94/" />
+<meta property="article:published_time" content="2019-09-01T18:39:05-04:00" />
+<meta property="article:modified_time" content="2019-09-01T18:39:05-04:00" />
 
-	<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Leetcode 94. Binary Tree Inorder Traversal"/>
-<meta name="twitter:description" content="Given a binary tree, return the inorder traversal of its nodes&rsquo; values.
+		<meta itemprop="name" content="Leetcode 94. Binary Tree Inorder Traversal">
+<meta itemprop="description" content="Given a binary tree, return the inorder traversal of its nodes&#39; values.
 Example:
-Input: [1,null,2,3] 1 \ 2 / 3 Output: [1,3,2]  Solution 1: Recursion Recursion is the go-to method when dealing with tree data structures. In this problem, the tree needs to be printed out as inorder, which means to put root node in between left subtree and right subtree. Therefore, the recursion solution is done by recursively calling a funtion with a tree node as the argument."/>
+Input: [1,null,2,3] 1 \ 2 / 3 Output: [1,3,2] Solution 1: Recursion Recursion is the go-to method when dealing with tree data structures. In this problem, the tree needs to be printed out as inorder, which means to put root node in between left subtree and right subtree. Therefore, the recursion solution is done by recursively calling a funtion with a tree node as the argument.">
+<meta itemprop="datePublished" content="2019-09-01T18:39:05-04:00" />
+<meta itemprop="dateModified" content="2019-09-01T18:39:05-04:00" />
+<meta itemprop="wordCount" content="408">
 
+
+
+<meta itemprop="keywords" content="Leetcode,Algorithms,DS-Tree," />
+
+		<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Leetcode 94. Binary Tree Inorder Traversal"/>
+<meta name="twitter:description" content="Given a binary tree, return the inorder traversal of its nodes&#39; values.
+Example:
+Input: [1,null,2,3] 1 \ 2 / 3 Output: [1,3,2] Solution 1: Recursion Recursion is the go-to method when dealing with tree data structures. In this problem, the tree needs to be printed out as inorder, which means to put root node in between left subtree and right subtree. Therefore, the recursion solution is done by recursively calling a funtion with a tree node as the argument."/>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
-	<link rel="stylesheet" href="/css/style.css">
-	<link rel="shortcut icon" href="/img/favicon-96.png">
+
+	<link rel="stylesheet" href="https://zhiqiyu.github.io/css/style.css">
+	
+
+	<link rel="shortcut icon" href="https://zhiqiyu.github.io/favicon.ico">
 		
 <script type="application/javascript">
 var doNotTrack = false;
@@ -43,17 +59,16 @@ if (!doNotTrack) {
 <body class="body">
 	<div class="container container--outer">
 		<header class="header">
-	<link rel="stylesheet" href="https://zhiqiyu.github.io/css/xcode.css" rel="stylesheet" id="theme-stylesheet">
-	<script src="https://zhiqiyu.github.io/js/highlight.pack.js"></script>
-	<script>hljs.initHighlightingOnLoad();</script>
-
-	<div class="container">
-		<div class="logo" role="banner">
-			<a class="logo__link" href="/" title="ZQ.Yu" rel="home">
-				<div class="logo__title">ZQ.Yu</div>
-				<div class="logo__tagline">Geospatial data explorer, Deep learning enthusiast</div>
-			</a>
-		</div>
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="https://zhiqiyu.github.io/" title="ZQ.Yu" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">ZQ.Yu</div>
+					<div class="logo__tagline">A place to share my work, study, achievements and life</div>
+				</div>
+		</a>
+	</div>
 		
 <nav class="menu">
 	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
@@ -61,10 +76,18 @@ if (!doNotTrack) {
 	</button>
 	<ul class="menu__list">
 		<li class="menu__item">
-			<a class="menu__link" href="/">Blog</a>
+			<a class="menu__link" href="https://zhiqiyu.github.io/">
+				
+				<span class="menu__text">Blog</span>
+				
+			</a>
 		</li>
 		<li class="menu__item">
-			<a class="menu__link" href="/about/">About</a>
+			<a class="menu__link" href="https://zhiqiyu.github.io/about/">
+				
+				<span class="menu__text">About</span>
+				
+			</a>
 		</li>
 	</ul>
 </nav>
@@ -72,32 +95,14 @@ if (!doNotTrack) {
 	</div>
 </header>
 		<div class="wrapper flex">
-			<section class="primary">
+			<div class="primary">
 			
 <main class="main" role="main">
 	<article class="post">
 		
-		<header class="post__header">
-			<h1 class="post__title">Leetcode 94. Binary Tree Inorder Traversal</h1>
-			<div class="post__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-	<time class="meta__text" datetime="2019-09-01T18:39:05">September 01, 2019</time>
-</div>
-
-<div class="meta__item-categories meta__item">
-	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta__text"><a class="meta__link" href="/categories/leetcode" rel="category">Leetcode</a></span>
-</div>
-</div>
-		
 		</header><div class="content post__content clearfix">
-			
-
-<p>Given a binary tree, return the inorder traversal of its nodes&rsquo; values.</p>
-
+			<p>Given a binary tree, return the inorder traversal of its nodes' values.</p>
 <p>Example:</p>
-
 <pre><code>Input: [1,null,2,3]
    1
     \
@@ -106,103 +111,110 @@ if (!doNotTrack) {
    3
 
 Output: [1,3,2]
-</code></pre>
-
-<h2 id="solution-1-recursion">Solution 1: Recursion</h2>
-
+</code></pre><h2 id="solution-1-recursion">Solution 1: Recursion</h2>
 <p>Recursion is the go-to method when dealing with tree data structures. In this problem, the tree needs to be printed out as inorder,
 which means to put root node in between left subtree and right subtree. Therefore, the recursion solution is done by recursively
 calling a funtion with a tree node as the argument. In the function, itself is called on left child node of the input tree node, which
 will properly print out the left subtree by inorder, followed by printing out the input tree node, and eventually calling itself again
 on the right child to print out right subtree inorder.</p>
-
 <p>The code is as follows:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * Definition for a binary tree node.
+</span><span style="color:#75715e"> * public class TreeNode {
+</span><span style="color:#75715e"> *     int val;
+</span><span style="color:#75715e"> *     TreeNode left;
+</span><span style="color:#75715e"> *     TreeNode right;
+</span><span style="color:#75715e"> *     TreeNode(int x) { val = x; }
+</span><span style="color:#75715e"> * }
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">inorderTraversal</span><span style="color:#f92672">(</span>TreeNode root<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#75715e">// Solution 1: Recursion
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>root <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;();</span>
+        List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> ans <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;();</span>
+        traverse<span style="color:#f92672">(</span>ans<span style="color:#f92672">,</span> root<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">return</span> ans<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
 
-<pre><code class="language-java">/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
-class Solution {
-    public List&lt;Integer&gt; inorderTraversal(TreeNode root) {
-        // Solution 1: Recursion
-        if (root == null) return new ArrayList&lt;Integer&gt;();
-        List&lt;Integer&gt; ans = new ArrayList&lt;&gt;();
-        traverse(ans, root);
-        return ans;
-    }
-
-    private void traverse(List&lt;Integer&gt; res, TreeNode root) {
-        if (root.left != null) traverse(res, root.left);
-        res.add(root.val);
-        if (root.right != null) traverse(res, root.right);
-    }
-}
-</code></pre>
-
-<h2 id="solution-2-iteration">Solution 2: Iteration</h2>
-
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">traverse</span><span style="color:#f92672">(</span>List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> res<span style="color:#f92672">,</span> TreeNode root<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>root<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> traverse<span style="color:#f92672">(</span>res<span style="color:#f92672">,</span> root<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">);</span>
+        res<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>root<span style="color:#f92672">.</span><span style="color:#a6e22e">val</span><span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>root<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> traverse<span style="color:#f92672">(</span>res<span style="color:#f92672">,</span> root<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h2 id="solution-2-iteration">Solution 2: Iteration</h2>
 <p>Another solution to the this problem is by iteration instead of recursion, which is much more tricky. Unlike recursion, which natually preserves
 the pointer to each root of subtrees when the recursion goes deep (by returning to the level of that root), iteration need stacks to do the trick.
 Specifically, a stack can be used to store a node when its left subtree is not null because we need to work on the left subtree first. After the
 left subtree is done, the stack can pop out the node at top which should be the immediate parent to the finished subtree. Then the right subtree
 can be worked on before another pop-up from stack, and goes on until the right-most node is reached.</p>
-
 <p>The code is as follows:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">inorderTraversal</span><span style="color:#f92672">(</span>TreeNode root<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#75715e">// Solution 2: Iteration
+</span><span style="color:#75715e"></span>        List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> ans <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;();</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>root <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#66d9ef">return</span> ans<span style="color:#f92672">;</span>
 
-<pre><code class="language-java">class Solution {
-    public List&lt;Integer&gt; inorderTraversal(TreeNode root) {
-        // Solution 2: Iteration
-        List&lt;Integer&gt; ans = new ArrayList&lt;&gt;();
-        if (root == null) return ans;
-
-        TreeNode cur = root;
-        Stack&lt;TreeNode&gt; s = new Stack&lt;&gt;();
-        while (cur != null || !s.isEmpty()) {
-            while (cur != null) {
-                s.push(cur);
-                cur = cur.left;
-            }
-            cur = s.pop();
-            ans.add(cur.val);
-            cur = cur.right;
-        }
-        return ans;
-    }
-}
-</code></pre>
-
+        TreeNode cur <span style="color:#f92672">=</span> root<span style="color:#f92672">;</span>
+        Stack<span style="color:#f92672">&lt;</span>TreeNode<span style="color:#f92672">&gt;</span> s <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Stack<span style="color:#f92672">&lt;&gt;();</span>
+        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>cur <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">||</span> <span style="color:#f92672">!</span>s<span style="color:#f92672">.</span><span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>cur <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                s<span style="color:#f92672">.</span><span style="color:#a6e22e">push</span><span style="color:#f92672">(</span>cur<span style="color:#f92672">);</span>
+                cur <span style="color:#f92672">=</span> cur<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+            cur <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">pop</span><span style="color:#f92672">();</span>
+            ans<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>cur<span style="color:#f92672">.</span><span style="color:#a6e22e">val</span><span style="color:#f92672">);</span>
+            cur <span style="color:#f92672">=</span> cur<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">return</span> ans<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
 		</div>
-		
+		<footer class="post__footer">
+			
 <div class="post__tags tags clearfix">
-	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16"><path d="M16 9.5c0 .373-.24.74-.5 1l-5 5c-.275.26-.634.5-1 .5-.373 0-.74-.24-1-.5L1 8a2.853 2.853 0 0 1-.7-1C.113 6.55 0 5.973 0 5.6V1.4C0 1.034.134.669.401.401.67.134 1.034 0 1.4 0h4.2c.373 0 .95.113 1.4.3.45.187.732.432 1 .7l7.5 7.502c.26.274.5.632.5.998zM3.5 5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/></svg>
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
 	<ul class="tags__list">
-		<li class="tags__item"><a class="tags__link btn" href="/tags/leetcode/" rel="tag">Leetcode</a></li>
-		<li class="tags__item"><a class="tags__link btn" href="/tags/tree/" rel="tag">tree</a></li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="https://zhiqiyu.github.io/tags/leetcode/" rel="tag">Leetcode</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="https://zhiqiyu.github.io/tags/algorithms/" rel="tag">Algorithms</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="https://zhiqiyu.github.io/tags/ds-tree/" rel="tag">DS-Tree</a>
+		</li>
 	</ul>
 </div>
+		</footer>
 	</article>
 </main>
 
 <div class="authorbox clearfix">
 	<figure class="authorbox__avatar">
-		<img alt="Zhiqi Yu avatar" src="/img/avatar.jpg" class="avatar" height="90" width="90">
+		<img alt="Zhiqi Yu avatar" src="https://zhiqiyu.github.io/img/avatar.jpg" class="avatar" height="90" width="90">
 	</figure>
 	<div class="authorbox__header">
 		<span class="authorbox__name">About Zhiqi Yu</span>
 	</div>
 	<div class="authorbox__description">
-		Ph.D. student in Geoinformation Science
+		Full stack developer, remote sensing researcher.
 	</div>
 </div>
 
-<nav class="post-nav flex">
-	<div class="post-nav__item post-nav__item--prev">
-		<a class="post-nav__link" href="/post/undef-symbol-pytorch/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">&#39;Undefined Symbol: PySlice_Unpack&#39; error in Pytorch</p></a>
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="https://zhiqiyu.github.io/post/undef-symbol-pytorch/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">&#39;Undefined Symbol: PySlice_Unpack&#39; error in Pytorch</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="https://zhiqiyu.github.io/post/memory_ownership/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">Memory Ownership in C Explained</p>
+		</a>
 	</div>
 </nav>
 
@@ -230,20 +242,21 @@ can be worked on before another pop-up from stack, and goes on until the right-m
 </section>
 
 
-			</section>
+			</div>
 			
 		</div>
 		<footer class="footer">
 	<div class="container footer__container flex">
 		
 		<div class="footer__copyright">
-			&copy; 2019 Zhiqi Yu.
+			&copy; 2021 Zhiqi Yu.
 			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
 		</div>
 	</div>
 </footer>
 	</div>
-<script async defer src="/js/menu.js"></script>
+<script async defer src="https://zhiqiyu.github.io/js/menu.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Keras on ZQ.Yu</title>
@@ -6,17 +6,13 @@
     <description>Recent content in Keras on ZQ.Yu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 08 Nov 2018 11:24:36 -0500</lastBuildDate>
-    
-	<atom:link href="https://zhiqiyu.github.io/tags/keras/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 08 Nov 2018 11:24:36 -0500</lastBuildDate><atom:link href="https://zhiqiyu.github.io/tags/keras/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>What are Fully-Connected Layers (FCN) in Convolutional Neural Networks (CNN)?</title>
-      <link>https://zhiqiyu.github.io/post/what-are-fully-connected-layers-fcn-in-convolutional-neural-networks-cnn/</link>
+      <link>https://zhiqiyu.github.io/post/conv-fc-conversion/</link>
       <pubDate>Thu, 08 Nov 2018 11:24:36 -0500</pubDate>
       
-      <guid>https://zhiqiyu.github.io/post/what-are-fully-connected-layers-fcn-in-convolutional-neural-networks-cnn/</guid>
+      <guid>https://zhiqiyu.github.io/post/conv-fc-conversion/</guid>
       <description>Recently, during a discussion with a colleague about his CNN model architecture on remote sensing image fusion task, he mentioned something that was interesting. Specifically, in his network, he used FCN implementations Keras.layers.Dense and torch.nn.Linear in his code, the input to the FCN is a 2D image with many channels with size (160, 160, channels). Traditionally, I think that to pass through a FCN layer, the neuron numbers of the first FCN layer in this case, should be 160 * 160 * channels, which basically means to flat the volume to a 1D array and feed in a traditional neural network.</description>
     </item>
     

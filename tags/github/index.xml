@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GitHub on ZQ.Yu</title>
+    <link>https://zhiqiyu.github.io/tags/github/</link>
+    <description>Recent content in GitHub on ZQ.Yu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 09 Feb 2021 12:15:13 -0500</lastBuildDate><atom:link href="https://zhiqiyu.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Resources to make a fancy GitHub README profile</title>
+      <link>https://zhiqiyu.github.io/post/fancy-github-readme/</link>
+      <pubDate>Tue, 09 Feb 2021 12:15:13 -0500</pubDate>
+      
+      <guid>https://zhiqiyu.github.io/post/fancy-github-readme/</guid>
+      <description>GitHub is a wonderful place for developers to showcase their projects and works. It is also a mythical place where a lot of secret techniques can be utilized, combined to make it more useful.
+GitHub pages As many of you know, GitHub has a GitHub Pages function that a user can use to create their user or organization sites conveniently. Basically, you just need to put source codes in a repo named username.</description>
+    </item>
+    
+  </channel>
+</rss>

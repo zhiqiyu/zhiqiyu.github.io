@@ -71,15 +71,12 @@ body {
 
 .flex {
 	display: -webkit-flex;
-	display: -ms-flexbox;
 	display: flex;
 }
 
 .primary {
 	-webkit-flex: 1 0 65.83%;
-	-ms-flex: 1 0 65.83%;
 	flex: 1 0 65.83%;
-	-ms-flex-order: 1;
 	-webkit-order: 1;
 	order: 1;
 	min-width: 0;
@@ -87,9 +84,7 @@ body {
 
 .sidebar {
 	-webkit-flex: 1 0 31.66%;
-	-ms-flex: 1 0 31.66%;
 	flex: 1 0 31.66%;
-	-ms-flex-order: 2;
 	-webkit-order: 2;
 	order: 2;
 	min-width: 0;
@@ -98,7 +93,6 @@ body {
 
 .sidebar--left {
 	-webkit-order: 0;
-	-ms-flex-order: 0;
 	order: 0;
 	margin: 0 2.5% 0 0;
 }
@@ -140,7 +134,7 @@ textarea {
 
 .btn:hover {
 	color: #fff;
-	background: #e64946;
+	background: #e22d30;
 }
 
 /* Animation */
@@ -199,7 +193,7 @@ a {
 }
 
 a:hover {
-	color: #e64946;
+	color: #e22d30;
 }
 
 hr {
@@ -273,10 +267,6 @@ code {
 code {
 	padding: 0 5px;
 	color: #c33;
-	white-space: nowrap;
-	white-space: -o-nowrap;
-	white-space: -moz-nowrap;
-	white-space: -webkit-nowrap;
 }
 
 pre {
@@ -285,11 +275,8 @@ pre {
 	padding: 1.25rem;
 	margin-bottom: 20px;
 	margin-bottom: 1.25rem;
+	overflow: auto;
 	color: #000;
-	white-space: pre-wrap;
-	white-space: -o-pre-wrap;
-	white-space: -moz-pre-wrap;
-	white-space: -webkit-pre-wrap;
 }
 
 pre code {
@@ -312,7 +299,7 @@ blockquote {
 	margin: 0 0 20px;
 	margin: 0 0 1.25rem;
 	line-height: 1.6;
-	border-left: 5px solid #e64946;
+	border-left: 5px solid #e22d30;
 }
 
 blockquote p:last-child {
@@ -386,6 +373,7 @@ select {
 
 .warning__icon {
 	margin-bottom: 20px;
+	fill: #ddd;
 }
 
 /* Header */
@@ -399,7 +387,32 @@ select {
 
 .logo__link {
 	display: inline-block;
+}
+
+.logo__item {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.logo__img {
+	max-height: 256px;
+}
+
+.logo__text {
 	text-transform: uppercase;
+}
+
+.logo--mixed .logo__item {
+	margin: .5rem auto;
+}
+
+.logo--mixed .logo__img {
+	max-width: 128px;
+	max-height: 128px;
+}
+
+.logo--mixed .logo__text {
+	padding: 0 1rem;
 }
 
 .logo__title {
@@ -418,14 +431,14 @@ select {
 	font-size: .875rem;
 	font-weight: 700;
 	line-height: 1;
-	color: #e64946;
+	color: #e22d30;
 	border-top: 1px solid #ebebeb;
 }
 
 .divider {
 	height: 5px;
 	margin: 0;
-	background: #e64946;
+	background: #e22d30;
 	border: 0;
 }
 
@@ -462,7 +475,7 @@ select {
 }
 
 :focus > .menu__btn-title {
-	box-shadow: inset 0 0 1px 3px #e64946;
+	box-shadow: inset 0 0 1px 3px #e22d30;
 }
 
 button:not(:-moz-focusring):focus > .menu__btn-title {
@@ -475,7 +488,7 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 }
 
 .js .menu__btn--active {
-	color: #e64946;
+	color: #e22d30;
 }
 
 .menu__list {
@@ -484,7 +497,7 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 }
 
 .menu__item:hover {
-	background: #e64946;
+	background: #e22d30;
 }
 
 .menu__item:first-child {
@@ -492,7 +505,7 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 }
 
 .menu__item--active {
-	background: #e64946;
+	background: #e22d30;
 }
 
 .menu__link {
@@ -533,7 +546,7 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 
 @media screen and (min-width: 767px) {
 	.menu {
-		border-bottom: 5px solid #e64946;
+		border-bottom: 5px solid #e22d30;
 	}
 
 	.menu__btn {
@@ -544,10 +557,8 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 	.js .menu__list {
 		position: relative;
 		display: -webkit-flex;
-		display: -ms-flexbox;
 		display: flex;
 		-webkit-flex-wrap: wrap;
-		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
 		visibility: visible;
 		border: 0;
@@ -589,7 +600,7 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 }
 
 .meta a:hover {
-	color: #e64946;
+	color: #e22d30;
 }
 
 .meta__item {
@@ -643,14 +654,16 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 }
 
 .content a,
-.warning a {
+.warning a,
+.authorbox__description a {
 	font-weight: 700;
-	color: #e64946;
+	color: #e22d30;
 }
 
 .content a:hover,
-.warning a:hover {
-	color: #e64946;
+.warning a:hover,
+.authorbox__description a:hover {
+	color: #e22d30;
 	text-decoration: underline;
 }
 
@@ -694,7 +707,9 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 }
 
 .content ul ul,
-.content ol ol {
+.content ol ol,
+.content ol ul,
+.content ul ol {
 	margin: 0 0 0 40px;
 }
 
@@ -702,6 +717,12 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 	margin-bottom: 5px;
 }
 
+.post__footer {
+	margin-top: 20px;
+	margin-top: 1.25rem;
+}
+
+/* Post tags */
 .tags {
 	margin-bottom: 20px;
 	margin-bottom: 1.25rem;
@@ -724,7 +745,7 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 }
 
 .tags__item:hover {
-	background: #e64946;
+	background: #e22d30;
 }
 
 .tags__link,
@@ -733,13 +754,13 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 	padding: 10px 15px;
 }
 
-.icon-tag {
+.tags__badge {
 	float: left;
 	width: 32px;
 	height: 32px;
 	padding: 8px;
 	margin-right: 6px;
-	background: #e64946;
+	background: #e22d30;
 	fill: #fff;
 }
 
@@ -797,7 +818,7 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 .toc__menu a {
 	display: block;
 	padding: 5px 10px;
-	color: #e64946;
+	color: #e22d30;
 	border-bottom: 1px solid #ebebeb;
 }
 
@@ -845,6 +866,11 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 	margin-bottom: .625rem;
 }
 
+.list__title {
+	font-size: 20px;
+	font-size: 1.25rem;
+}
+
 .list__meta {
 	margin-top: 5px;
 }
@@ -880,12 +906,11 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 .pagination__item:hover,
 .pagination__item--current {
 	color: #fff;
-	background: #e64946;
+	background: #e22d30;
 }
 
-/* Post Navigation */
-.post-nav {
-	-ms-flex-pack: justify;
+/* Pager (prev/next links) navigation */
+.pager {
 	-webkit-justify-content: space-between;
 	justify-content: space-between;
 	padding-top: 25px;
@@ -894,7 +919,7 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 	border-bottom: 1px solid #ebebeb;
 }
 
-.post-nav__caption {
+.pager__subtitle {
 	display: block;
 	margin-bottom: 5px;
 	font-weight: 700;
@@ -902,26 +927,25 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 	text-transform: uppercase;
 }
 
-.post-nav__post-title {
+.pager__title {
 	margin-bottom: 0;
 	overflow: hidden;
 	font-size: 13px;
 	font-size: .8125rem;
 }
 
-.post-nav__item {
+.pager__item {
 	-webkit-flex: 1 1 50%;
-	-ms-flex: 1 1 50%;
 	flex: 1 1 50%;
 	max-width: 48%;
 }
 
-.post-nav__item--next {
+.pager__item--next {
 	margin-left: auto;
 	text-align: right;
 }
 
-.post-nav__link {
+.pager__link {
 	display: block;
 }
 
@@ -1004,7 +1028,7 @@ input[type=reset] {
 
 input[type=submit]:hover,
 input[type=reset]:hover {
-	background: #e64946;
+	background: #e22d30;
 }
 
 textarea {
@@ -1033,7 +1057,7 @@ textarea {
 	font-size: 16px;
 	font-size: 1rem;
 	text-transform: uppercase;
-	border-bottom: 3px solid #e64946;
+	border-bottom: 3px solid #e22d30;
 }
 
 .widget__item {
@@ -1094,6 +1118,7 @@ textarea {
 .widget-social__link-icon {
 	margin: 0 5px 0 0;
 	vertical-align: middle;
+	fill: #fff;
 }
 
 /* Tags Widget */
@@ -1102,6 +1127,20 @@ textarea {
 	margin: 0 4px 8px 0;
 	font-size: 12px;
 	text-transform: uppercase;
+}
+
+/* Languages Widget */
+.widget-languages__link {
+	display: block;
+}
+
+.widget-languages__link:hover .widget-languages__link-btn {
+	color: #fff;
+	background: #e22d30;
+}
+
+.widget-languages__link-btn {
+	display: inline-block;
 }
 
 /* Footer */
@@ -1116,15 +1155,12 @@ textarea {
 
 .footer__container {
 	-webkit-flex-flow: row wrap;
-	-ms-flex-flow: row wrap;
 	flex-flow: row wrap;
-	-ms-flex-pack: justify;
 	-webkit-justify-content: space-between;
 	justify-content: space-between;
 }
 
 .footer__links {
-	-ms-flex-order: 1;
 	-webkit-order: 1;
 	order: 1;
 }
@@ -1189,6 +1225,10 @@ textarea {
 		text-align: center;
 	}
 
+	.logo__link {
+		margin: 0 auto;
+	}
+
 	.logo__title {
 		font-size: 24px;
 		font-size: 1.5rem;
@@ -1222,16 +1262,16 @@ textarea {
 		margin: 0 0 20px;
 	}
 
-	.post-nav {
+	.pager {
 		display: block;
 	}
 
-	.post-nav__item {
+	.pager__item {
 		min-width: 100%;
 		text-align: center;
 	}
 
-	.post-nav__item--prev {
+	.pager__item--prev {
 		padding-bottom: 25px;
 	}
 
@@ -1241,7 +1281,9 @@ textarea {
 	}
 
 	.content ul ul,
-	.content ol ol {
+	.content ol ol,
+	.content ol ul,
+	.content ul ol {
 		margin: 0 0 0 20px;
 	}
 

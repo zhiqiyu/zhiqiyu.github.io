@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Memory Ownership in C Explained - ZQ.Yu</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="Memory Ownership in C Explained" />
+<meta property="og:description" content="The memory ownership problem or pointer ownership problem is a problem generally seen in C and C&#43;&#43; programs. The problem is generally violating a simple assumption that there should be only one pointer to a given piece of memory, so that when the memory is freed, no other pointers will point to an address that has already been freed.
+For example, you have a main function, in which a pointer gfcontext_t *ctx to a struct gfcontext_t is created." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://zhiqiyu.github.io/post/memory_ownership/" />
+<meta property="article:published_time" content="2019-09-25T17:07:25-04:00" />
+<meta property="article:modified_time" content="2019-09-25T17:07:25-04:00" />
+
+		<meta itemprop="name" content="Memory Ownership in C Explained">
+<meta itemprop="description" content="The memory ownership problem or pointer ownership problem is a problem generally seen in C and C&#43;&#43; programs. The problem is generally violating a simple assumption that there should be only one pointer to a given piece of memory, so that when the memory is freed, no other pointers will point to an address that has already been freed.
+For example, you have a main function, in which a pointer gfcontext_t *ctx to a struct gfcontext_t is created.">
+<meta itemprop="datePublished" content="2019-09-25T17:07:25-04:00" />
+<meta itemprop="dateModified" content="2019-09-25T17:07:25-04:00" />
+<meta itemprop="wordCount" content="441">
+
+
+
+<meta itemprop="keywords" content="C," />
+
+		<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Memory Ownership in C Explained"/>
+<meta name="twitter:description" content="The memory ownership problem or pointer ownership problem is a problem generally seen in C and C&#43;&#43; programs. The problem is generally violating a simple assumption that there should be only one pointer to a given piece of memory, so that when the memory is freed, no other pointers will point to an address that has already been freed.
+For example, you have a main function, in which a pointer gfcontext_t *ctx to a struct gfcontext_t is created."/>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="https://zhiqiyu.github.io/css/style.css">
+	
+
+	<link rel="shortcut icon" href="https://zhiqiyu.github.io/favicon.ico">
+		
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-128672710-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="https://zhiqiyu.github.io/" title="ZQ.Yu" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">ZQ.Yu</div>
+					<div class="logo__tagline">A place to share my work, study, achievements and life</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="https://zhiqiyu.github.io/">
+				
+				<span class="menu__text">Blog</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="https://zhiqiyu.github.io/about/">
+				
+				<span class="menu__text">About</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		
+		</header><div class="content post__content clearfix">
+			<p>The memory ownership problem or pointer ownership problem is a problem generally seen in C and C++ programs. The problem is generally violating a simple assumption that there should be only one pointer to a given piece of memory, so that when the memory is freed, no other pointers will point to an address that has already been freed.</p>
+<p>For example, you have a main function, in which a pointer <code>gfcontext_t *ctx</code> to a <code>struct gfcontext_t</code> is created. Let&rsquo;s say the <code>ctx</code> is located at address <code>y</code>, and its value is <code>x</code>, which is the address of the actual created data structure. If the address now need to be passed to a second function for additional process, if we directly pass <code>ctx</code> to the function, in the scope of this function, a local pointer variable at address <code>z</code> will be created, and it holds exactly same value as the passed-in <code>ctx</code>, i.e <code>y</code>, because function arguments are passed-by-value in C. What this implies is that there will be two pointers to the <code>y</code>, one in the main function, one in the second function. If the second function decide to free the memory of the data because it finished processing, the other pointer in the main function will not be affected, and it still holds the address to the data, which is just freed by the second function. The second function have no way to modify the <code>ctx</code> pointer in the main function because the function does not have the address of <code>ctx</code>.</p>
+<p>A simple way to avoid such problem is to use a <strong>pointer-to-pointer</strong> as the function argument. The figure below illustrate the pointer relationship.</p>
+<p><img src="https://zhiqiyu.github.io/img/memory_ownership.png" alt="memory ownership"></p>
+<p>Specifically, by passing <code>&amp;ctx</code> to the second function, the function will create a local variable at address <code>z</code> which holds the address of the pointer <code>*ctx</code>, i.e <code>y</code> in the main function. Now, if the second function need to free the data, all it needs to do is dereferencing the passed-in pointer-to-pointer, which gives us the value in the address of <code>ctx</code>, i.e <code>x</code>. Then we just call <code>free()</code> on the dereferenced pointer-to-pointer because is is the same as <code>free(x)</code>. After the data is properly freed, the pointer <code>ctx</code> in the main function is still lingering there, but now we have a &lsquo;handle&rsquo; of <code>ctx</code> in the scope of the second function, i.e the passed-in address of that variable. Therefore, we can set the value in that address to <code>NULL</code> and everything is properly cleaned.</p>
+<p>The high-level code of the above process is as below:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>() {
+    gfcontext_t <span style="color:#f92672">*</span>ctx <span style="color:#f92672">=</span> malloc(<span style="color:#66d9ef">sizeof</span>(gfcontext_t));
+    func(<span style="color:#f92672">&amp;</span>ctx);
+}
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">func</span>(gfcontext <span style="color:#f92672">**</span>c) {
+    <span style="color:#75715e">// do something...
+</span><span style="color:#75715e"></span>    free((<span style="color:#f92672">*</span>c));
+    (<span style="color:#f92672">*</span>c) <span style="color:#f92672">=</span> NULL;
+}
+</code></pre></div>
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="https://zhiqiyu.github.io/tags/c/" rel="tag">C</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="Zhiqi Yu avatar" src="https://zhiqiyu.github.io/img/avatar.jpg" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About Zhiqi Yu</span>
+	</div>
+	<div class="authorbox__description">
+		Full stack developer, remote sensing researcher.
+	</div>
+</div>
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="https://zhiqiyu.github.io/post/leetcode94/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">Leetcode 94. Binary Tree Inorder Traversal</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="https://zhiqiyu.github.io/post/ll-dqn/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">Solve LunarLander-v2 with Deep Q-learning</p>
+		</a>
+	</div>
+</nav>
+
+<section class="comments">
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "realm-z" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 Zhiqi Yu.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="https://zhiqiyu.github.io/js/menu.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pytorch on ZQ.Yu</title>
@@ -6,21 +6,17 @@
     <description>Recent content in Pytorch on ZQ.Yu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 24 Apr 2019 23:42:55 -0400</lastBuildDate>
-    
-	<atom:link href="https://zhiqiyu.github.io/tags/pytorch/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 24 Apr 2019 23:42:55 -0400</lastBuildDate><atom:link href="https://zhiqiyu.github.io/tags/pytorch/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>&#39;Undefined Symbol: PySlice_Unpack&#39; error in Pytorch</title>
-      <link>https://zhiqiyu.github.io/post/undefined-symbol-pyslice_unpack-error-in-pytorch/</link>
+      <link>https://zhiqiyu.github.io/post/undef-symbol-pytorch/</link>
       <pubDate>Wed, 24 Apr 2019 23:42:55 -0400</pubDate>
       
-      <guid>https://zhiqiyu.github.io/post/undefined-symbol-pyslice_unpack-error-in-pytorch/</guid>
+      <guid>https://zhiqiyu.github.io/post/undef-symbol-pytorch/</guid>
       <description>Problem:
  &amp;lsquo;Undefined Symbol: PySlice_Unpack&amp;rsquo;
  Environment:
-Pytorch = 1.0.1 Python = 3.6.0  Solution:
+Pytorch = 1.0.1 Python = 3.6.0 Solution:
  Upgrade Python to 3.6.3. Seems like this is the only solution.
 Update by conda install python==3.6.3 command if using Miniconda in CLI.
  </description>

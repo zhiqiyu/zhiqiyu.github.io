@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on ZQ.Yu</title>
@@ -6,17 +6,13 @@
     <description>Recent content in Categories on ZQ.Yu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 12 Sep 2018 17:15:15 -0400</lastBuildDate>
-    
-	<atom:link href="https://zhiqiyu.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 09 Feb 2021 12:15:13 -0500</lastBuildDate><atom:link href="https://zhiqiyu.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Achievements</title>
-      <link>https://zhiqiyu.github.io/categories/achievements/</link>
-      <pubDate>Wed, 12 Sep 2018 17:15:15 -0400</pubDate>
+      <title>Technical</title>
+      <link>https://zhiqiyu.github.io/categories/technical/</link>
+      <pubDate>Tue, 09 Feb 2021 12:15:13 -0500</pubDate>
       
-      <guid>https://zhiqiyu.github.io/categories/achievements/</guid>
+      <guid>https://zhiqiyu.github.io/categories/technical/</guid>
       <description></description>
     </item>
     
@@ -39,11 +35,11 @@
     </item>
     
     <item>
-      <title>Technical</title>
-      <link>https://zhiqiyu.github.io/categories/technical/</link>
-      <pubDate>Tue, 04 Feb 2020 15:21:38 -0500</pubDate>
+      <title>Achievements</title>
+      <link>https://zhiqiyu.github.io/categories/achievements/</link>
+      <pubDate>Wed, 12 Sep 2018 17:15:15 -0400</pubDate>
       
-      <guid>https://zhiqiyu.github.io/categories/technical/</guid>
+      <guid>https://zhiqiyu.github.io/categories/achievements/</guid>
       <description></description>
     </item>
     

@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Solve LunarLander-v2 with Deep Q-learning - ZQ.Yu</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="Solve LunarLander-v2 with Deep Q-learning" />
+<meta property="og:description" content="the LL environ- ment is a simulated environment where the agent needs to successfully and safely land the aircraft in the designated area. The lunar lander has 4 discrete actions, do nothing, fire the left orientation engine, fire the main engine, and fire the right orientation engine. The states of the lander are represented as 8-dimensional vectors: (x, y, vx, vy, θ, vθ, lef tleg, rightleg), x and y are the x and y-coordinates of the lunar lander’s position on the screen." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://zhiqiyu.github.io/post/ll-dqn/" />
+<meta property="article:published_time" content="2019-10-28T22:53:17-04:00" />
+<meta property="article:modified_time" content="2019-10-28T22:53:17-04:00" />
+
+		<meta itemprop="name" content="Solve LunarLander-v2 with Deep Q-learning">
+<meta itemprop="description" content="the LL environ- ment is a simulated environment where the agent needs to successfully and safely land the aircraft in the designated area. The lunar lander has 4 discrete actions, do nothing, fire the left orientation engine, fire the main engine, and fire the right orientation engine. The states of the lander are represented as 8-dimensional vectors: (x, y, vx, vy, θ, vθ, lef tleg, rightleg), x and y are the x and y-coordinates of the lunar lander’s position on the screen.">
+<meta itemprop="datePublished" content="2019-10-28T22:53:17-04:00" />
+<meta itemprop="dateModified" content="2019-10-28T22:53:17-04:00" />
+<meta itemprop="wordCount" content="1904">
+
+
+
+<meta itemprop="keywords" content="Reinforcement Learning,OMSCS," />
+
+		<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Solve LunarLander-v2 with Deep Q-learning"/>
+<meta name="twitter:description" content="the LL environ- ment is a simulated environment where the agent needs to successfully and safely land the aircraft in the designated area. The lunar lander has 4 discrete actions, do nothing, fire the left orientation engine, fire the main engine, and fire the right orientation engine. The states of the lander are represented as 8-dimensional vectors: (x, y, vx, vy, θ, vθ, lef tleg, rightleg), x and y are the x and y-coordinates of the lunar lander’s position on the screen."/>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="https://zhiqiyu.github.io/css/style.css">
+	
+
+	<link rel="shortcut icon" href="https://zhiqiyu.github.io/favicon.ico">
+		
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-128672710-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="https://zhiqiyu.github.io/" title="ZQ.Yu" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">ZQ.Yu</div>
+					<div class="logo__tagline">A place to share my work, study, achievements and life</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="https://zhiqiyu.github.io/">
+				
+				<span class="menu__text">Blog</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="https://zhiqiyu.github.io/about/">
+				
+				<span class="menu__text">About</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		
+		</header><div class="content post__content clearfix">
+			<p>the LL environ- ment is a simulated environment where the agent needs to successfully and safely land the aircraft in the designated area. The lunar lander has 4 discrete actions, do nothing, fire the left orientation engine, fire the main engine, and fire the right orientation engine. The states of the lander are represented as 8-dimensional vectors:
+<code>(x, y, vx, vy, θ, vθ, lef tleg, rightleg)</code>,
+x and y are the x and y-coordinates of the lunar lander’s position on the screen. vx and vy are the lunar lander’s velocity components on the x and y axes.θ is the angle of the lunar lander. vθ is the angular velocity of the lander. Finally, leftleg and rightleg are binary values to indicate whether the left leg or right leg of the lunar lander is touching the ground. The lunar lander starts as (0,0) and the target landing pad is at (0, 1). The total reward for moving from starting point to landing pad ranges from 100 - 140 points varying on lander placement on the pad. If lander moves away from landing pad it is penalized the amount of reward that would be gained by moving towards the pad. An episode finishes if the lander crashes or comes to rest, receiving additional -100 or +100 points respectively. Each leg ground contact is rewarded with +10 points. Each firing main engine action has a -0.3 point reward, but fuels are infinite. Lastly, the LL problem is considered solved when an average of 200 points is achieved over 100 consecutive runs.</p>
+<h2 id="trained-agent-performance">Trained Agent Performance</h2>
+<p><img src="https://zhiqiyu.github.io/img/lunar-lander/ll_trial.gif" alt="trial"></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> deque, namedtuple
+<span style="color:#f92672">import</span> time
+<span style="color:#f92672">import</span> math
+<span style="color:#f92672">import</span> copy
+<span style="color:#f92672">import</span> random
+<span style="color:#f92672">import</span> gym
+<span style="color:#f92672">from</span> gym <span style="color:#f92672">import</span> wrappers
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#f92672">import</span> matplotlib
+<span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#f92672">as</span> plt
+<span style="color:#f92672">import</span> torch
+<span style="color:#f92672">import</span> torch.nn <span style="color:#f92672">as</span> nn
+<span style="color:#f92672">import</span> torch.nn.functional <span style="color:#f92672">as</span> F
+<span style="color:#f92672">from</span> torch.optim <span style="color:#f92672">import</span> Adam
+
+_ <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>manual_seed(<span style="color:#ae81ff">1027</span>)
+np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>seed(<span style="color:#ae81ff">1027</span>)
+random<span style="color:#f92672">.</span>seed(<span style="color:#ae81ff">1027</span>)
+</code></pre></div><h2 id="experience-replay">Experience Replay</h2>
+<p>This is the key to train DQN, it serves to remove strong correlations between consecutive transitions because transitions are randomly sampled for training with experience replay.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">Experience <span style="color:#f92672">=</span> namedtuple(<span style="color:#e6db74">&#34;Experience&#34;</span>, (<span style="color:#e6db74">&#39;state&#39;</span>, <span style="color:#e6db74">&#39;action&#39;</span>, <span style="color:#e6db74">&#39;reward&#39;</span>, <span style="color:#e6db74">&#39;next_state&#39;</span>, <span style="color:#e6db74">&#39;is_done&#39;</span>))
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ExpReplay</span>:
+    <span style="color:#66d9ef">def</span> __init__(self, capacity<span style="color:#f92672">=</span><span style="color:#ae81ff">100000</span>, starting_size<span style="color:#f92672">=</span><span style="color:#ae81ff">20000</span>):
+        self<span style="color:#f92672">.</span>memory <span style="color:#f92672">=</span> deque(maxlen<span style="color:#f92672">=</span>capacity)
+        self<span style="color:#f92672">.</span>starting_size <span style="color:#f92672">=</span> starting_size
+        
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">add</span>(self, transition):
+            self<span style="color:#f92672">.</span>memory<span style="color:#f92672">.</span>append(transition)
+            
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">sample</span>(self, batch_size<span style="color:#f92672">=</span><span style="color:#ae81ff">16</span>):
+        <span style="color:#66d9ef">if</span> batch_size <span style="color:#f92672">&gt;</span> len(self<span style="color:#f92672">.</span>memory):
+            <span style="color:#66d9ef">return</span> None
+        <span style="color:#66d9ef">return</span> random<span style="color:#f92672">.</span>sample(self<span style="color:#f92672">.</span>memory, batch_size)
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">canStart</span>(self):
+        <span style="color:#66d9ef">return</span> len(self<span style="color:#f92672">.</span>memory) <span style="color:#f92672">&gt;=</span> self<span style="color:#f92672">.</span>starting_size
+</code></pre></div><h2 id="function-approximation">Function Approximation</h2>
+<p>An artificial neural network (ANN) is used as function approximation. Specifically, a 4-layer ANN was used. Noticably, the last layer of the ANN should have linear activation, i.e. no activation function needed, because rewards can be positive and negative.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">QNN</span>(nn<span style="color:#f92672">.</span>Module):
+    <span style="color:#66d9ef">def</span> __init__(self, state_dim, action_dim, hidden_dims<span style="color:#f92672">=</span>[<span style="color:#ae81ff">48</span>, <span style="color:#ae81ff">48</span>]):
+        super(QNN, self)<span style="color:#f92672">.</span>__init__()
+        self<span style="color:#f92672">.</span>state_dim <span style="color:#f92672">=</span> state_dim
+        self<span style="color:#f92672">.</span>n_action <span style="color:#f92672">=</span> action_dim
+        
+        n_nodes <span style="color:#f92672">=</span> [state_dim] <span style="color:#f92672">+</span> hidden_dims <span style="color:#f92672">+</span> [action_dim]
+        self<span style="color:#f92672">.</span>layers <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>ModuleList([])
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, len(n_nodes)):
+            self<span style="color:#f92672">.</span>layers<span style="color:#f92672">.</span>append(nn<span style="color:#f92672">.</span>Linear(n_nodes[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>], n_nodes[i]))
+        
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">forward</span>(self, X):
+        
+        <span style="color:#75715e"># feed through all layers</span>
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(self<span style="color:#f92672">.</span>layers) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>):
+            X <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>tanh(self<span style="color:#f92672">.</span>layers[i](X))
+        
+        out <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>layers[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>](X)
+        
+        <span style="color:#66d9ef">return</span> out
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># loss function</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">loss_fn</span>(yPred, yTrue):
+    <span style="color:#66d9ef">return</span> torch<span style="color:#f92672">.</span>nn<span style="color:#f92672">.</span>SmoothL1Loss()(yPred, yTrue)
+</code></pre></div><h2 id="the-lunar-lander-agent">The Lunar Lander Agent</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">LunarLanderAgent</span>:
+    <span style="color:#66d9ef">def</span> __init__(self, env, policy_net, target_net, exp_replay):
+        self<span style="color:#f92672">.</span>env <span style="color:#f92672">=</span> env
+        self<span style="color:#f92672">.</span>state_dim <span style="color:#f92672">=</span> env<span style="color:#f92672">.</span>observation_space<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">0</span>]
+        self<span style="color:#f92672">.</span>n_action <span style="color:#f92672">=</span> env<span style="color:#f92672">.</span>action_space<span style="color:#f92672">.</span>n
+        
+        <span style="color:#75715e"># intialize NN for Q function approximation, and associated target net</span>
+        self<span style="color:#f92672">.</span>pn <span style="color:#f92672">=</span> policy_net<span style="color:#f92672">.</span>to(device)               
+        self<span style="color:#f92672">.</span>tn <span style="color:#f92672">=</span> target_net<span style="color:#f92672">.</span>to(device)              
+        self<span style="color:#f92672">.</span>tn<span style="color:#f92672">.</span>load_state_dict(self<span style="color:#f92672">.</span>pn<span style="color:#f92672">.</span>state_dict())
+        self<span style="color:#f92672">.</span>tn<span style="color:#f92672">.</span>eval()
+        
+        <span style="color:#75715e"># initialize experience replay</span>
+        self<span style="color:#f92672">.</span>memo <span style="color:#f92672">=</span> exp_replay   
+    
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__wrapState</span>(self, state):
+        <span style="color:#e6db74">&#34;&#34;&#34;Wrap state tuples into a torch.tensor&#34;&#34;&#34;</span>
+        <span style="color:#66d9ef">return</span> torch<span style="color:#f92672">.</span>tensor(state, dtype<span style="color:#f92672">=</span>torch<span style="color:#f92672">.</span>float32, device<span style="color:#f92672">=</span>device)<span style="color:#f92672">.</span>reshape(<span style="color:#ae81ff">1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+    
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">chooseAction</span>(self, state, epsilon):
+        <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">        Choose action using the epsilon greedy policy, with epsilon probability to choose a random action, 
+</span><span style="color:#e6db74">        otherwise stick with policy.
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        explore <span style="color:#f92672">=</span> (torch<span style="color:#f92672">.</span>rand(<span style="color:#ae81ff">1</span>) <span style="color:#f92672">&lt;</span> epsilon)
+        <span style="color:#66d9ef">if</span> explore:  
+            <span style="color:#75715e"># need to explore</span>
+            <span style="color:#66d9ef">return</span> torch<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">0</span>, self<span style="color:#f92672">.</span>n_action, (<span style="color:#ae81ff">1</span>,))<span style="color:#f92672">.</span>item()
+        <span style="color:#66d9ef">else</span>:        
+            <span style="color:#75715e"># pick the best move</span>
+            state <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>__wrapState(state)
+            <span style="color:#66d9ef">with</span> torch<span style="color:#f92672">.</span>no_grad():
+                action <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>pn(state)<span style="color:#f92672">.</span>detach()<span style="color:#f92672">.</span>argmax()<span style="color:#f92672">.</span>item()
+            <span style="color:#66d9ef">return</span> action
+        
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">play</span>(self, render<span style="color:#f92672">=</span>False, sleep_time<span style="color:#f92672">=</span><span style="color:#ae81ff">0.1</span>):
+        <span style="color:#e6db74">&#39;&#39;&#39;
+</span><span style="color:#e6db74">        Run the agent in the environment once, return the total reward if no rendering
+</span><span style="color:#e6db74">        is needed, otherwise, render the environment with given time intervals between 
+</span><span style="color:#e6db74">        each frame.
+</span><span style="color:#e6db74">        &#39;&#39;&#39;</span>
+        total_reward <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+        state <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>env<span style="color:#f92672">.</span>reset()
+        <span style="color:#66d9ef">while</span> True:
+            <span style="color:#66d9ef">with</span> torch<span style="color:#f92672">.</span>no_grad():
+                action <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>pn(self<span style="color:#f92672">.</span>__wrapState(state))<span style="color:#f92672">.</span>argmax()<span style="color:#f92672">.</span>item()
+            new_state, reward, done, _ <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>env<span style="color:#f92672">.</span>step(action)
+            <span style="color:#66d9ef">if</span> render:
+                time<span style="color:#f92672">.</span>sleep(sleep_time)
+                self<span style="color:#f92672">.</span>env<span style="color:#f92672">.</span>render()
+            total_reward <span style="color:#f92672">+=</span> reward
+            state <span style="color:#f92672">=</span> new_state
+            <span style="color:#66d9ef">if</span> done:
+                <span style="color:#66d9ef">break</span>
+        <span style="color:#66d9ef">if</span> render:
+            <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Total reward: </span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">%</span> total_reward)
+            self<span style="color:#f92672">.</span>env<span style="color:#f92672">.</span>close()
+        <span style="color:#66d9ef">else</span>:
+            <span style="color:#66d9ef">return</span> total_reward
+</code></pre></div><h2 id="training">Training</h2>
+<p>The training procedure follows the original algorithm described in Mnih et al. (2015) like below:</p>
+<p><img src="https://zhiqiyu.github.io/img/lunar-lander/dqn_alg.PNG" alt="DQN algorithm"></p>
+<p>Something different is that an early-stopping flag is added to early stop training when the agent is already able to confidently (90%) land on the landing pad with &gt; 200 points.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">processBatch</span>(batch):
+    <span style="color:#e6db74">&#39;&#39;&#39;Wrap elements of mini-batches into torch tensors&#39;&#39;&#39;</span>
+    state_dim <span style="color:#f92672">=</span> batch[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>state<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">0</span>]
+
+    X <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>empty((len(batch), state_dim), dtype<span style="color:#f92672">=</span>torch<span style="color:#f92672">.</span>float32)
+    X_next <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>empty((len(batch), state_dim), dtype<span style="color:#f92672">=</span>torch<span style="color:#f92672">.</span>float32)
+    rewards <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>empty((len(batch), <span style="color:#ae81ff">1</span>), dtype<span style="color:#f92672">=</span>torch<span style="color:#f92672">.</span>float32)
+    actions <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>zeros((len(batch,)), dtype<span style="color:#f92672">=</span>torch<span style="color:#f92672">.</span>long)
+    not_dones <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>tensor([True] <span style="color:#f92672">*</span> len(batch), dtype<span style="color:#f92672">=</span>torch<span style="color:#f92672">.</span>bool)
+    <span style="color:#66d9ef">for</span> i, transition <span style="color:#f92672">in</span> enumerate(batch):
+        X[i, :] <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>tensor(transition<span style="color:#f92672">.</span>state, dtype<span style="color:#f92672">=</span>torch<span style="color:#f92672">.</span>float32)            <span style="color:#75715e"># current state</span>
+        X_next[i, :] <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>tensor(transition<span style="color:#f92672">.</span>next_state, dtype<span style="color:#f92672">=</span>torch<span style="color:#f92672">.</span>float32)  <span style="color:#75715e"># next state</span>
+        actions[i] <span style="color:#f92672">=</span> transition<span style="color:#f92672">.</span>action                                           <span style="color:#75715e"># action</span>
+        rewards[i, :] <span style="color:#f92672">=</span> transition<span style="color:#f92672">.</span>reward                                        <span style="color:#75715e"># rewards</span>
+        not_dones[i] <span style="color:#f92672">=</span> <span style="color:#f92672">not</span> transition<span style="color:#f92672">.</span>is_done                                    <span style="color:#75715e"># is terminal state</span>
+        
+    <span style="color:#66d9ef">return</span> X<span style="color:#f92672">.</span>to(device), X_next<span style="color:#f92672">.</span>to(device), actions<span style="color:#f92672">.</span>to(device), rewards<span style="color:#f92672">.</span>to(device), not_dones<span style="color:#f92672">.</span>to(device)
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">train</span>(agent, optimizer, episodes<span style="color:#f92672">=</span><span style="color:#ae81ff">500</span>, batch_size<span style="color:#f92672">=</span><span style="color:#ae81ff">32</span>, update_rate<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, gamma<span style="color:#f92672">=</span><span style="color:#ae81ff">0.99</span>, 
+            max_epsilon<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, min_epsilon<span style="color:#f92672">=</span><span style="color:#ae81ff">0.1</span>, eps_decay<span style="color:#f92672">=</span><span style="color:#ae81ff">200</span>, reward_thres<span style="color:#f92672">=</span><span style="color:#ae81ff">195</span>, C<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span>):
+    <span style="color:#e6db74">&#39;&#39;&#39;Train the agent&#39;&#39;&#39;</span>
+
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Training start:&#34;</span>)
+    
+    <span style="color:#75715e"># counter of total steps taken</span>
+    step_counter <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>   
+    
+    <span style="color:#75715e"># record the return from every episode, for diagnose purpose</span>
+    episode_return <span style="color:#f92672">=</span> []
+    
+    <span style="color:#75715e"># early stop flag</span>
+    early_stop <span style="color:#f92672">=</span> False
+    
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(episodes):
+        state <span style="color:#f92672">=</span> agent<span style="color:#f92672">.</span>env<span style="color:#f92672">.</span>reset()
+        reward_rec <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>  <span style="color:#75715e"># record reward of this episode</span>
+        <span style="color:#66d9ef">if</span> early_stop:
+            <span style="color:#66d9ef">break</span>
+        <span style="color:#66d9ef">while</span> True:
+            <span style="color:#75715e"># decay epsilon</span>
+            <span style="color:#66d9ef">if</span> agent<span style="color:#f92672">.</span>memo<span style="color:#f92672">.</span>canStart():
+                <span style="color:#75715e"># do not decay epsilon when the replay memory is not large enough, instead, use max_epsilon</span>
+                epsilon <span style="color:#f92672">=</span> min_epsilon <span style="color:#f92672">+</span> (max_epsilon <span style="color:#f92672">-</span> min_epsilon) <span style="color:#f92672">*</span> math<span style="color:#f92672">.</span>exp(<span style="color:#f92672">-</span><span style="color:#ae81ff">1.</span> <span style="color:#f92672">*</span> step_counter <span style="color:#f92672">/</span> eps_decay)
+            <span style="color:#66d9ef">else</span>:
+                epsilon <span style="color:#f92672">=</span> max_epsilon
+                
+            action <span style="color:#f92672">=</span> agent<span style="color:#f92672">.</span>chooseAction(state, epsilon)
+            new_state, reward, done, _ <span style="color:#f92672">=</span> agent<span style="color:#f92672">.</span>env<span style="color:#f92672">.</span>step(action)
+
+            step_counter <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>      <span style="color:#75715e"># increment the counter of steps taken</span>
+            reward_rec <span style="color:#f92672">+=</span> reward   <span style="color:#75715e"># record the reward of this transition</span>
+            
+            <span style="color:#75715e"># new_state = agent.__wrapState(new_state)</span>
+            agent<span style="color:#f92672">.</span>memo<span style="color:#f92672">.</span>add(Experience(state, action, reward, new_state, done))
+            
+            <span style="color:#75715e"># don&#39;t forget this assignment!!!!!</span>
+            state <span style="color:#f92672">=</span> new_state
+            
+            <span style="color:#66d9ef">if</span> done:
+                episode_return<span style="color:#f92672">.</span>append(reward_rec)
+                <span style="color:#66d9ef">if</span> (i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>) <span style="color:#f92672">%</span> <span style="color:#ae81ff">100</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+                    <span style="color:#75715e"># print something useful every 100 episodes</span>
+                    mean_reward <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>mean(episode_return[<span style="color:#f92672">-</span><span style="color:#ae81ff">100</span>:])<span style="color:#f92672">.</span>item()                  <span style="color:#75715e"># mean reward of the last 100 episodes</span>
+                    num_solve <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>sum(np<span style="color:#f92672">.</span>array(episode_return[<span style="color:#f92672">-</span><span style="color:#ae81ff">100</span>:]) <span style="color:#f92672">&gt;=</span> reward_thres)  <span style="color:#75715e"># count of last 100 episodes that solved</span>
+        
+                    <span style="color:#75715e"># early stop if the current policy already solved problem and the exploration rate is low</span>
+                    <span style="color:#66d9ef">if</span> mean_reward <span style="color:#f92672">&gt;=</span> reward_thres <span style="color:#f92672">and</span> num_solve <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">90</span> <span style="color:#f92672">and</span> epsilon <span style="color:#f92672">&lt;</span> min_epsilon <span style="color:#f92672">+</span> <span style="color:#ae81ff">0.05</span>:
+                        early_stop <span style="color:#f92672">=</span> True
+
+                    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;  -Episode: {0}/{1};</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">Total steps: {2};</span><span style="color:#ae81ff">\t</span><span style="color:#e6db74">Mean rewards of last 100 runs: {3};</span><span style="color:#ae81ff">\t\
+</span><span style="color:#ae81ff"></span><span style="color:#e6db74">                    Count of solved episodes in last 100 runs: {4}&#34;</span>\
+                            <span style="color:#f92672">.</span>format(i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, episodes, step_counter, mean_reward, num_solve))
+                <span style="color:#66d9ef">break</span>
+            
+            
+            <span style="color:#75715e"># check if replay memory is big enough to start learning, learn every update_rate steps</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> agent<span style="color:#f92672">.</span>memo<span style="color:#f92672">.</span>canStart() <span style="color:#f92672">or</span> step_counter <span style="color:#f92672">%</span> update_rate <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span>:
+                <span style="color:#66d9ef">continue</span>
+            
+            <span style="color:#75715e"># =====================</span>
+            <span style="color:#75715e"># sample from experience memory and start learning</span>
+            <span style="color:#75715e"># =====================</span>
+            batch <span style="color:#f92672">=</span> agent<span style="color:#f92672">.</span>memo<span style="color:#f92672">.</span>sample(batch_size<span style="color:#f92672">=</span>batch_size)
+            <span style="color:#66d9ef">if</span> batch <span style="color:#f92672">is</span> None:
+                <span style="color:#66d9ef">continue</span>
+            <span style="color:#66d9ef">else</span>:
+                <span style="color:#75715e"># transform batch into predicted and true Q values</span>
+                X, X_next, actions, rewards, not_dones <span style="color:#f92672">=</span> processBatch(batch)
+                
+                yPred <span style="color:#f92672">=</span> agent<span style="color:#f92672">.</span>pn(X)<span style="color:#f92672">.</span>gather(<span style="color:#ae81ff">1</span>, actions<span style="color:#f92672">.</span>view(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>))
+                yTrue <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>zeros((len(batch), <span style="color:#ae81ff">1</span>), dtype<span style="color:#f92672">=</span>torch<span style="color:#f92672">.</span>float32, device<span style="color:#f92672">=</span>device)
+                yTrue[not_dones, :] <span style="color:#f92672">=</span> agent<span style="color:#f92672">.</span>tn(X_next[not_dones, :])<span style="color:#f92672">.</span>detach()<span style="color:#f92672">.</span>max(<span style="color:#ae81ff">1</span>)[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>view(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>)
+                yTrue <span style="color:#f92672">=</span> rewards <span style="color:#f92672">+</span> yTrue <span style="color:#f92672">*</span> gamma
+    
+                loss <span style="color:#f92672">=</span> loss_fn(yPred, yTrue)
+                
+                optimizer<span style="color:#f92672">.</span>zero_grad()
+                loss<span style="color:#f92672">.</span>backward()
+                
+<span style="color:#75715e">#                 for param in agent.pn.parameters():</span>
+<span style="color:#75715e">#                     param.grad.data.clamp_(-1, 1)</span>
+                    
+                optimizer<span style="color:#f92672">.</span>step()
+            
+            <span style="color:#66d9ef">if</span> step_counter <span style="color:#f92672">%</span> C <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:   <span style="color:#75715e"># update target network after C steps</span>
+                agent<span style="color:#f92672">.</span>tn<span style="color:#f92672">.</span>load_state_dict(agent<span style="color:#f92672">.</span>pn<span style="color:#f92672">.</span>state_dict())
+    
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Training complete!&#34;</span>)
+    plot_training(episode_return)
+    <span style="color:#66d9ef">return</span> episode_return
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">plot_training</span>(episode_rewards, solve_thres<span style="color:#f92672">=</span><span style="color:#ae81ff">200</span>):
+
+    is_ipython <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;inline&#39;</span> <span style="color:#f92672">in</span> matplotlib<span style="color:#f92672">.</span>get_backend()
+    <span style="color:#66d9ef">if</span> is_ipython:
+        <span style="color:#f92672">from</span> IPython <span style="color:#f92672">import</span> display
+    
+    x_ticks <span style="color:#f92672">=</span> len(episode_rewards)
+    y_max <span style="color:#f92672">=</span> max(episode_rewards)
+    y_min <span style="color:#f92672">=</span> min(episode_rewards)
+
+    plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">3</span>))
+    plt<span style="color:#f92672">.</span>grid(True)
+    plt<span style="color:#f92672">.</span>plot(range(<span style="color:#ae81ff">1</span>, x_ticks<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>), episode_rewards, c<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;b&#39;</span>, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;episode returns&#34;</span>)
+    plt<span style="color:#f92672">.</span>plot(range(<span style="color:#ae81ff">1</span>, x_ticks<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>), [solve_thres] <span style="color:#f92672">*</span> x_ticks, c<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;r&#39;</span>, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;solving threshold&#34;</span>)
+    plt<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#34;Episode Return during Training&#34;</span>)
+    plt<span style="color:#f92672">.</span>legend()
+    <span style="color:#75715e"># plt.savefig(&#34;illustrations/training.png&#34;, dpi=300)</span>
+    plt<span style="color:#f92672">.</span>show()
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">plot_test</span>(agent, solve_thres<span style="color:#f92672">=</span><span style="color:#ae81ff">200</span>):
+    rewards <span style="color:#f92672">=</span> []
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">100</span>):
+        rewards<span style="color:#f92672">.</span>append(agent<span style="color:#f92672">.</span>play())
+    
+    num_solved <span style="color:#f92672">=</span> sum(np<span style="color:#f92672">.</span>array(rewards) <span style="color:#f92672">&gt;=</span> solve_thres)
+
+    plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">3.54</span>, <span style="color:#ae81ff">2.8</span>))
+    plt<span style="color:#f92672">.</span>grid(True)
+    plt<span style="color:#f92672">.</span>scatter(range(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">101</span>), rewards, c<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;b&#39;</span>, s<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;episode returns&#34;</span>)
+    plt<span style="color:#f92672">.</span>plot(range(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">101</span>), [solve_thres] <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span>, c<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;r&#39;</span>, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Solving threshold&#34;</span>)
+
+    plt<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#34;Episode Return of 100 runs with greedy policy, solved {}/100&#34;</span><span style="color:#f92672">.</span>format(num_solved))
+    plt<span style="color:#f92672">.</span>legend()
+    <span style="color:#75715e"># plt.savefig(&#34;illustrations/test.png&#34;, dpi=300)</span>
+    plt<span style="color:#f92672">.</span>show()
+</code></pre></div><h2 id="start-training">Start Training:</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Hyperparameters</span>
+<span style="color:#75715e"># -----------------------</span>
+NUM_EPISODES <span style="color:#f92672">=</span> <span style="color:#ae81ff">3000</span>
+BATCH_SIZE <span style="color:#f92672">=</span> <span style="color:#ae81ff">32</span>
+LEARNING_RATE <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.001</span>
+GAMMA <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.99</span>
+MAX_EPSILON <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+MIN_EPSILON <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.05</span>
+EPS_DECAY <span style="color:#f92672">=</span> <span style="color:#ae81ff">50000</span>
+EXPERIENCE_CAPACITY <span style="color:#f92672">=</span> <span style="color:#ae81ff">500000</span>
+EXP_START_SIZE <span style="color:#f92672">=</span> <span style="color:#ae81ff">20000</span>
+UPDATE_RATE <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+REWARD_THRES <span style="color:#f92672">=</span> <span style="color:#ae81ff">200</span>
+C <span style="color:#f92672">=</span> <span style="color:#ae81ff">10000</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">device <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>device(<span style="color:#e6db74">&#34;cuda&#34;</span> <span style="color:#66d9ef">if</span> torch<span style="color:#f92672">.</span>cuda<span style="color:#f92672">.</span>is_available() <span style="color:#66d9ef">else</span> <span style="color:#e6db74">&#34;cpu&#34;</span>)
+
+env <span style="color:#f92672">=</span> gym<span style="color:#f92672">.</span>make(<span style="color:#e6db74">&#34;LunarLander-v2&#34;</span>)
+
+<span style="color:#75715e"># environment attributes </span>
+state_dim <span style="color:#f92672">=</span> env<span style="color:#f92672">.</span>observation_space<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">0</span>]
+n_actions <span style="color:#f92672">=</span> env<span style="color:#f92672">.</span>action_space<span style="color:#f92672">.</span>n
+
+<span style="color:#75715e"># The function approximation for Q function</span>
+policy_net <span style="color:#f92672">=</span> QNN(state_dim, n_actions, [<span style="color:#ae81ff">48</span>])
+target_net <span style="color:#f92672">=</span> QNN(state_dim, n_actions, [<span style="color:#ae81ff">48</span>])
+
+<span style="color:#75715e"># Experience replay</span>
+exp_play <span style="color:#f92672">=</span> ExpReplay(EXPERIENCE_CAPACITY, EXP_START_SIZE)
+
+<span style="color:#75715e"># make the learning agent</span>
+agent <span style="color:#f92672">=</span> LunarLanderAgent(env, policy_net, target_net, exp_play)
+
+<span style="color:#75715e"># set-up optimizer</span>
+optimizer <span style="color:#f92672">=</span> Adam(agent<span style="color:#f92672">.</span>pn<span style="color:#f92672">.</span>parameters(), lr<span style="color:#f92672">=</span>LEARNING_RATE)
+
+<span style="color:#75715e"># start training</span>
+reward_records <span style="color:#f92672">=</span> train(agent, optimizer, episodes<span style="color:#f92672">=</span>NUM_EPISODES, batch_size<span style="color:#f92672">=</span>BATCH_SIZE, update_rate<span style="color:#f92672">=</span>UPDATE_RATE, 
+            gamma<span style="color:#f92672">=</span>GAMMA, max_epsilon<span style="color:#f92672">=</span>MAX_EPSILON, min_epsilon<span style="color:#f92672">=</span>MIN_EPSILON, eps_decay<span style="color:#f92672">=</span>EPS_DECAY, reward_thres<span style="color:#f92672">=</span>REWARD_THRES, C<span style="color:#f92672">=</span>C)
+
+<span style="color:#75715e"># save training info</span>
+<span style="color:#75715e"># torch.save(agent.pn.state_dict(), &#34;checkpoint.pt&#34;)</span>
+</code></pre></div><pre><code>Training start:
+  -Episode: 100/10000;	Total steps: 9067;	Mean rewards of last 100 runs: -160.88986340660983;	Count of solved episodes in last 100 runs: 0
+  -Episode: 200/10000;	Total steps: 17939;	Mean rewards of last 100 runs: -160.47751106315226;	Count of solved episodes in last 100 runs: 0
+  -Episode: 300/10000;	Total steps: 30335;	Mean rewards of last 100 runs: -158.31169153656703;	Count of solved episodes in last 100 runs: 0
+  -Episode: 400/10000;	Total steps: 42925;	Mean rewards of last 100 runs: -113.53394949576729;	Count of solved episodes in last 100 runs: 0
+  -Episode: 500/10000;	Total steps: 58738;	Mean rewards of last 100 runs: -89.43146045843977;	Count of solved episodes in last 100 runs: 0
+  -Episode: 600/10000;	Total steps: 79764;	Mean rewards of last 100 runs: -51.9893973266434;	Count of solved episodes in last 100 runs: 0
+  -Episode: 700/10000;	Total steps: 130868;	Mean rewards of last 100 runs: -18.182056879256944;	Count of solved episodes in last 100 runs: 0
+  -Episode: 800/10000;	Total steps: 221585;	Mean rewards of last 100 runs: -29.624186275988762;	Count of solved episodes in last 100 runs: 3
+  -Episode: 900/10000;	Total steps: 302616;	Mean rewards of last 100 runs: 39.47518648175584;	Count of solved episodes in last 100 runs: 17
+  -Episode: 1000/10000;	Total steps: 376357;	Mean rewards of last 100 runs: 101.38140501057693;	Count of solved episodes in last 100 runs: 21
+  -Episode: 1100/10000;	Total steps: 453062;	Mean rewards of last 100 runs: 79.35989873385518;	Count of solved episodes in last 100 runs: 12
+  -Episode: 1200/10000;	Total steps: 534772;	Mean rewards of last 100 runs: 59.02408128299986;	Count of solved episodes in last 100 runs: 14
+  -Episode: 1300/10000;	Total steps: 617943;	Mean rewards of last 100 runs: 72.61160251534045;	Count of solved episodes in last 100 runs: 26
+  -Episode: 1400/10000;	Total steps: 698440;	Mean rewards of last 100 runs: 121.4529622869516;	Count of solved episodes in last 100 runs: 26
+  -Episode: 1500/10000;	Total steps: 762849;	Mean rewards of last 100 runs: 184.06175787646396;	Count of solved episodes in last 100 runs: 49
+  -Episode: 1600/10000;	Total steps: 823373;	Mean rewards of last 100 runs: 198.621072098437;	Count of solved episodes in last 100 runs: 63
+  -Episode: 1700/10000;	Total steps: 881620;	Mean rewards of last 100 runs: 197.92096811870906;	Count of solved episodes in last 100 runs: 60
+  -Episode: 1800/10000;	Total steps: 940180;	Mean rewards of last 100 runs: 177.97471911411057;	Count of solved episodes in last 100 runs: 68
+  -Episode: 1900/10000;	Total steps: 996553;	Mean rewards of last 100 runs: 211.3775879535419;	Count of solved episodes in last 100 runs: 66
+  -Episode: 2000/10000;	Total steps: 1041880;	Mean rewards of last 100 runs: 227.34789115259966;	Count of solved episodes in last 100 runs: 90
+Training complete!
+</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">plot_training(episode_rewards, solve_thres<span style="color:#f92672">=</span><span style="color:#ae81ff">200</span>)
+</code></pre></div><!-- raw HTML omitted -->
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">plot_test(agent, solve_thres<span style="color:#f92672">=</span><span style="color:#ae81ff">200</span>)
+</code></pre></div><!-- raw HTML omitted -->
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">agent<span style="color:#f92672">.</span>play(render<span style="color:#f92672">=</span>False)
+</code></pre></div><pre><code>Total reward: 221
+</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># average reward of 100 trials</span>
+rewards <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">100</span>):
+    rewards <span style="color:#f92672">+=</span> agent<span style="color:#f92672">.</span>play()
+
+rewards<span style="color:#f92672">/</span><span style="color:#ae81ff">100</span>
+</code></pre></div><pre><code>204.6834266441645
+</code></pre>
+<h2 id="conclusion">Conclusion</h2>
+<p>From the test, we can see that only ~9 trials have less than 200 points, &gt; 90% of them landed with high points. A random trial achieved 221 points, and the average point of 100 trials is 204.68. Therefore, we can conclude that we solved the LunarLander-v2 with &gt; 90% confidence.</p>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="https://zhiqiyu.github.io/tags/reinforcement-learning/" rel="tag">Reinforcement Learning</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="https://zhiqiyu.github.io/tags/omscs/" rel="tag">OMSCS</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="Zhiqi Yu avatar" src="https://zhiqiyu.github.io/img/avatar.jpg" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About Zhiqi Yu</span>
+	</div>
+	<div class="authorbox__description">
+		Full stack developer, remote sensing researcher.
+	</div>
+</div>
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="https://zhiqiyu.github.io/post/memory_ownership/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">Memory Ownership in C Explained</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="https://zhiqiyu.github.io/post/docker-win10home/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">Install and Troubleshoot Docker Toolbox on Windows 10 Home</p>
+		</a>
+	</div>
+</nav>
+
+<section class="comments">
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "realm-z" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 Zhiqi Yu.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="https://zhiqiyu.github.io/js/menu.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+</body>
+</html>
