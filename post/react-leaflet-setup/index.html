@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Essential setup steps to use React-Leaflet - ZQ.Yu</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="Essential setup steps to use React-Leaflet" />
+<meta property="og:description" content="Using Leaflet in a React project, especially a create-react-app project can be tricky. In a React app, the UI are composed by components. Each component encapsulate some logic and states to itself. This is different from traditional ways of writing HTML &#43; CSS &#43; JavaScript. This is why many traditional JS libraries like Bootstrap and Semantic-UI have React-specific counterparts (React-Bootstrap and Semantic-UI React) to allow using them in the React way." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://zhiqiyu.github.io/post/react-leaflet-setup/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-07-21T17:15:30-04:00" />
+<meta property="article:modified_time" content="2021-07-21T17:15:30-04:00" />
+
+
+		<meta itemprop="name" content="Essential setup steps to use React-Leaflet">
+<meta itemprop="description" content="Using Leaflet in a React project, especially a create-react-app project can be tricky. In a React app, the UI are composed by components. Each component encapsulate some logic and states to itself. This is different from traditional ways of writing HTML &#43; CSS &#43; JavaScript. This is why many traditional JS libraries like Bootstrap and Semantic-UI have React-specific counterparts (React-Bootstrap and Semantic-UI React) to allow using them in the React way."><meta itemprop="datePublished" content="2021-07-21T17:15:30-04:00" />
+<meta itemprop="dateModified" content="2021-07-21T17:15:30-04:00" />
+<meta itemprop="wordCount" content="565">
+<meta itemprop="keywords" content="Frontend,React," />
+		<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Essential setup steps to use React-Leaflet"/>
+<meta name="twitter:description" content="Using Leaflet in a React project, especially a create-react-app project can be tricky. In a React app, the UI are composed by components. Each component encapsulate some logic and states to itself. This is different from traditional ways of writing HTML &#43; CSS &#43; JavaScript. This is why many traditional JS libraries like Bootstrap and Semantic-UI have React-specific counterparts (React-Bootstrap and Semantic-UI React) to allow using them in the React way."/>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="https://zhiqiyu.github.io/css/style.css">
+	
+
+	<link rel="shortcut icon" href="https://zhiqiyu.github.io/favicon.ico">
+		
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-128672710-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="https://zhiqiyu.github.io/" title="ZQ.Yu" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">ZQ.Yu</div>
+					<div class="logo__tagline">A place to share my work, study, achievements and life</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="https://zhiqiyu.github.io/">
+				
+				<span class="menu__text">Blog</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="https://zhiqiyu.github.io/about/">
+				
+				<span class="menu__text">About</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Essential setup steps to use React-Leaflet</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-07-21T17:15:30-04:00">July 21, 2021</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="https://zhiqiyu.github.io/categories/technical/" rel="category">Technical</a>
+	</span>
+</div></div>
+		</header>
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#install-related-packages">Install related packages</a></li>
+    <li><a href="#import-leaflet-css">Import Leaflet CSS</a></li>
+    <li><a href="#one-last-step">One last step</a></li>
+    <li><a href="#sample-code">Sample Code</a></li>
+  </ul>
+</nav>
+	</div>
+</div><div class="content post__content clearfix">
+			<p>Using <a href="https://leafletjs.com/">Leaflet</a> in a React project, especially a <a href="https://create-react-app.dev/">create-react-app</a> project can be tricky. In a React app, the UI are composed by components. Each component encapsulate some logic and states to itself. This is different from traditional ways of writing HTML + CSS + JavaScript. This is why many traditional JS libraries like Bootstrap and Semantic-UI have React-specific counterparts (<a href="https://react-bootstrap.github.io/">React-Bootstrap</a> and <a href="https://react.semantic-ui.com/">Semantic-UI React</a>) to allow using them in the React way. Leaflet is no different. Although there is no official React-bindings for Leaflet, <a href="https://react-leaflet.js.org/">React-Leaflet</a> is one popular choice out there.
+However, the React-Leaflet documentation is not very clear on how to properly setup in order to correctly show the map, at least not very clear to me.</p>
+<p>Here is a quick setup for React-Leaflet in a create-react-app project:</p>
+<h2 id="install-related-packages">Install related packages</h2>
+<p>First step is to install Leaflet and React-Leaflet from commandline interface in project folder:</p>
+<p><code>npm install leaflet react-leaflet</code></p>
+<h2 id="import-leaflet-css">Import Leaflet CSS</h2>
+<p>Traditionally, you need to include Leaflet CSS in the HTML <code>&lt;head&gt;</code> tag like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://unpkg.com/leaflet@1.7.1/dist/leaflet.css&#34;</span>
+  <span style="color:#a6e22e">integrity</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==&#34;</span>
+  <span style="color:#a6e22e">crossorigin</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>/&gt;
+</code></pre></div><p>And include Leaflet JS file like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://unpkg.com/leaflet@1.7.1/dist/leaflet.js&#34;</span>
+   <span style="color:#a6e22e">integrity</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==&#34;</span>
+   <span style="color:#a6e22e">crossorigin</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><p>You can still do this in the <code>public/index.html</code> file in the project. However, since we already installed Leaflet via NPM, the package will be bundled into the final build, which means that we can directly use them from the local Leaflet package stored in <code>node_modules/</code> to avoid requesting them again.</p>
+<p>Suppose the file you want to write the map component is <code>src/map.jsx</code>, you can import the Leaflet CSS file directly by putting <code>import &quot;leaflet/dist/leaflet.css&quot;</code> at the top of <code>src/map.jsx</code>. Then you can write your map component in the file as usual. You don&rsquo;t need to worry about Leaflet JS file as the webpack will bundle the JS file in the final build automatically. One advantage of this approach is that once you update Leaflet version via NPM, your code will use the new version automatically.</p>
+<h2 id="one-last-step">One last step</h2>
+<p>If you read carefully the React-Leaflet doc and Leaflet doc, you may endup at last step, but you may notice your map still does not show up on your page. This is because leaflet by default does not set container width and height. Traditionally, Leaflet ask you to write a map container div like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#map&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width:500px;height:300px;&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div><p>and then put map in this div in JS like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">mymap</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">L</span>.<span style="color:#a6e22e">map</span>(<span style="color:#e6db74">&#39;map&#39;</span>)
+</code></pre></div><p>Naturally, you may want to put a div around the <code>&lt;MapContainer /&gt;</code> component from React-Leaflet, and set the height and width of it, but nope, it does not work. The reason is the <code>&lt;MapContainer /&gt;</code> already contains a such div and you need to set height and width of that contained div. You can do it by selecting the <code>leaflet-container</code> class in CSS, which is by default included in the container div. Or, you can set an id or your own class for the <code>&lt;MapContainer /&gt;</code> component and reference it in the CSS. Here is an example using default class <code>leaflet-container</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">leaflet-container</span> {
+  <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">vw</span>;
+  <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">vh</span>;
+}
+</code></pre></div><p>Voila, you should then see the map.</p>
+<h2 id="sample-code">Sample Code</h2>
+<p><code>src/map.jsx</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">React</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;react&#39;</span>
+<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">MapContainer</span>, <span style="color:#a6e22e">TileLayer</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;react-leaflet&#34;</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;leaflet/dist/leaflet.css&#39;</span>
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Map</span>() {
+  <span style="color:#66d9ef">return</span> (
+    &lt;<span style="color:#f92672">MapContainer</span> <span style="color:#a6e22e">center</span><span style="color:#f92672">=</span>{[<span style="color:#ae81ff">51.505</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">0.09</span>]} <span style="color:#a6e22e">zoom</span><span style="color:#f92672">=</span>{<span style="color:#ae81ff">13</span>} <span style="color:#a6e22e">scrollWheelZoom</span><span style="color:#f92672">=</span>{<span style="color:#66d9ef">false</span>} <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;map&#34;</span>&gt;
+      &lt;<span style="color:#f92672">TileLayer</span>
+        <span style="color:#a6e22e">attribution</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&amp;copy; &lt;a href=&#34;http://osm.org/copyright&#34;&gt;OpenStreetMap&lt;/a&gt; contributors&#39;</span>
+        <span style="color:#a6e22e">url</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png&#34;</span>
+      /&gt;
+    &lt;/<span style="color:#f92672">MapContainer</span>&gt;
+  )
+}
+</code></pre></div><p><code>src/App.css</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">leaflet-container</span> {
+  <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">vw</span>;
+  <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">vh</span>;
+}
+<span style="color:#75715e">/* or */</span>
+#map {
+  <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">vw</span>;
+  <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">vh</span>;
+}
+</code></pre></div>
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="https://zhiqiyu.github.io/tags/frontend/" rel="tag">Frontend</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="https://zhiqiyu.github.io/tags/react/" rel="tag">React</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="Zhiqi Yu avatar" src="https://zhiqiyu.github.io/img/avatar.jpg" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About Zhiqi Yu</span>
+	</div>
+	<div class="authorbox__description">
+		Full stack developer, remote sensing researcher.
+	</div>
+</div>
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="https://zhiqiyu.github.io/post/git-setup-for-hugo-blog-with-github-pages/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">Git Setup for Hugo Blog With Github Pages</p>
+		</a>
+	</div>
+</nav>
+
+<section class="comments">
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "realm-z" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 Zhiqi Yu.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="https://zhiqiyu.github.io/js/menu.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+</body>
+</html>
