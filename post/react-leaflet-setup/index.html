@@ -18,7 +18,7 @@
 		<meta itemprop="name" content="Essential setup steps to use React-Leaflet">
 <meta itemprop="description" content="Using Leaflet in a React project, especially a create-react-app project can be tricky. In a React app, the UI are composed by components. Each component encapsulate some logic and states to itself. This is different from traditional ways of writing HTML &#43; CSS &#43; JavaScript. This is why many traditional JS libraries like Bootstrap and Semantic-UI have React-specific counterparts (React-Bootstrap and Semantic-UI React) to allow using them in the React way."><meta itemprop="datePublished" content="2021-07-21T17:15:30-04:00" />
 <meta itemprop="dateModified" content="2021-07-21T17:15:30-04:00" />
-<meta itemprop="wordCount" content="565">
+<meta itemprop="wordCount" content="664">
 <meta itemprop="keywords" content="Frontend,React," />
 		<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Essential setup steps to use React-Leaflet"/>
@@ -104,6 +104,7 @@ if (!doNotTrack) {
   <ul>
     <li><a href="#install-related-packages">Install related packages</a></li>
     <li><a href="#import-leaflet-css">Import Leaflet CSS</a></li>
+    <li><a href="#solve-the-failed-to-compile--node_modulesreact-leafletcoreesmpathjs-1041-module-parse-failed-unexpected-token-1041-error">Solve the &ldquo;Failed to compile : ./node_modules/@react-leaflet/core/esm/path.js 10:41 Module parse failed: Unexpected token (10:41)&rdquo; error</a></li>
     <li><a href="#one-last-step">One last step</a></li>
     <li><a href="#sample-code">Sample Code</a></li>
   </ul>
@@ -127,7 +128,18 @@ However, the React-Leaflet documentation is not very clear on how to properly se
    <span style="color:#a6e22e">crossorigin</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
 </code></pre></div><p>You can still do this in the <code>public/index.html</code> file in the project. However, since we already installed Leaflet via NPM, the package will be bundled into the final build, which means that we can directly use them from the local Leaflet package stored in <code>node_modules/</code> to avoid requesting them again.</p>
 <p>Suppose the file you want to write the map component is <code>src/map.jsx</code>, you can import the Leaflet CSS file directly by putting <code>import &quot;leaflet/dist/leaflet.css&quot;</code> at the top of <code>src/map.jsx</code>. Then you can write your map component in the file as usual. You don&rsquo;t need to worry about Leaflet JS file as the webpack will bundle the JS file in the final build automatically. One advantage of this approach is that once you update Leaflet version via NPM, your code will use the new version automatically.</p>
-<h2 id="one-last-step">One last step</h2>
+<h2 id="solve-the-failed-to-compile--node_modulesreact-leafletcoreesmpathjs-1041-module-parse-failed-unexpected-token-1041-error">Solve the &ldquo;Failed to compile : ./node_modules/@react-leaflet/core/esm/path.js 10:41 Module parse failed: Unexpected token (10:41)&rdquo; error</h2>
+<p>If you are using create-react-app and Leaflet, you might encounter this issue when you try to do <code>npm start</code>. At least at the time of this article, with my create-react-app version 4.0.3, the issue is still not resolved. There are some discussions about this issue on Stackoverflow, and the solutions reduce to replace the browser list in <code>package.json</code> to the below, as the original target browsers might be too aggressive.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#960050;background-color:#1e0010">//</span> <span style="color:#960050;background-color:#1e0010">package.json</span>
+{
+  <span style="color:#960050;background-color:#1e0010">...</span>
+  <span style="color:#f92672">&#34;browserslist&#34;</span>: [
+    <span style="color:#e6db74">&#34;&gt;0.2%&#34;</span>,
+    <span style="color:#e6db74">&#34;not dead&#34;</span>,
+    <span style="color:#e6db74">&#34;not op_mini all&#34;</span>
+  ]
+}
+</code></pre></div><h2 id="one-last-step">One last step</h2>
 <p>If you read carefully the React-Leaflet doc and Leaflet doc, you may endup at last step, but you may notice your map still does not show up on your page. This is because leaflet by default does not set container width and height. Traditionally, Leaflet ask you to write a map container div like this:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#map&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width:500px;height:300px;&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
 </code></pre></div><p>and then put map in this div in JS like this:</p>
